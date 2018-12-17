@@ -2,7 +2,7 @@
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
 # Prototipo del sito web dei comuni italiani
-Questo progetto offre un modello di riferimento per l'organizzazione delle informazioni, l'erogazione dei servizi e l'esperienza utente  del sito web di un comune. Maggiori informazioni sono disponibili sulla [pagina del progetto](https://docs.italia.it/italia/designers-italia/design-comuni-docs/) su Docs Italia. *MANCA LINK ALLA PAGINA!!!*
+Questo progetto offre un modello di riferimento per l'organizzazione delle informazioni, l'erogazione dei servizi e l'esperienza utente  del sito web di un comune. Maggiori informazioni sono disponibili sulla [pagina del progetto](https://docs.google.com/document/d/1mUQbnwGR8DXF-EgbJFN82cQaXvmmnm6oFMVIsC4z-aA/edit?usp=sharing) su Docs Italia.
 
 Questo repository contiene i prototipi a media e alta definizione in formato grafico.
 
