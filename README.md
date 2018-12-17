@@ -1,3 +1,6 @@
+[![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7658JRJR/)
+[![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
+
 # Prototipo del sito web dei comuni italiani
 Questo progetto offre un modello di riferimento per l'organizzazione delle informazioni, l'erogazione dei servizi e l'esperienza utente  del sito web di un comune. Maggiori informazioni sono disponibili sulla [pagina del progetto](https://docs.italia.it/italia/designers-italia/design-comuni-docs/) su Docs Italia. *MANCA LINK ALLA PAGINA!!!*
 
