@@ -14,7 +14,7 @@ Nella cartella `Dependencies` trovi il file delle librerie collegate e i font ch
 
 ## 🔧 Segnalazione bug e richieste di aiuto
 
-Per segnalare un bug apri in issue qui su GitHub. Se invece vuoi discutere delle scelte fatte o qualcosa non ti è chiaro, puoi unirti al canale [Slack](https://slack.developers.italia.it/) o sul [Forum di Designers Italia](https://forum.italia.it/c/design).
+Per segnalare un bug apri in issue qui su GitHub. Se invece vuoi discutere delle scelte fatte o qualcosa non ti è chiaro, puoi unirti al canale [Slack](https://slack.developers.italia.it/) o scrivere sul [forum](https://forum.italia.it/c/design) di Designers Italia.
 
 ## ✨ Come contribuire
 Vorresti contribuire ai prototipi? Sei nel posto giusto!
