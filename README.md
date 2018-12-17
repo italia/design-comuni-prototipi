@@ -10,11 +10,11 @@ Questo repository contiene i prototipi a media e alta definizione in formato gra
 ## 📒 Come iniziare
 Il prototipi sono realizzati in Sketch e sono basati sul [Wireframe kit](https://designers.italia.it/kit/wireframe-kit/) e sullo [UI kit](https://designers.italia.it/kit/ui-kit/) di designers italia.
 
-Nella cartella `Dependencies` trovi il file delle librerie collegate e i font che servono per visualizzare correttamente i file.
+Nella cartella `Dependencies` trovi il file delle librerie collegate e i font che servono per visualizzare correttamente i layout.
 
 ## 🔧 Segnalazione bug e richieste di aiuto
 
-Per segnalare un bug apri in issue qui su GitHub. Se invece vuoi discutere delle scelte fatte o qualcosa non ti è chiaro, puoi venire a parlarne su Slack o sul [Forum di Designers Italia](https://forum.italia.it/c/design).
+Per segnalare un bug apri in issue qui su GitHub. Se invece vuoi discutere delle scelte fatte o qualcosa non ti è chiaro, puoi unirti al canale [Slack](https://slack.developers.italia.it/) o sul [Forum di Designers Italia](https://forum.italia.it/c/design).
 
 ## ✨ Come contribuire
 Vorresti contribuire ai prototipi? Sei nel posto giusto!
