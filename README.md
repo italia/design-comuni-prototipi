@@ -4,6 +4,8 @@
 # Prototipo del sito web dei comuni italiani
 Questo progetto offre un modello di riferimento per l'organizzazione delle informazioni, l'erogazione dei servizi e l'esperienza utente  del sito web di un comune. Maggiori informazioni sono disponibili sulla [pagina del progetto](https://docs.google.com/document/d/1mUQbnwGR8DXF-EgbJFN82cQaXvmmnm6oFMVIsC4z-aA/edit?usp=sharing) su Docs Italia.
 
+[Visualizza il concept del modello di siti dei comuni su Invision.](https://invis.io/Q2OTF1RMNUB)
+
 Questo repository contiene i prototipi a media e alta definizione in formato grafico.
 
 - Nel prototipo mid-fi abbiamo raccolto i wireframe dei flussi di interazione collegati agli [scenari](https://docs.google.com/spreadsheets/d/1Z_YgxckqlWJIBOOXpzMlpzbPfElMLA50-4grsndEX20/edit?usp=sharing) di progetto.
