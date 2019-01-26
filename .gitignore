@@ -1,3 +1,6 @@
+# Jekyll output files #
+_site
+
 # Compiled source #
 ###################
 *.com
