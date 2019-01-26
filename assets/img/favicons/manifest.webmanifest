@@ -1,0 +1,21 @@
+{
+  "name": "Siti Web dei Comuni Italiani",
+  "short_name": "Siti Web comunali",
+  "start_url": "/design-comuni-prototipi",
+  "theme_color": "#06C",
+  "background_color": "#06C",
+  "display": "standalone",
+  "description": "Siti Web dei Comuni Italiani.",
+  "icons": [
+    {
+      "src": "/design-comuni-prototipi/assets/img/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/design-comuni-prototipi/assets/img/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

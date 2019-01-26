@@ -15,7 +15,13 @@ Questo repository contiene i prototipi a media e alta definizione in formato gra
 ## 📒 Come iniziare
 Il prototipi sono realizzati in Sketch e sono basati sul [Wireframe kit](https://designers.italia.it/kit/wireframe-kit/) e sullo [UI kit](https://designers.italia.it/kit/ui-kit/) di designers italia.
 
-Nella cartella `Dependencies` trovi il file delle librerie collegate e i font che servono per visualizzare correttamente i layout.
+Per la corretta visualizzazione dei layout, sono necessarie tali libreria e i seguenti font, scaricabili gratuitamente da [Google Fonts](https://fonts.google.com/): 
+
+- [Lora](https://fonts.google.com/specimen/Lora)
+
+- [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)
+
+- [Titillium Web](https://fonts.google.com/specimen/Titillium+Web)
 
 ## 🔧 Segnalazione bug e richieste di aiuto
 
