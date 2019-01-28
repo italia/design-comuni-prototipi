@@ -2,6 +2,9 @@
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
 # Prototipo del sito web dei comuni italiani
+
+ <img src="https://github.com/italia/design-comuni-prototipi/blob/master/image-%20repo.png" width="800"> 
+ 
 Questo progetto offre un modello di riferimento per l'organizzazione delle informazioni, l'erogazione dei servizi e l'esperienza utente  del sito web di un comune. Maggiori informazioni sono disponibili sulla [pagina del progetto](https://docs.google.com/document/d/1mUQbnwGR8DXF-EgbJFN82cQaXvmmnm6oFMVIsC4z-aA/edit?usp=sharing) su Docs Italia.
 
 [Visualizza il concept del modello di siti dei comuni su Invision.](https://invis.io/Q2OTF1RMNUB)
