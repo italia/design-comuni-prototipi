@@ -13,7 +13,7 @@ Questo repository contiene i prototipi a media e alta definizione in formato gra
 - Nei prototipi hi-fi mostriamo l'aspetto grafico del sito nelle versioni desktop e mobile, e  gli elementi di interfaccia utili a realizzare i template in HTML
 
 ## 📒 Come iniziare
-Il prototipi sono realizzati in Sketch e sono basati sul [Wireframe kit](https://designers.italia.it/kit/wireframe-kit/) e sullo [UI kit](https://designers.italia.it/kit/ui-kit/) di designers italia.
+I prototipi sono realizzati in Sketch e sono basati sul [Wireframe kit](https://designers.italia.it/kit/wireframe-kit/) e sullo [UI kit](https://designers.italia.it/kit/ui-kit/) di designers italia.
 
 Per la corretta visualizzazione dei layout, sono necessarie tali libreria e i seguenti font, scaricabili gratuitamente da [Google Fonts](https://fonts.google.com/): 
 
@@ -22,6 +22,11 @@ Per la corretta visualizzazione dei layout, sono necessarie tali libreria e i se
 - [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)
 
 - [Titillium Web](https://fonts.google.com/specimen/Titillium+Web)
+
+## 🤩 Contributi
+Questo repository contiene anche alcuni contributi dei comuni che stanno facendo uso del modello di riferimento. Il repository stesso è un sito in Jekyll e GitHub pages per la condivisione di tali contributi.
+
+[Visualizza i contributi](https://italia.github.io/design-comuni-prototipi/).
 
 ## 🔧 Segnalazione bug e richieste di aiuto
 
