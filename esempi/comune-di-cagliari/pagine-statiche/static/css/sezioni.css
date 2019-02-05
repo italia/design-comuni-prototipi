@@ -29,6 +29,10 @@ section#briciole {
     font-weight: 300;
 }
 
+#briciole .breadcrumb .breadcrumb-item:focus {
+    border: 2px solid #FF8C00 !important;
+}
+
 #intro .titolo-sezione, 
 #intro #menu-sezione,
 #intro-argomenti .titolo-sezione {
@@ -52,7 +56,7 @@ section#briciole {
 #intro .titolo-sezione h4, 
 #intro-argomenti .titolo-sezione h4,
 #introricerca .titolo-sezione h4 {
-    color: #827534;
+    color: #796C31;
     font-size: 1.556em;
     margin: 16px 0 0 0;
     font-weight: bold;
@@ -147,6 +151,11 @@ section#briciole {
     height: 24px;
 }
 
+#intro .form-group .ico-sufix:focus, 
+#introricerca .form-group .ico-sufix:focus {
+    border: 2px solid #FF8C00 !important; outline: 0;
+}
+
 .cerca-risultati {
     margin-top: 32px;
     font-size: 0.889em;
@@ -174,7 +183,7 @@ section#briciole {
 }
 
 #articolo-dettaglio-testo #menu-sinistro-cerca h4 {
-    color: #827534;
+    color: #796C31;
     font-size: 0.889em;
     font-weight: bold;
     letter-spacing: 1px;
@@ -236,7 +245,7 @@ section#briciole {
 }
 
 #sezioninterne-novita .titolettosezione h3 {
-    color: #827534;
+    color: #796C31;
     font-size: 1.778em;
     font-weight: 700;
 }
@@ -357,6 +366,14 @@ section#briciole {
     fill: #555;
 }
 
+.scheda .scheda-icona-small a:focus {
+    outline: 2px solid #FF8C00 !important; 
+}
+
+.scheda .scheda-icona-small .datagrigia {
+    color: #555555;
+}
+
 .scheda .scheda-testo, 
 .scheda .scheda-testo-small, 
 .scheda .scheda-footer,
@@ -453,8 +470,18 @@ section#briciole {
     width: 70%;
 }
 
+.txt-roboto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.txt-lora {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+
 .tutte {
-    color: #74A681;
+    color: #4E7E5B;
     font-size: 0.778em;
     text-transform: uppercase;
     vertical-align: middle;
@@ -466,14 +493,14 @@ section#briciole {
 .tutte:not([href]):not([tabindex]), 
 .tutte:not([href]):not([tabindex]):focus, 
 .tutte:not([href]):not([tabindex]):hover {
-    color: #74A681;
+    color: #4E7E5B;
 }
 
 .tutte svg.icon {
     vertical-align: bottom;
     width: 20px;
     height:20px;
-    fill: #74A681;
+    fill: #4E7E5B;
 }
 
 .bricklayer-column .scheda-news {
@@ -899,6 +926,13 @@ section#briciole {
     margin-top: 8px;
 }
 
+#intro-sititematici .box-sitotematico .titolo-sezione h3 {
+    color: #003882;
+    font-size: 2.222em;
+    margin: 0;
+    letter-spacing: 0;
+}
+
 .scheda-app {
     border-radius: 4px;
     box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1);
@@ -1083,7 +1117,6 @@ section#briciole {
 
     #intro .form-group .ico-sufix, 
     #introricerca .form-group .ico-sufix {
-        line-height: 40px;
         width: 40px;
     }
 
@@ -1120,7 +1153,7 @@ section#briciole {
     .scheda .scheda-footer {
         padding: 16px 24px 13px 24px;
     }
-    
+
     .scheda-argomento-lista {
         margin-bottom: 16px;
     }
@@ -1149,6 +1182,14 @@ section#briciole {
     #sezioninterne-novita {
         padding: 32px 0;
         margin: 0;
+    }
+    
+    #sezioni-infoutili .mt64 {
+        margin-top: 32px !important;
+    }
+    
+    #sezioni-infoutili .mb64 {
+        margin-bottom: 32px !important;
     }
 
     .scheda-news {
@@ -1293,6 +1334,10 @@ section#briciole {
         padding: 32px 0 16px 0;
     }
 
+    #intro-sititematici .box-sitotematico .titolo-sezione h3 {
+        font-size: 2em;
+    }
+
     .box-argomento {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -1364,7 +1409,8 @@ section#briciole {
         padding-bottom: 8px;
     }
 
-    section .titolettosezione .float-left {
+    section .titolettosezione .float-left,
+    section .titolosezione .float-left {
         float: none !important;
     }
 

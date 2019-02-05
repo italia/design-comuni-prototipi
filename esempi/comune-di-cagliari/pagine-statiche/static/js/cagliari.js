@@ -187,3 +187,10 @@ jQuery(document).ready(function ($) {
 });
 
 /* End jPush Menu */
+
+
+
+
+$('.megamenu .dropdown-menu').click(function(e) {
+    e.stopPropagation();
+});

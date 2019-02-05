@@ -28,7 +28,7 @@ app.controller('ctrlPrenotazione', [ '$scope', '$location', '$anchorScroll', fun
 			{'id':1, 'value':'edilizia-privata', 'name':'Edilizia Privata', 'enable':true},
 			{'id':2, 'value':'istruzione', 'name':'Istruzione', 'enable':false},
 			{'id':3, 'value':'turismo', 'name':'Turismo', 'enable':false},
-			{'id':4, 'value':'viabilita', 'name':'Viabilit&agrave;', 'enable':false}];
+			{'id':4, 'value':'urbanistica', 'name':'Urbanistica', 'enable':false}];
 
 	this.referenti = [{'id':0, 'name':'Gabriele Bianchi', 'role':'Responsabile del servizio', 'disp':'Riceve lun / mar ore 9:00 - 11:00'},
 			{'id':1, 'name':'Raffaele Rossi', 'role':'Tecnico di area', 'disp':'Riceve mar / mer ore 10:00 - 13:00'},

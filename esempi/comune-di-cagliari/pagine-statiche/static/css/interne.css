@@ -164,6 +164,14 @@
     height: 22px;
 }
 
+.condividi a:focus {
+    border: 2px solid #FF8C00 !important;
+}
+
+.list-group-item-action:focus {
+    border: 2px solid #FF8C00 !important;
+}
+
 .data-articolo, .lettura-articolo {
     margin: 0;
 }
@@ -174,7 +182,7 @@
 
 .data-articolo strong {
     font-size: 0.889em;
-    font-family: "Roboto Mono";
+    font-family: "Roboto Mono", monospace;
     font-weight: bold;
 }
 
@@ -220,7 +228,6 @@
 }
 
 #menu-sinistro h4.dropdown [data-toggle=collapse][aria-expanded=false] svg.icon {
-    content: '\e818';
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
 }
@@ -251,7 +258,6 @@
     padding: 6px 24px;
     color: #003882;
     border:0;
-    text-decoration: underline;
 }
 
 #menu-sinistro #lista-paragrafi .list-group-item.active, 
@@ -326,6 +332,20 @@
     font-size: 14px;
     font-size: 0.778em;
 }
+
+#articolo-dettaglio-testo .articolo-paragrafi-link .paragrafo h4 a {
+    position: relative;
+    left: auto;
+    top: auto;
+}
+
+#articolo-dettaglio-testo .articolo-paragrafi-link .testolungo p a strong {
+    font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
 
 #articolo-dettaglio-testo .galleriasfondo {
     background: #30373D;
@@ -480,7 +500,7 @@
     width: 88px;
     height: 88px;
     float: right;
-    margin: 16px 0;
+    margin: 16px 0 16px 16px;
 }
 
 .scheda-gestione .thumbs-round-icon {
@@ -644,7 +664,7 @@
     margin-right: 15px;
 }
 
-.stepper {
+.stepper, .stepper-comunicazioni {
     margin: 32px 0 16px 0;
 }
 
@@ -652,34 +672,39 @@
     height: 96px;
 }
 
-.stepper .step .date-step {
-    color: #827534;
+.stepper-comunicazioni .step {
+    height: 100%;
+}
+
+.stepper .step .date-step, 
+.stepper-comunicazioni .step .date-step {
+    color: #796C31;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
     width: 11%;
-    border-right: 1px solid #827534;
+    border-right: 1px solid #796C31;
     float: left;
     height: 100%;
     line-height: 1.2;
     position: relative;
 }
 
-.stepper .step .date-step .pallino {
+.step .date-step .pallino {
     width: 9px;
     height: 9px;
     position: absolute;
     top: 35px;
     right: -5px;
-    background-color: #827534;
+    background-color: #796C31;
     border-radius: 50%;
 }
 
-.stepper .step .date-step .date-step-giorno {
+.step .date-step .date-step-giorno {
     font-size: 2.222em;
     font-weight: 100;
 }
 
-.stepper .step .date-step .date-step-mese {
+.step .date-step .date-step-mese {
     font-size: 0.889em;
     font-weight: 500;
 }
@@ -696,8 +721,24 @@
     height: 76px;
 }
 
-.stepper .step:last-of-type .scheda-gestione {
+.step:last-of-type .scheda-gestione {
     margin-bottom: 0;
+}
+
+.stepper-comunicazioni .step .testo-step {
+    width: 89%;
+    float: right;
+    height: 100%;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.stepper-comunicazioni .scheda-gestione {
+    padding: 12px 24px 24px 24px;
+}
+
+.stepper-comunicazioni .scheda-gestione p {
+    display: block;
 }
 
 
@@ -971,7 +1012,7 @@
 }
 
 #servizi-prenotazione .ui-datepicker th {
-    color: #827534;
+    color: #796C31;
     font-weight: 600;
     text-align: center;
     font-size: 1em;
@@ -1127,7 +1168,7 @@ a.ui-button:active, .ui-button:active,
 }
 
 #servizi-prenotazione h5 {
-    color: #827534;
+    color: #796C31;
     font-weight: 600;
     font-size: 1.111em;
     margin-bottom: 20px;
@@ -1157,7 +1198,19 @@ a.ui-button:active, .ui-button:active,
 }
 
 #servizi-prenotazione .verifica h4 {
-    color: #827534;
+    color: #796C31;
+}
+
+
+/* ---- RUBRICA DIPENDENTI ---- */
+
+.scheda-dipendente {
+    background-color: #EAF2EC;
+    padding:24px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    height: 100%;
+    line-height: 1.5em;
 }
 
 
@@ -1169,11 +1222,13 @@ a.ui-button:active, .ui-button:active,
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
-    .stepper .step .date-step {
+    .stepper .step .date-step,
+    .stepper-comunicazioni .step .date-step {
         width: 18%;
     }
 
-    .stepper .step .testo-step {
+    .stepper .step .testo-step,
+    .stepper-comunicazioni .step .testo-step {
         width: 82%;
     }
 
@@ -1274,6 +1329,10 @@ a.ui-button:active, .ui-button:active,
         border-top: 1px solid #E5E5E5;
     }
 
+    #menu-sinistro h4.dropdown:focus {
+        border: 2px solid #FF8C00 !important;
+    }
+
     #menu-sinistro .menu-separatore {
         margin-right: 0px;
     }
@@ -1368,23 +1427,28 @@ a.ui-button:active, .ui-button:active,
         height: 64px;
     }
 
-    .stepper .step .date-step {
+    .stepper .step .date-step,
+    .stepper-comunicazioni .step .date-step {
         width: 15%;
     }
 
-    .stepper .step .date-step .pallino {
+    .stepper .step .date-step .pallino,
+    .stepper-comunicazioni .step .date-step .pallino {
         top: 22px;
     }
 
-    .stepper .step .date-step .date-step-giorno {
+    .stepper .step .date-step .date-step-giorno,
+    .stepper-comunicazioni .step .date-step .date-step-giorno {
         font-size: 2em;
     }
 
-    .stepper .step .date-step .date-step-mese {
+    .stepper .step .date-step .date-step-mese,
+    .stepper-comunicazioni .step .date-step .date-step-mese {
         font-size: 0.875em;
     }
 
-    .stepper .step .testo-step {
+    .stepper .step .testo-step,
+    .stepper-comunicazioni .step .testo-step {
         width: 85%;
     }
 

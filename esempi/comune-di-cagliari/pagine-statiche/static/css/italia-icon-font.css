@@ -30,7 +30,7 @@
   line-height: 1em;
 
   /* Font smoothing. That was taken from TWBS */
-  font-smoothing: antialiased;
+  /* font-smoothing: antialiased; */
 }
 
 .it-app:before { content: '\e800'; } /* '' */
