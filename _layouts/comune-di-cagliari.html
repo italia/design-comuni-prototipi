@@ -28,7 +28,7 @@
   <link rel="icon" type="image/png" href="static/img/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="static/img/favicon-16x16.png" sizes="16x16" />
 
-  <link href="{{ site.cdn.bootstrap_italia_css }}" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ site.cdn.bootstrap_italia_css }}" />
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,500,500i" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -49,7 +49,7 @@
 <script src="static/js/jquery-3.3.1.min.js"></script>
 <script src="static/js/popper.min.js"></script>
 
-<script src="{{ site.cdn.bootstrap_italia_bundle_js }}"></script>
+<script src="{{ site.cdn.bootstrap_italia_js_bundle }}"></script>
 
 <script src="static/js/cagliari.min.js"></script>
 <script src="static/js/jquery-ui.js"></script>
@@ -79,12 +79,12 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="modalaccess">Accesso ai servizi online</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Chiudi accesso area riservata"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="modalaccess">Accesso ai servizi online</h1>
       </div>
       <div class="modal-body">
         <div class="modal-footer">
-          <h4>Accesso al portale</h4>
+          <h2>Accesso al portale</h2>
           <form action="index.html?login=true" method="post">
             <div class="form-group">
               <label for="username" class="control-label">Username</label>
@@ -121,24 +121,24 @@
               <div class="container">
                 <div class="row">
                   <div class="offset-md-1 col-md-10 col-sm-12 text-center" data-ng-class="{pb12: !ctrl.filtri}">
-                    <button data-ng-hide="ctrl.filtri" type="button" class="close d-block d-sm-block d-md-none d-lg-none d-xl-none" data-dismiss="modal" aria-label="Close">
+                    <button data-ng-hide="ctrl.filtri" type="button" class="close d-block d-sm-block d-md-none d-lg-none d-xl-none" data-dismiss="modal" aria-label="Chiudi filtri di ricerca">
                       <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_back"></use></svg>
                     </button>
-                    <button data-ng-show="ctrl.filtri" type="button" class="close d-block d-sm-block d-md-none d-lg-none d-xl-none" aria-label="Close"  data-ng-click="ctrl.filtri=false">
+                    <button data-ng-show="ctrl.filtri" type="button" class="close d-block d-sm-block d-md-none d-lg-none d-xl-none" aria-label="Chiudi filtri di ricerca"  data-ng-click="ctrl.filtri=false">
                       <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_back"></use></svg>
                     </button>
-                    <h3 class="modal-title" id="searchModalTitle">
+                    <h1 class="modal-title" id="searchModalTitle">
                       <span data-ng-hide="ctrl.filtri">Cerca</span>
                       <span data-ng-show="ctrl.filtri">Filtri</span>
-                    </h3>
+                    </h1>
                     <button data-ng-show="ctrl.filtri" class="confirm btn btn-default btn-trasparente float-right">Conferma</button>
                   </div>
                   <div class="col-md-1">
                     <div class="center-v">
-                      <button data-ng-hide="ctrl.filtri" type="button" class="close d-none d-md-block d-lg-block d-xl-block" data-dismiss="modal" aria-label="Close">
+                      <button data-ng-hide="ctrl.filtri" type="button" class="close d-none d-md-block d-lg-block d-xl-block" data-dismiss="modal" aria-label="Chiudi filtri di ricerca">
                         <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg>
                       </button>
-                      <button data-ng-show="ctrl.filtri" type="button" class="close d-none d-md-block d-lg-block d-xl-block" aria-label="Close" data-ng-click="ctrl.filtri = false">
+                      <button data-ng-show="ctrl.filtri" type="button" class="close d-none d-md-block d-lg-block d-xl-block" aria-label="Chiudi filtri di ricerca" data-ng-click="ctrl.filtri = false">
                         <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg>
                       </button>
                     </div>
@@ -160,8 +160,8 @@
                     <div class="form-group">
                       <label class="sr-only active" for="cerca-txt">Cerca</label>
                       <input type="text" class="form-control" id="cerca-txt" placeholder="Cerca servizi, informazioni, persone ...">
-                      <button type="button" id="searchclear"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></button>
-                      <button type="submit" class="ico-sufix"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-search"></use></svg></button>
+                      <button type="button" id="searchclear" value="Cancella contenuto ricerca"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></button>
+                      <button type="submit" class="ico-sufix" value="Cerca"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-search"></use></svg></button>
                     </div>
                     <div class="form-filtro">
                       <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.class_tutti()" data-ng-click="ctrl.toggleAll()">Tutto</a>
@@ -205,7 +205,7 @@
                       <a class="btn btn-default btn-trasparente" data-ng-click="ctrl.filtri = true">...</a>
                     </div>
                     <div class="form-suggerimenti">
-                      <h4>Ricerche frequenti</h4>
+                      <h2>Ricerche frequenti</h2>
                       <ul>
                         <li><a href="#" title="Vai alla pagina: Uffici comunali"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> Uffici comunali</a></li>
                         <li><a href="#" title="Vai alla pagina: Servizi demografici"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Servizi demografici</a></li>
@@ -217,85 +217,110 @@
                   </div>
                 </div>
 
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Agevolazioni per la casa')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Animali')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Anziani')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Asili nido')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Assistenza e inclusione')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Associazioni')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Bambini e ragazzi')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Cantieri e progetti')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Comunicare con il comune')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Corsi e tempo libero')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Costruire e ristrutturare')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Cultura')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Edilizia residenziale pubblica')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Famiglia')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Formazione professionale')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Fornitori del comune')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Immigrazione')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Imprese e investitori')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Inquinamento')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('La città che cambia')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Lavorare')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Muoversi')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Musei civici')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Parcheggi e ZTL')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Partecipazione e cittadinanza attiva')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Politiche giovanili')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Rete idrica e fognaria')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Rifiuti, pulizia a riciclaggio')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Salute')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Scuole civiche')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi anagrafici')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi per i cittadini')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi per le imprese')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi e supporto all%educazione')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizio civile')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Sostegno al reddito')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Spazi del comune')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Spazi verdi')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Sport')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Stato civile')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Studenti')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Tasse e contributi comunali')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Viabilità e strade')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Visitare il comune')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Volontariato')"/>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Votare')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza / Attività produttive')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Enti e società partecipate')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Dipendenti')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Consiglio Comunale')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Giunta Comunale')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Luoghi')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Uffici di Città')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Affidamento verde pubblico')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Assegnazioni spazi del Comune')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Bandi')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Concessioni d%uso impianti sportivi')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Gare')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Delibere, determine e ordinanze')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità / Comunicati stampa')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità / Eventi')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità / Notizie')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Autorizzazioni e concessioni')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Certificati e dichiarazioni')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Domande e iscrizioni')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Pagamenti')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Segnalazioni')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Servizi pubblici')"/>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Sostegno')"/>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Agevolazioni per la casa')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Animali')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Anziani')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Assistenza e inclusione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Associazioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Bambini e ragazzi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Cantieri e progetti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Comunicare con il comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Corsi e tempo libero')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Costruire e ristrutturare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Cultura')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Edilizia')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Famiglia')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Formazione professionale')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Fornitori del comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Immigrazione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Imparare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Imprese e investitori')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Inquinamento')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('La città che cambia')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Lavorare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Muoversi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Parcheggi e ZTL')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Partecipare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Rete idrica e fognaria')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Rifiuti, pulizia a riciclaggio')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Salute')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi anagrafici')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi per i cittadini')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi per le imprese')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi e supporto all%educazione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizio civile')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Sicurezza')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Spazi del comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Spazi verdi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Sport')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Sposarsi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Strade e viabilità')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Studenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Trasferirsi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Uffici comunali')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Visitare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Vivere la città')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setArgomenti('Votare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza / Attività produttive')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Enti e società partecipate')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Dipendenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Consiglio Comunale')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Giunta Comunale')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Luoghi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Uffici di Città')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio / Richiesta d’accesso agli atti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Archivio atti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Atti del Comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Limiti di rumore per attività')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Statuto e regolamenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Verde privato')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Affidamento verde pubblico')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Assegnazioni spazi del Comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Bandi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Concessioni d%uso impianti sportivi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Gare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi / Selezioni personale')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Attività di impresa')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Bonifiche')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Edilizia privata')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Innovazione tecnologica')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione del verde')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione strade')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Misure riduzione dell’inquinamento')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Organizzazione e promozione di iniziative sportive')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / PGT e pianificazione urbanistica')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Pianificazione mobilità')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti educazione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti lavori pubblici')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti solidarietà')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Rifiuti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Servizio civile')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Sicurezza urbana')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Traffico e cantieri')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Vendita di immobili')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità / Comunicati stampa')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità / Eventi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità / Notizie')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Autorizzazioni e concessioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Certificati e dichiarazioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Domande e iscrizioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Pagamenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Segnalazioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Servizi pubblici')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Sostegno')"></data-ng-container>
+
                 <div role="tabpanel" data-ng-show="ctrl.filtri" class="ng-hide">
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="categoriaTab">
@@ -387,14 +412,14 @@
                           <div class="form-group">
                             <label for="datepicker_start">Data inizio</label>
                             <input type="text" class="form-control" id="datepicker_start" data-ng-model="ctrl.data_inizio" placeholder="gg/mm/aaaa" />
-                            <button type="button" class="ico-sufix" onclick="$('#datepicker_start').focus();" onkeypress="$('#datepicker_start').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
+                            <button aria-label="Apri calendario" type="button" class="ico-sufix" onclick="$('#datepicker_start').focus();" onkeypress="$('#datepicker_start').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
                           </div>
                         </div>
                         <div class="col-md-5 col-sm-12">
                           <div class="form-group">
                             <label for="datepicker_end">Data fine</label>
                             <input type="text" class="form-control" id="datepicker_end" data-ng-model="ctrl.data_fine" placeholder="gg/mm/aaaa" />
-                            <button type="button" class="ico-sufix" onclick="$('#datepicker_end').focus();" onkeypress="$('#datepicker_end').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
+                            <button aria-label="Apri calendario" type="button" class="ico-sufix" onclick="$('#datepicker_end').focus();" onkeypress="$('#datepicker_end').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
                           </div>
                         </div>
                       </div>
