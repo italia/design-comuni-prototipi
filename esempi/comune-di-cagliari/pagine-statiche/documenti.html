@@ -25,14 +25,22 @@ title: "Documenti"
           <div class="col-lg-12 col-md-12 col-sm-12 entesup">
             <a aria-label="Collegamento a sito esterno - Sito della Regione Sardegna - nuova finestra" title="Regione Autonoma della Sardegna" href="http://www.regione.sardegna.it" target="_blank">
               Regione Autonoma della Sardegna 								</a>
-            <!-- accedi -->
-            <div class="accedi float-right text-right">
-              <button class="btn btn-default btn-accedi" data-toggle="modal" data-target="xxx">
-                <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_circle"></use></svg>
-                <span>Accedi all&#8217;area personale</span>
-              </button>
+            <div class="float-right">
+              <!-- siti verticali -->
+              <div class="sitiverticali float-left text-right d-none d-xl-block d-lg-block">
+                <a aria-label="Collegamento a sito esterno - Sito CagliariTurismo - nuova finestra" title="CagliariTurismo" href="http://www.cagliariturismo.it" target="_blank">CagliariTurismo</a>
+                <a aria-label="Collegamento a sito esterno - Sito CagliariSportiva - nuova finestra" title="CagliariSportiva" href="http://www.cagliarisportiva.it" target="_blank">CagliariSportiva</a>
+              </div>
+              <!-- siti verticali -->
+              <!-- accedi -->
+              <div class="accedi float-left text-right">
+                <button class="btn btn-default btn-accedi" data-toggle="modal" data-target="xxx">
+                  <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_circle"></use></svg>
+                  <span>Accedi all&#8217;area personale</span>
+                </button>
+              </div>
+              <!-- accedi -->
             </div>
-            <!-- accedi -->
           </div>
         </div>
       </div>
@@ -245,7 +253,6 @@ title: "Documenti"
     </nav>
     <!-- End Menu -->
 
-
     <!-- Intestazione -->
     <div class="container header">
       <div class="row clearfix">
@@ -406,11 +413,67 @@ title: "Documenti"
         <div class="offset-lg-1 col-lg-6 col-md-7">
           <div class="titolo-sezione">
             <h2>Documenti</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="form-group">
-            <label class="sr-only" for="cerca-intro">Cerca Documenti</label>
-            <input type="text" class="form-control" id="cerca-intro" placeholder="Cerca documenti">
-            <button type="submit" class="ico-sufix" value="Cerca"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-search"></use></svg></button>
-          </div>                    			</div>
+            <p>La documentazione prodotta e pubblicata dal Comune come atti, progetti, bandi, concorsi e modulistica.</p><form data-ng-cloak data-ng-controller="ctrlRicerca as ctrl" action="http://ponmetroca.consulmedia.it/ponmetroca/it/cerca.page" method="post">
+            <div class="form-group">
+              <label class="sr-only" for="cerca-intro">Cerca Documenti</label>
+              <input type="text" class="form-control" id="cerca-intro" name="cercatxt" placeholder="Cerca documenti"  data-ng-model="ctrl.Ricerca.cercatxt">
+              <button type="submit" class="ico-sufix">
+                <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-search"></use></svg>
+              </button>
+            </div>
+            <div class="form-filtro">
+              <h5>Filtri</h5>
+              <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_tutti()" data-ng-click="ctrl.Ricerca.toggleAll()">Tutto</a>
+              <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_ammins_selected(), ctrl.Ricerca.get_ammins_chk())" data-ng-click="ctrl.Ricerca.ammins_toggleAll()" data-ng-if="ctrl.Ricerca.get_ammins_selected().length == ctrl.Ricerca.get_ammins_chk().length"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> Amministrazione</a>
+              <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_servizi_selected(), ctrl.Ricerca.get_servizi_chk())" data-ng-click="ctrl.Ricerca.servizi_toggleAll()" data-ng-if="ctrl.Ricerca.get_servizi_selected().length == ctrl.Ricerca.get_servizi_chk().length"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Servizi</a>
+              <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_novita_selected(), ctrl.Ricerca.get_novita_chk())" data-ng-click="ctrl.Ricerca.novita_toggleAll()" data-ng-if="ctrl.Ricerca.get_novita_selected().length == ctrl.Ricerca.get_novita_chk().length"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg> Novit&agrave;</a>
+              <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_docs_selected(), ctrl.Ricerca.get_docs_chk())" data-ng-click="ctrl.Ricerca.docs_toggleAll()" data-ng-if="ctrl.Ricerca.get_docs_selected().length == ctrl.Ricerca.get_docs_chk().length"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-description"></use></svg> Documenti</a>
+              <div data-ng-if="ctrl.Ricerca.get_ammins_selected().length !== ctrl.Ricerca.get_ammins_chk().length" data-ng-repeat="item in ctrl.Ricerca.get_ammins_selected()" class="btn-badge active">
+                <span data-ng-bind-html="item">-</span>
+                <a data-ng-click="ctrl.Ricerca.unchk(item, ctrl.Ricerca.get_ammins_selected())" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+              </div>
+              <div data-ng-if="ctrl.Ricerca.get_servizi_selected().length !== ctrl.Ricerca.get_servizi_chk().length" data-ng-repeat="item in ctrl.Ricerca.get_servizi_selected()" class="btn-badge active">
+                <span data-ng-bind-html="item">-</span>
+                <a data-ng-click="ctrl.Ricerca.unchk(item, ctrl.Ricerca.get_servizi_selected())" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+              </div>
+              <div data-ng-if="ctrl.Ricerca.get_novita_selected().length !== ctrl.Ricerca.get_novita_chk().length" data-ng-repeat="item in ctrl.Ricerca.get_novita_selected()" class="btn-badge active">
+                <span data-ng-bind-html="item">-</span>
+                <a data-ng-click="ctrl.Ricerca.unchk(item, ctrl.Ricerca.get_novita_selected())" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+              </div>
+              <div data-ng-if="ctrl.Ricerca.get_docs_selected().length !== ctrl.Ricerca.get_docs_chk().length" data-ng-repeat="item in ctrl.Ricerca.get_docs_selected()" class="btn-badge active">
+                <span data-ng-bind-html="item">-</span>
+                <a data-ng-click="ctrl.Ricerca.unchk(item, ctrl.Ricerca.get_docs_selected())" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+              </div>
+              <div data-ng-if="ctrl.Ricerca.get_args_selected().length !== ctrl.Ricerca.get_argomenti().length" data-ng-repeat="item in ctrl.Ricerca.get_args_selected()"
+                   class="btn-badge active">
+                <span data-ng-bind-html="item">-</span>
+                <a data-ng-click="ctrl.Ricerca.unchk(item, ctrl.Ricerca.get_args_selected())" class="btn-badge-close">
+                  <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg>
+                </a>
+              </div>
+              <div data-ng-if="ctrl.Ricerca.active_chk" class="btn-badge active">
+                Contenuti attivi <a data-ng-click="ctrl.Ricerca.active_chk = null" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></svg></a>
+              </div>
+              <div data-ng-if="ctrl.Ricerca.data_inizio && ctrl.Ricerca.data_fine" class="btn-badge active">
+                Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %}&nbsp;al&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %} <a data-ng-click="ctrl.Ricerca.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+              </div>
+              <div data-ng-if="ctrl.Ricerca.data_inizio && !ctrl.Ricerca.data_fine" class="btn-badge active">
+                Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %} <a data-ng-click="ctrl.Ricerca.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+              </div>
+              <div data-ng-if="!ctrl.Ricerca.data_inizio && ctrl.Ricerca.data_fine" class="btn-badge active">
+                Fino a&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %} <a data-ng-click="ctrl.Ricerca.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+              </div>
+              <a class="btn btn-default btn-trasparente" data-ng-click="ctrl.Ricerca.setActive(); ctrl.General.setFiltriMode(true, true, 'Home,Documenti,')" aria-label="Dettaglio filtri" data-toggle="modal" data-target="#searchModal">...</a>
+            </div>
+            <input type="hidden" id="amminstrazione" name="amminstrazione" value="{% raw %}{{ctrl.Ricerca.get_ammins_selected()}}{% endraw %}">
+            <input type="hidden" id="servizi" name="servizi" value="{% raw %}{{ctrl.Ricerca.get_servizi_selected()}}{% endraw %}">
+            <input type="hidden" id="novita" name="novita" value="{% raw %}{{ctrl.Ricerca.get_novita_selected()}}{% endraw %}">
+            <input type="hidden" id="documenti" name="documenti" value="{% raw %}{{ctrl.Ricerca.get_docs_selected()}}{% endraw %}">
+            <input type="hidden" id="argomenti" name="argomenti" value="{% raw %}{{ctrl.Ricerca.get_args_selected()}}{% endraw %}">
+            <input type="hidden" id="attivi" name="attivi" value="{% raw %}{{ctrl.Ricerca.active_chk}}{% endraw %}">
+            <input type="hidden" id="inizio" name="inizio" value="{% raw %}{{ctrl.Ricerca.data_inizio}}{% endraw %}">
+            <input type="hidden" id="fine" name="fine" value="{% raw %}{{ctrl.Ricerca.data_fine}}{% endraw %}">
+          </form>                    			</div>
         </div>
         <div class="offset-lg-1 col-lg-3 offset-lg-1 offset-md-1 col-md-4">
           <aside id="menu-sezione">
@@ -500,7 +563,7 @@ title: "Documenti"
                 </a>
               </div>
               <div class="scheda-testo-small">
-                <h4><a href="#" title="Vai alla pagina: Concessione edilizia n&deg;315">Concessione edilizia n&deg;315</a></h4>
+                <h4><a href="#" title="Vai alla notizia: Concessione edilizia n&deg;315">Concessione edilizia n&deg;315</a></h4>
                 <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id.</p>
               </div>
             </article>      </div>
@@ -514,7 +577,7 @@ title: "Documenti"
                 </a>
               </div>
               <div class="scheda-testo-small">
-                <h4><a href="#" title="Vai alla pagina: Concorso per dirigente">Concorso per dirigente</a></h4>
+                <h4><a href="#" title="Vai alla notizia: Concorso per dirigente">Concorso per dirigente</a></h4>
                 <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id.</p>
               </div>
             </article>      </div>
@@ -528,7 +591,7 @@ title: "Documenti"
                 </a>
               </div>
               <div class="scheda-testo-small">
-                <h4><a href="#" title="Vai alla pagina: Bando per assegnazione lotto di nuove case popolari">Bando per assegnazione lotto di nuove case popolari</a></h4>
+                <h4><a href="#" title="Vai alla notizia: Bando per assegnazione lotto di nuove case popolari">Bando per assegnazione lotto di nuove case popolari</a></h4>
                 <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id.</p>
               </div>
             </article>      </div>
@@ -546,7 +609,7 @@ title: "Documenti"
                 <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, nam libero tempore.</p>
               </div>
               <div class="scheda-footer">
-                <a href="#" aria-label="Esplora argomento - Vai alla pagina Imprese e investitori" title="Vai alla pagina: Imprese e investitori" class="tutte">Esplora argomento</a>
+                <a href="#" aria-label="Esplora argomento - Vai alla pagina Imprese e investitori" title="Vai alla pagina: Imprese e investitori" class="tutte">Esplora argomento <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
               </div>
             </article>      </div>
 
@@ -561,7 +624,7 @@ title: "Documenti"
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
               <div class="scheda-footer">
-                <a href="#" aria-label="Esplora argomento - Vai alla pagina Tasse e contributi comunali" title="Vai alla pagina: Tasse e contributi comunali" class="tutte">Esplora argomento</a>
+                <a href="#" aria-label="Esplora argomento - Vai alla pagina Tasse e contributi comunali" title="Vai alla pagina: Tasse e contributi comunali" class="tutte">Esplora argomento <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
               </div>
             </article>      </div>
 
@@ -590,7 +653,7 @@ title: "Documenti"
                 <p>Tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
               </div>
               <div class="scheda-footer">
-                <a href="#" aria-label="Esplora argomento - Vai alla pagina Progetti e attivit&agrave;" title="Vai alla pagina: Progetti e attivit&agrave;" class="tutte">Vedi tutti <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
+                <a href="#" aria-label="Vai alla pagina Progetti e attivit&agrave;" title="Vai alla pagina: Progetti e attivit&agrave;" class="tutte">Vai alla pagina <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
 
               </div>
             </article>      </div>
@@ -605,7 +668,7 @@ title: "Documenti"
                 <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
               </div>
               <div class="scheda-footer">
-                <a href="#" aria-label="Esplora argomento - Vai alla pagina Atti amministrativi" title="Vai alla pagina: Atti amministrativi" class="tutte">Vedi tutti <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
+                <a href="#" aria-label="Vai alla pagina Atti amministrativi" title="Vai alla pagina: Atti amministrativi" class="tutte">Vai alla pagina <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
 
               </div>
             </article>      </div>
@@ -620,7 +683,7 @@ title: "Documenti"
                 <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
               </div>
               <div class="scheda-footer">
-                <a href="#" aria-label="Esplora argomento - Vai alla pagina Bandi" title="Vai alla pagina: Bandi" class="tutte">Vedi tutti <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
+                <a href="#" aria-label="Vai alla pagina Bandi" title="Vai alla pagina: Bandi" class="tutte">Vai alla pagina <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
 
               </div>
             </article>      </div>
@@ -637,7 +700,7 @@ title: "Documenti"
                 <p>Cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
               </div>
               <div class="scheda-footer">
-                <a href="#" aria-label="Esplora argomento - Vai alla pagina Concorsi" title="Vai alla pagina: Concorsi" class="tutte">Vedi tutti <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
+                <a href="#" aria-label="Vai alla pagina Concorsi" title="Vai alla pagina: Concorsi" class="tutte">Vai alla pagina <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
 
               </div>
             </article>      </div>
@@ -652,7 +715,7 @@ title: "Documenti"
                 <p>Optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
               </div>
               <div class="scheda-footer">
-                <a href="#" aria-label="Esplora argomento - Vai alla pagina Albo Pretorio" title="Vai alla pagina: Albo pretorio" class="tutte">Vedi tutti <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
+                <a href="#" aria-label="Vai alla pagina Albo pretorio" title="Vai alla pagina: Albo pretorio" class="tutte">Vai alla pagina <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_forward"></use></svg></a>
 
               </div>
             </article>      </div>

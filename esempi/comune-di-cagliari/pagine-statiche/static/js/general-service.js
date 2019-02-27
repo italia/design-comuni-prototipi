@@ -1,9 +1,13 @@
 app.factory('GeneralService', function($http, $q) {
 	
 	var factory = {
-        getBaseURL: getBaseURL
+        getBaseURL : getBaseURL,
+		getFiltriMode : getFiltriMode,
+		setFiltriMode : setFiltriMode
     };
     return factory;
+	
+	this.filtriMode = {filtri:false, internal:false};
 	
 	function getBaseURL() {
 		var url = location.href;
@@ -24,5 +28,26 @@ app.factory('GeneralService', function($http, $q) {
 		  return baseURL + "/" + pathname + "/legacyapi/rs/it/jacms";
 		}
     };
+	
+	function getFiltriMode() {
+	    return this.filtriMode;
+	}
+    
+    function setFiltriMode(show, interno, pagina) {
+		var categoria = [];
+		var type = "";
+		if(pagina !== undefined){
+			categoria = pagina.split(",");
+			if (categoria[1].includes("Amministrazione"))
+				type = "Amministrazione";
+			if (categoria[1].includes("Novit"))
+				type = "Novità"
+			if (categoria[1].includes("Servizi"))
+				type = "Servizi"
+			if (categoria[1].includes("Documenti"))
+				type = "Documenti"
+		}
+		this.filtriMode = {filtri:show, internal:interno, categoria: type};
+	}
 	
 });

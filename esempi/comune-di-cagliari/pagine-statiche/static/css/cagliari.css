@@ -163,8 +163,30 @@ body.ridotto {
     color: #fff;
 }
 
-#mainheader .preheader .accedi {
+#mainheader .preheader .sitiverticali {
     margin: 0;
+    border:0;
+    text-align: center;
+    height: 40px;
+    padding: 0;
+}
+
+#mainheader .preheader .sitiverticali a {
+    height: 40px;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    border-right: 2px solid #003882;
+    padding: 0 24px;
+}
+
+#mainheader .preheader .sitiverticali a:hover {
+    color: #6FA67E;
+    text-decoration: underline;
+}
+
+#mainheader .preheader .accedi {
+    margin: 0 0 0 24px;
     border:0;
     text-align: center;
     height: 40px;
@@ -180,7 +202,7 @@ body.ridotto {
     font-weight: 600;
 }
 
-#mainheader .preheader .accedi .btn-accedi:hover {
+#mainheader .preheader .accedi .btn-accedi:hover span {
     color: #6FA67E;
     text-decoration: underline;
 }
@@ -689,7 +711,7 @@ body.ridotto {
 }
 
 #sub_nav .owl-megamenu .owl-dots .owl-dot span {
-    background: #74A681;
+    background: #4E7E5B;
     opacity: 0.1;
     width: 8px;
     height: 8px;
@@ -990,12 +1012,12 @@ ul.navmenu {
     color: #6FA67E; */
 
     background-color: rgba(116,166,129,0.1);
-    border-left: 4px solid #74A681;
+    border-left: 4px solid #4E7E5B;
 }
 
 .navmenu>li.open>a {
     background-color: rgba(116,166,129,0.1);
-    border-left: 4px solid #74A681;
+    border-left: 4px solid #4E7E5B;
 }
 
 .utilitymobile {
@@ -1093,8 +1115,8 @@ ul.navmenu {
 }
 
 .modal-header-fullsrc {
-    margin-top: 56px;
-    margin-bottom: 56px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .modal-header-fullsrc h1 {
@@ -1115,7 +1137,7 @@ ul.navmenu {
 .modal-header-fullsrc .back {
     color: #003882;
     opacity: 1;
-    font-size: 1em;
+    font-size: 1.111em;
     text-shadow: none;
     line-height: 0;
     float: left;
@@ -1123,12 +1145,13 @@ ul.navmenu {
     background-color: transparent;
     border: 0;
     -webkit-appearance: none;
+    margin-top: 24px;
 }
 
 .modal-header-fullsrc .close svg.icon,
 .modal-header-fullsrc .back svg.icon {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     fill: #003882;
 }
 
@@ -1142,13 +1165,19 @@ ul.navmenu {
     right: 0;
 }
 
+.modal-header-fullsrc .close:hover, .modal-header-fullsrc .close:focus ,
+.modal-header-fullsrc .back:hover, .modal-header-fullsrc .back:focus,
+.modal-header-fullsrc .close:not(:disabled):not(.disabled):focus, 
+.modal-header-fullsrc .close:not(:disabled):not(.disabled):hover {
+    color: #003882;
+    opacity: 1;
+}
+
+
 #searchModal .modal-body-search {
     margin-bottom: 56px;
 }
 
-#searchModal .search-filter-dategroup .form-group {
-    margin-bottom: 72px;
-}
 
 #searchModal .search-filter-dategroup .form-group label {
     padding: 0;
@@ -1196,11 +1225,25 @@ ul.navmenu {
     top: 0;
     bottom: 0;
     vertical-align: middle;
-    background-color: #74A681;
+    background-color: #4E7E5B;
     color: #fff;
     border-radius: 0 4px 4px 0;
     border: 0;
     padding: 0;
+    cursor: pointer;
+}
+
+#searchModal #opzioniTab .form-check.form-check-group {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#searchModal #opzioniTab .search-filter-dategroup .form-group input {
+    height:40px;
+}
+
+#searchModal #opzioniTab .form-group .ico-sufix {
+    width: 40px;
 }
 
 #searchModal .form-group .ico-sufix svg.icon {
@@ -1239,34 +1282,82 @@ ul.navmenu {
 
 #searchModal .modal-body-search .form-filtro {
     margin-top: 32px;
-    margin-bottom: 80px;
+    margin-bottom: 64px;
 }
 
 .form-filtro .btn-trasparente {
     margin: 0 8px 8px 0;
 }
 
+.form-filtro .btn-trasparente:hover,
+.form-filtro .btn-trasparente.active {
+    background-color: #EAF2EC;
+    color: #555 !important;
+    border: 1px solid #EAF2EC;
+}
+
+.form-filtro .btn-trasparente:hover svg.icon,
+.form-filtro .btn-trasparente.active svg.icon {
+    fill: #555 !important;
+}
+
 #searchModal .modal-body-search .form-filtro .btn-trasparente:first-of-type {
     margin-left: 0;
 }
 
-#searchModal .modal-body-search .form-suggerimenti ul {
+#searchModal .modal-body-search .btn-badge:hover,
+#searchModal .modal-body-search .btn-badge.active { 
+    color:#555;
+}
+
+#searchModal .modal-body-search .badge-argomenti { 
+    color: #003882;
+    border: 1px solid #003882;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    font-size: 0.889em;
+    font-weight: 600;
+    line-height: 1.2; 
+}
+
+#searchModal .modal-body-search .badge-argomenti:hover,
+#searchModal .modal-body-search .badge-argomenti.active { 
+    background-color: #EAF2EC;
+    color:#555;
+    text-decoration: none;
+    border: 1px solid #EAF2EC;
+}
+
+#searchModal .modal-body-search .badge-argomenti.puntini {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#searchModal .modal-body-search .form-blockopz {
+    margin-bottom: 32px;
+}
+
+#searchModal .modal-body-search .form-blockopz:last-child {
+    margin-bottom: 0;
+}
+
+#searchModal .modal-body-search .form-blockopz ul {
     list-style-type: none;
     padding: 0;
 }
 
-#searchModal .modal-body-search .form-suggerimenti ul li {
+#searchModal .modal-body-search .form-blockopz ul li {
     margin: 12px 0;
 }
 
-#searchModal .modal-body-search .form-suggerimenti ul li a {
+#searchModal .modal-body-search .form-blockopz ul li a {
     color: #003882;
     vertical-align: middle;
     line-height: 1;
     font-size: 1.111em;
 }
 
-#searchModal .modal-body-search .form-suggerimenti ul li a svg.icon {
+#searchModal .modal-body-search .form-blockopz ul li a svg.icon {
     vertical-align: middle;
     width: 24px;
     height: 24px;
@@ -1275,8 +1366,10 @@ ul.navmenu {
 
 .modal-header-fullsrc .confirm {
     position: absolute;
-    top: 18px;
-    left: 0;
+    top: 24px;
+    right: 0;
+    font-size: 0.778em;
+    min-width: 152px;
 }
 
 .modal-header-fullsrc .search-filter-type {
@@ -1306,10 +1399,9 @@ ul.navmenu {
 
 .modal-header-fullsrc .nav-tabs li a {
     color: #003882;
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 1.111em;
+    font-weight: 600;
     letter-spacing: 1px;
-    text-transform: uppercase;
     display: block;
     border-bottom: 2px solid transparent;
     padding: 16px 0;
@@ -1385,7 +1477,7 @@ ul.navmenu {
 }
 
 #searchModal .toggles label input[type=checkbox]:checked+.lever:after {
-    background-color: #74A681;
+    background-color: #4E7E5B;
 }
 
 #searchModal .search-filter-dategroup {
@@ -1468,7 +1560,7 @@ html #ui-datepicker-div .ui-button.ui-state-disabled:active {
 #ui-datepicker-div.ui-datepicker .ui-button:active, 
 #ui-datepicker-div.ui-datepicker .ui-button.ui-state-active:hover,
 #ui-datepicker-div.ui-datepicker .ui-datepicker-calendar .ui-datepicker-today a.ui-state-active {
-    background-color: #74A681;
+    background-color: #4E7E5B;
     -webkit-box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1); 
     -moz-box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1);
     box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1);
@@ -1485,7 +1577,7 @@ html #ui-datepicker-div .ui-button.ui-state-disabled:active {
 #ui-datepicker-div .ui-button:focus {
     color: #555555;
     font-weight: 600;
-    border:1px solid #74A681;
+    border:1px solid #4E7E5B;
     border-radius: 50%;
 }
 
@@ -1534,7 +1626,7 @@ html #ui-datepicker-div .ui-button.ui-state-disabled:active {
 }
 
 #ui-datepicker-div .ui-datepicker-calendar .ui-datepicker-today a {
-    border:1px solid #74A681;
+    border:1px solid #4E7E5B;
     background: transparent;
     -webkit-box-shadow: none; 
     -moz-box-shadow: none;
@@ -2128,12 +2220,16 @@ section .titolettosezione h3 {
 .btn-badge-close {
     cursor: pointer;
     margin-left: 8px;
+    padding: 0;
+    display: inline-block;
 }
 
 .btn-badge-close svg.icon {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     fill: #003882;
+    margin: 0;
+    padding: 0;
 }
 
 .argomenti {
@@ -2208,7 +2304,7 @@ section .pagination .page-item .page-link svg.icon {
 }
 
 section .pagination .page-item .page-link[aria-current] {
-    border: 1.5px solid #74A681;
+    border: 1.5px solid #51825F;
     color: #555;
 }
 
@@ -2588,6 +2684,7 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
         top: 0px;
         right: 0;
         left: auto;
+        min-width: 0;
     }
 
     #spidModal .modal-header-fullsrc .back {
@@ -2596,6 +2693,13 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
 
     #spidModal .modal-header-fullsrc .close {
         top: 0;
+    }
+
+    .modal-header-fullsrc .close, 
+    .modal-header-fullsrc .back {
+        margin-top: 0;
+        position: absolute;
+        left: 0;
     }
 
     .modal-header-fullsrc .close svg.icon,
@@ -2608,16 +2712,6 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
     #searchModal .search-filter-dategroup .form-group input {
         height: 40px;
         font-size: 1em;
-    }
-
-    #searchModal #searchclear {
-        top: 8px;
-        right: 48px;
-    }
-
-    #searchModal #searchclear svg.icon {
-        width: 26px;
-        height: 26px;
     }
 
     #searchModal .modal-body-search .form-filtro {

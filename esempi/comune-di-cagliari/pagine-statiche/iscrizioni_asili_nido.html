@@ -23,14 +23,22 @@ title: "Iscrizioni agli asili nido"
  							<div class="col-lg-12 col-md-12 col-sm-12 entesup">
  								<a aria-label="Collegamento a sito esterno - Sito della Regione Sardegna - nuova finestra" title="Regione Autonoma della Sardegna" href="http://www.regione.sardegna.it" target="_blank">
 Regione Autonoma della Sardegna 								</a>
- 								 <!-- accedi -->
- 								<div class="accedi float-right text-right">
- 									<button class="btn btn-default btn-accedi" data-toggle="modal" data-target="xxx">
- 										<svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_circle"></use></svg>
-											<span>Accedi all&#8217;area personale</span>
-									</button>
- 								</div>
- 								<!-- accedi -->
+                <div class="float-right">
+                  <!-- siti verticali -->
+                  <div class="sitiverticali float-left text-right d-none d-xl-block d-lg-block">
+                    <a aria-label="Collegamento a sito esterno - Sito CagliariTurismo - nuova finestra" title="CagliariTurismo" href="http://www.cagliariturismo.it" target="_blank">CagliariTurismo</a>
+                    <a aria-label="Collegamento a sito esterno - Sito CagliariSportiva - nuova finestra" title="CagliariSportiva" href="http://www.cagliarisportiva.it" target="_blank">CagliariSportiva</a>
+                  </div>
+                  <!-- siti verticali -->
+                  <!-- accedi -->
+                  <div class="accedi float-left text-right">
+                    <button class="btn btn-default btn-accedi" data-toggle="modal" data-target="xxx">
+                      <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_circle"></use></svg>
+                      <span>Accedi all&#8217;area personale</span>
+                    </button>
+                  </div>
+                  <!-- accedi -->
+                </div>
  							</div>
  						</div>
  					</div>
@@ -493,11 +501,11 @@ Comune di Cagliari 								</h1>
 															<svg class="iconexpand right"><use xlink:href="static/img/bootstrap-italia.svg#it-collapse"></use></svg>
 														</a>
 														<ul class="link-sublist collapse" id="collapseCondividi">
-															<li><a href="#" class="list-item" title="Condividi su: Facebook"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-facebook"></use></svg>Facebook</a></li>
-															<li><a href="#" class="list-item" title="Condividi su: Twitter"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-twitter"></use></svg>Twitter</a></li>
-															<li><a href="#" class="list-item" title="Condividi su: Google+"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-googleplus"></use></svg>Google+</a></li>
-															<li><a href="#" class="list-item" title="Condividi su: Linkedin"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-linkedin"></use></svg>Linkedin</a></li>
-														</ul>
+                              <li><a class="list-item" href="#" title="Condividi su: Facebook"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-facebook"></use></svg>Facebook</a></li>
+                              <li><a class="list-item" href="#" title="Condividi su: Twitter"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-twitter"></use></svg>Twitter</a></li>
+                              <li><a class="list-item" href="#" title="Condividi su: Google+"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-googleplus"></use></svg>Google+</a></li>
+                              <li><a class="list-item" href="#" title="Condividi su: Linkedin"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-linkedin"></use></svg>Linkedin</a></li>
+                            </ul>
 													</li>
 												</ul>
 											</div>
@@ -516,6 +524,7 @@ Comune di Cagliari 								</h1>
 				</aside>
 			</div>
 		</div>
+  </div>
 </section>
 <section id="articolo-dettaglio-testo">
 	<div class="container profilo-dettaglio-testo">
@@ -531,7 +540,7 @@ Comune di Cagliari 								</h1>
 					</h4>
 					<div class="menu-separatore"><div class="bg-oro"></div></div>
 											<div id="lista-paragrafi" class="list-group collapse show">
-																								<a class="list-group-item list-group-item-action" #articolo-par-1" title="Vai al paragrafo Introduzione">Introduzione</a>
+                        <a class="list-group-item list-group-item-action" href="#articolo-par-1" title="Vai al paragrafo Introduzione">Introduzione</a>
 																																<a class="list-group-item list-group-item-action" href="#articolo-par-2" title="Vai al paragrafo Chi pu&ograve; fare richiesta">Chi pu&ograve; fare richiesta</a>
 																																<a class="list-group-item list-group-item-action" href="#articolo-par-3" title="Vai al paragrafo Come iscriversi">Come iscriversi</a>
 																																<a class="list-group-item list-group-item-action" href="#articolo-par-4" title="Vai al paragrafo Cosa serve">Cosa serve</a>
@@ -931,7 +940,7 @@ Comune di Cagliari 								</h1>
   	<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances.</p>
   </div>
   <div class="scheda-footer">
-  	<a href="#" aria-label="Esplora argomento - Vai alla pagina Bambini e ragazzi" title="Vai alla pagina: Bambini e ragazzi" class="tutte">Esplora argomento</a>
+    <a href="#" title="Vai alla pagina: Bambini e ragazzi" class="tutte">Esplora argomento</a>
   </div>
 </article>					</div>
 				</div>

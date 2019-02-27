@@ -1,8 +1,6 @@
 app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService', '$location', '$anchorScroll', '$sce', '$timeout', 
 	function($scope, FiltriService, GeneralService, $location, $anchorScroll, $sce, $timeout){
 	
-	$scope.loader = false;
-	
 	$scope.contents = [];
 	$scope.renderContent = [];
 	$scope.renderContentSecondModel = [];
@@ -13,6 +11,7 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 	$scope.renderEventContent = [];
 	$scope.categoryContent = [];
 	$scope.dayName = [];
+	$scope.loader = [];
 	
 		
 	$scope.setParameters = function (pageSize, maxElem, contentType, modelId, categoryCode, elemId, secondModelId, filters, contents) {
@@ -50,7 +49,6 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 	}
 	
 	$scope.getContents = function (contentType, modelId, categoryCode, elemId, filters, date) {
-		$scope.loader = true;
 		if (filters != undefined)
 			$scope.filters = filters;
 		$scope.currentPage = 0;
@@ -62,6 +60,8 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 		FiltriService.getContents(contentType, categoryCode, $scope.filters, date).then(
 			function(response) {
 				$scope.events[date]=[];
+				if(response != undefined)
+					$scope.loader[date]= true;
 				if (response != undefined) {
 					if (!Array.isArray(response)) {
 						if (response.$){
@@ -87,7 +87,6 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 					for(var i in $scope.contents){
 						FiltriService.getContent($scope.contents[i].$, modelId).then(
 							function(response) {
-								$scope.loader = false;
 								$scope.renderContent[response.item.id] = $sce.trustAsHtml(response.html);
 							}, function(errResponse) {
 								console.error("Errore durante il caricamento del contenuto");
@@ -110,24 +109,24 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 							FiltriService.getContent($scope.events[date][i].$, modelId).then(
 								function(response) {
 									$scope.renderEventContent[date][response.item.id] = $sce.trustAsHtml(response.html);
+									$scope.loader[date]= false;
 									$scope.categoryContent[date][response.item.id] = "";
 									for(var i in response.item.categories.category){
 										if(response.item.categories.category[i] != undefined)
 											$scope.categoryContent[date][response.item.id] += response.item.categories.category[i];
 									}
 								}, function(errResponse) {
+									$scope.loader[date]= false;
 									console.error("Errore durante il caricamento del contenuto");
 							});
 						}
-						$scope.loader = false;
 					}
 				} else {
-					$scope.loader = false;
 					$scope.contents = [];
 				}
 			}, function(errResponse) {
-				$scope.loader = false;
 				$scope.contents = [];
+				$scope.loader[date]= false;
 			});
 	}
 	
@@ -180,7 +179,6 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 		for(var i in $scope.contents){
 			FiltriService.getContent($scope.contents[i].contentId, $scope.contents[i].modelId).then(
 				function(response) {
-					$scope.loader = false;
 					$scope.renderContent[response.item.id] = $sce.trustAsHtml(response.html);
 				}, function(errResponse) {
 					console.error("Errore durante il caricamento del contenuto");
@@ -196,4 +194,3 @@ app.filter('startFrom', function() {
         return input.slice(start);
     }
 });
-

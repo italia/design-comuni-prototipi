@@ -66,8 +66,8 @@
 
 .tutte svg.icon {
     vertical-align: bottom;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 20px;
     fill: #4E7E5B;
 }
 
@@ -193,6 +193,7 @@
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    position: relative;
 }
 
 #calendario #owl-calendario .owl-stage-outer {
@@ -201,6 +202,35 @@
     box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.1);
     -webkit-box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.1);
     -moz-box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.1);
+}
+
+#calendario #owl-calendario .owl-nav {
+    top: -44px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+#calendario #owl-calendario .owl-nav .owl-prev {
+    left:8px;
+    position: absolute;
+}
+
+#calendario #owl-calendario .owl-nav .owl-next {
+    right:8px;
+    position: absolute;
+}
+
+#calendario #owl-calendario .owl-nav svg.icon {
+    fill: #fff;
+    width: 26px;
+    height: 26px;
+}
+
+#calendario #owl-calendario .owl-nav .owl-prev:hover,
+#calendario #owl-calendario .owl-nav .owl-next:hover {
+    background: transparent;
 }
 
 #calendario #owl-calendario .owl-dots {
@@ -223,27 +253,36 @@
     -moz-box-shadow: 8px 0px 32px -8px rgba(0,0,0,0.2);
     box-shadow: 8px 0px 32px -8px rgba(0,0,0,0.2);
     min-height: 380px;
-    padding: 16px;
+    padding: 0;
+}
+
+#calendario .scheda-calendario .progress-spinner {
+    margin: 0 auto;
+}
+
+#calendario .scheda-calendario .progress-spinner.progress-spinner-active:not(.progress-spinner-double) {
+    opacity: 0.5;
+    border-color: #7f9bc0 #7f9bc0 #e5ebf2;
 }
 
 #calendario .scheda-calendario .scheda-calendario-data {
     color: #796C31;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 0.889em;
-    margin-left: 12px;
-    margin-bottom: 24px;
+    padding: 12px 22px;
+    background-color: rgba(78,126,91,0.2);
+    text-transform: capitalize;
+    line-height: 1;
 }
 
 #calendario .scheda-calendario .scheda-calendario-data strong {
-    font-size: 2.500em;
+    font-size: 2.000em;
     display: block;
-    line-height: 40px;
-    font-family: "Roboto Mono";
-    font-weight: 300;
+    font-weight: 700;
 }
 
 #calendario .scheda-calendario .scheda-calendario-lista {
-    margin: 16px 0;
+    margin: 0;
     padding: 0;
     color: #003882;
     list-style-type: none;
@@ -252,33 +291,18 @@
 #calendario .scheda-calendario .scheda-calendario-lista li {
     border-top: 1px solid #D8D8D8;
     font-size: 0.889em;
-    padding: 10px 0px;
+    padding: 12px 0px;
+    margin: 0 16px;
+    color: #555;
+}
+
+#calendario .scheda-calendario .scheda-calendario-lista li:first-child {
+    border: 0;
 }
 
 #calendario .scheda-calendario .scheda-calendario-lista li a {
     color: #003882;
-    display: table;
-}
-
-#calendario .scheda-calendario .scheda-calendario-lista li a .thumbs-square {
-    border-radius: 4px;
-    width: 56px;
-    height: 56px;
-    overflow: hidden;
-    margin-bottom: 8px;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#calendario .scheda-calendario .scheda-calendario-lista li a .thumbs-desc {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 8px;
-}
-
-#calendario .scheda-calendario .scheda-calendario-lista li a .thumbs-square img {
-    height: 100%;
-    object-fit: cover;
+    font-weight: bold;
 }
 
 
@@ -355,27 +379,41 @@
     color: #fff;
     padding: 16px;
     margin-bottom: 8px;
+    display: table;
+    width: 100%;
 }
 
-.scheda-sito .thumbs-round {
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    float: left;
-    overflow: hidden;
+.scheda-sito .icona-sito {
+    display: table-cell;
+    vertical-align: middle;
+    width: 64px;
+    text-align: center;
 }
 
-.scheda-sito .thumbs-round img {
-    height: 100%;
-    object-fit: cover;
+.scheda-sito .icona-sito svg.icon {
+    fill: #fff;
+    width: 40px;
+    height: 40px;
 }
+
+.scheda-sito .icona-sito svg.icon.ca-portaporta {width: 65px;}
+.scheda-sito .icona-sito svg.icon.ca-ponmetro {width: 63px;}
+.scheda-sito .icona-sito svg.icon.ca-iti {width: 52px;}
 
 .scheda-sito p {
-    margin-left: 56px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.889em;
+    padding-left: 8px;
 }
 
 .scheda-sito a {
     color: #fff;
+}
+
+.scheda-sito a strong {
+    font-size: 1.125em;
+    font-weight: bold;
 }
 
 .scheda-lista {
@@ -453,11 +491,29 @@
     line-height: 21px;
 }
 
-#servizi .box-servizi svg.icon {
-    fill: #D1CFCF;
+#servizi .form-group {
+    padding: 0;
+    margin: 16px 0;
+}
+
+#servizi .form-group .ico-sufix {
+    position: absolute;
+    width: 48px;
+    text-align: center;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    vertical-align: middle;
+    background-color: #4E7E5B;
+    border-radius: 0 4px 4px 0;
+    border: 0;
+    padding: 8px;
+}
+
+#servizi .form-group .ico-sufix svg.icon {
+    fill: #fff;
     width: 24px;
     height: 24px;
-    margin: 13px;
 }
 
 #servizi .box-servizi {
@@ -496,7 +552,7 @@
         font-size: 1.556em;
         margin-right: 0;
     }
-    
+
     .novita-testo p, 
     .novita-testo .argomenti {
         margin-right: 0;
@@ -534,7 +590,15 @@
     }
 
     #calendario .scheda-calendario .scheda-calendario-data strong {
-        font-size: 2.5em;
+        font-size: 2em;
+    }
+    
+    #calendario .scheda-calendario .scheda-calendario-lista li {
+        font-size: 1em;
+    }
+    
+    #calendario #owl-calendario .owl-nav {
+        top: -38px;
     }
 
     #argomenti_evidenza .argomenti-foto {

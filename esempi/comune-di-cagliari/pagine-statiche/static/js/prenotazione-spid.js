@@ -108,7 +108,8 @@ app.controller('ctrlPrenotaSpid', [ '$scope', '$location', '$anchorScroll', func
 	this.quintoSubmitP = function() {
 		selfps.quintostep = false;
 		selfps.sestostep = true;
-		selfps.appuntamento = "L'appuntamento con "+selfps.referenti[selfps.referente].name+" &egrave; stato confermato per "+selfps.giorno+", Ore "+selfps.ora;
+		selfps.appuntamento_tit = "L'appuntamento con "+selfps.referenti[selfps.referente].name+" &egrave; stato confermato";
+                selfps.appuntamento_data = selfps.giorno+" | Ore "+selfps.ora;
 		$location.hash('intro');
 		$anchorScroll();
 	}

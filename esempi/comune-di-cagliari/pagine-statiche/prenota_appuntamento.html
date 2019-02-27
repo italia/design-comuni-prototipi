@@ -24,14 +24,22 @@ title: "Prenota un appuntamento"
           <div class="col-lg-12 col-md-12 col-sm-12 entesup">
             <a aria-label="Collegamento a sito esterno - Sito della Regione Sardegna - nuova finestra" title="Regione Autonoma della Sardegna" href="http://www.regione.sardegna.it" target="_blank">
               Regione Autonoma della Sardegna 								</a>
-            <!-- accedi -->
-            <div class="accedi float-right text-right">
-              <button class="btn btn-default btn-accedi" data-toggle="modal" data-target="xxx">
-                <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_circle"></use></svg>
-                <span>Accedi all&#8217;area personale</span>
-              </button>
+            <div class="float-right">
+              <!-- siti verticali -->
+              <div class="sitiverticali float-left text-right d-none d-xl-block d-lg-block">
+                <a aria-label="Collegamento a sito esterno - Sito CagliariTurismo - nuova finestra" title="CagliariTurismo" href="http://www.cagliariturismo.it" target="_blank">CagliariTurismo</a>
+                <a aria-label="Collegamento a sito esterno - Sito CagliariSportiva - nuova finestra" title="CagliariSportiva" href="http://www.cagliarisportiva.it" target="_blank">CagliariSportiva</a>
+              </div>
+              <!-- siti verticali -->
+              <!-- accedi -->
+              <div class="accedi float-left text-right">
+                <button class="btn btn-default btn-accedi" data-toggle="modal" data-target="xxx">
+                  <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_circle"></use></svg>
+                  <span>Accedi all&#8217;area personale</span>
+                </button>
+              </div>
+              <!-- accedi -->
             </div>
-            <!-- accedi -->
           </div>
         </div>
       </div>
@@ -447,8 +455,11 @@ title: "Prenota un appuntamento"
             <div class="offset-lg-1 col-lg-6 col-md-8">
               <div class="titolo-sezione">
                 <h2>Prenota un appuntamento</h2>
-                <p data-ng-hide="ctrl.sestostep">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                <p data-ng-show="ctrl.sestostep" class="ng-hide verde"><strong><span data-ng-bind-html ="ctrl.appuntamento"></span></strong></p>
+                <p data-ng-hide="ctrl.sestostep">Il servizio permette di prenotare un appuntamento con gli operatori degli uffici aperti al pubblico, evitando attese presso i front-office.</p>
+                <div data-ng-show="ctrl.sestostep" class="ng-hide notifica notification with-icon success" role="alert" aria-labelledby="notifica-app-titolo" id="notifica-app">
+                  <h5 id="notifica-app-titolo"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-check-circle"></use></svg><span data-ng-bind-html="ctrl.appuntamento_tit"></span></h5>
+                  <p data-ng-bind-html="ctrl.appuntamento_data"></p>
+                </div>
               </div>
             </div>
             <div class="offset-lg-1 col-lg-3 col-md-4">
@@ -481,7 +492,7 @@ title: "Prenota un appuntamento"
                           data-ng-model="ctrl.ufficio"
                           data-ng-disabled="!ctrl.primostep" >
                     <option value="" disabled selected>Scegli l'ufficio</option>
-                    <option data-ng-repeat="uf in ctrl.uffici" value="{% raw %}{{uf.id}}{% endraw %}" data-ng-bind-html="uf.name" data-ng-disabled="{% raw %}{{!uf.enable}}{% endraw %}">{% raw %}{{uf.name}}{% endraw %}</option>
+                    <option data-ng-repeat="uf in ctrl.uffici" value="{% raw %}{{uf.id}}{% endraw %}" data-ng-disabled="{% raw %}{{!uf.enable}}{% endraw %}">{% raw %}{{uf.name}}{% endraw %}</option>
                   </select>
                 </div>
                 <button data-ng-disabled="!ctrl.ufficio.length > 0" data-ng-show="ctrl.primostep" data-ng-click="ctrl.primoSubmit()" class="btn btn-verde">Prosegui</button>

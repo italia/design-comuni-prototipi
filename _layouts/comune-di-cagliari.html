@@ -30,8 +30,8 @@
 
   <link rel="stylesheet" href="{{ site.cdn.bootstrap_italia_css }}" />
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,500,500i" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script>window.__PUBLIC_PATH__ = 'static/font'</script>
+
   <link href="static/css/cagliari.min.css" rel="stylesheet" type="text/css" />
   <link href="static/css/cagliari-print.min.css" rel="stylesheet" type="text/css" />
 
@@ -42,6 +42,39 @@
 {{ content }}
 
 <link href="static/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+{% case page.title %}
+{% when 'Home' %}
+<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/home.min.css" rel="stylesheet" type="text/css" />
+{% when 'Notizia' %}
+<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+{% when 'Iscrizioni agli asili nido' %}
+<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+
+{% when 'Muoversi' %}
+<link href="static/css/bricklayer.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+
+{% when 'Prenota un appuntamento' %}
+<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+{% when 'Giunta comunale' %}
+<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+{% when 'Cerca' %}
+<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+{% else %}
+<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+{% endcase %}
 
 <link href="static/css/angular-material.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/bricklayer.min.css" rel="stylesheet" type="text/css" />
@@ -64,388 +97,13 @@
 <script src="static/js/angular-bricklayer.min.js"></script>
 <script src="static/js/app.js"></script>
 <script src="static/js/ricerca.js"></script>
+<script src="static/js/ricerca-service.js"></script>
+<script src="static/js/general-service.js"></script>
+<script src="static/js/filtri-controller.js"></script>
+<script src="static/js/filtri-service.js"></script>
 
-<!-- COOKIE BAR -->
-<div class="cookiebar hide bg-bluscuro" aria-hidden="true">
-  <p class="text-white">
-    Questo sito utilizza cookie tecnici, analytics e di terze parti. Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br />
-    <button data-accept="cookiebar" class="btn btn-info mr-2 btn-verde">Accetto</button>
-    <a href="#" class="btn btn-outline-info btn-trasp">Privacy policy</a>
-  </p>
-</div>
-
-<!-- ACCESSO AREA RISERVATA -->
-<div class="modal fade" id="accessModal" tabindex="-1" role="dialog" aria-labelledby="modalaccess">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Chiudi accesso area riservata"><span aria-hidden="true">&times;</span></button>
-        <h1 class="modal-title" id="modalaccess">Accesso ai servizi online</h1>
-      </div>
-      <div class="modal-body">
-        <div class="modal-footer">
-          <h2>Accesso al portale</h2>
-          <form action="index.html?login=true" method="post">
-            <div class="form-group">
-              <label for="username" class="control-label">Username</label>
-              <input type="text" class="form-control" name="username" id="username" placeholder="inserisci il tuo username" />
-            </div>
-            <div class="form-group">
-              <label for="password_modal" class="control-label">Password</label>
-              <input type="password" class="form-control" name="password" id="password_modal" placeholder="inserisci la password" />
-            </div>
-            <div class="form-group small text-center mt15 mb15">
-              <input type="submit" class="btn btn-primary" value="Login" />
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="dvRicerca">
-  <div data-ng-cloak data-ng-controller="ctrlRicerca as ctrl">
-    <!-- CERCA -->
-    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalTitle" aria-hidden="true">
-      <script>
-          $(function() {
-              $("#datepicker_start").datepicker();
-              $("#datepicker_end").datepicker();
-          });
-      </script>
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <form action="ricerca.html" method="post">
-            <div class="modal-header-fullsrc">
-              <div class="container">
-                <div class="row">
-                  <div class="offset-md-1 col-md-10 col-sm-12 text-center" data-ng-class="{pb12: !ctrl.filtri}">
-                    <button data-ng-hide="ctrl.filtri" type="button" class="close d-block d-sm-block d-md-none d-lg-none d-xl-none" data-dismiss="modal" aria-label="Chiudi filtri di ricerca">
-                      <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_back"></use></svg>
-                    </button>
-                    <button data-ng-show="ctrl.filtri" type="button" class="close d-block d-sm-block d-md-none d-lg-none d-xl-none" aria-label="Chiudi filtri di ricerca"  data-ng-click="ctrl.filtri=false">
-                      <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_back"></use></svg>
-                    </button>
-                    <h1 class="modal-title" id="searchModalTitle">
-                      <span data-ng-hide="ctrl.filtri">Cerca</span>
-                      <span data-ng-show="ctrl.filtri">Filtri</span>
-                    </h1>
-                    <button data-ng-show="ctrl.filtri" class="confirm btn btn-default btn-trasparente float-right">Conferma</button>
-                  </div>
-                  <div class="col-md-1">
-                    <div class="center-v">
-                      <button data-ng-hide="ctrl.filtri" type="button" class="close d-none d-md-block d-lg-block d-xl-block" data-dismiss="modal" aria-label="Chiudi filtri di ricerca">
-                        <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg>
-                      </button>
-                      <button data-ng-show="ctrl.filtri" type="button" class="close d-none d-md-block d-lg-block d-xl-block" aria-label="Chiudi filtri di ricerca" data-ng-click="ctrl.filtri = false">
-                        <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="search-filter-type ng-hide" data-ng-show="ctrl.filtri">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li role="presentation"><a href="#categoriaTab" aria-controls="categoriaTab" role="tab" data-toggle="tab" class="active">Categoria</a></li>
-                  <li role="presentation"><a href="#argomentoTab" aria-controls="argomentoTab" role="tab" data-toggle="tab">Argomenti</a></li>
-                  <li role="presentation"><a href="#opzioniTab" aria-controls="opzioniTab" role="tab" data-toggle="tab">Opzioni</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="modal-body-search">
-              <div class="container">
-                <div class="row" data-ng-hide="ctrl.filtri">
-                  <div class="offset-md-1 col-md-10 col-sm-12">
-                    <div class="form-group">
-                      <label class="sr-only active" for="cerca-txt">Cerca</label>
-                      <input type="text" class="form-control" id="cerca-txt" placeholder="Cerca servizi, informazioni, persone ...">
-                      <button type="button" id="searchclear" value="Cancella contenuto ricerca"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></button>
-                      <button type="submit" class="ico-sufix" value="Cerca"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-search"></use></svg></button>
-                    </div>
-                    <div class="form-filtro">
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.class_tutti()" data-ng-click="ctrl.toggleAll()">Tutto</a>
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.class_categorie(ctrl.ammins_selected, ctrl.ammins_chk)" data-ng-click="ctrl.ammins_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> Amministrazione</a>
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.class_categorie(ctrl.servizi_selected, ctrl.servizi_chk)" data-ng-click="ctrl.servizi_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Servizi</a>
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.class_categorie(ctrl.novita_selected, ctrl.novita_chk)" data-ng-click="ctrl.novita_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg> Novit&agrave;</a>
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.class_categorie(ctrl.docs_selected, ctrl.docs_chk)" data-ng-click="ctrl.docs_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-description"></use></svg> Documenti</a>
-
-                      <div data-ng-if="ctrl.ammins_selected.length !== ctrl.ammins_chk.length" data-ng-repeat="item in ctrl.ammins_selected" class="btn-badge">
-                        <span data-ng-bind-html="item">-</span>
-                        <a data-ng-click="ctrl.unchk(item, ctrl.ammins_selected)" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-close-big"></use></svg></a>
-                      </div>
-                      <div data-ng-if="ctrl.servizi_selected.length !== ctrl.servizi_chk.length" data-ng-repeat="item in ctrl.servizi_selected" class="btn-badge">
-                        <span data-ng-bind-html="item">-</span>
-                        <a data-ng-click="ctrl.unchk(item, ctrl.servizi_selected)" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-close-big"></use></svg></a>
-                      </div>
-                      <div data-ng-if="ctrl.novita_selected.length !== ctrl.novita_chk.length" data-ng-repeat="item in ctrl.novita_selected" class="btn-badge">
-                        <span data-ng-bind-html="item">-</span>
-                        <a data-ng-click="ctrl.unchk(item, ctrl.novita_selected)" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-close-big"></use></svg></a>
-                      </div>
-                      <div data-ng-if="ctrl.docs_selected.length !== ctrl.docs_chk.length" data-ng-repeat="item in ctrl.docs_selected" class="btn-badge">
-                        <span data-ng-bind-html="item">-</span>
-                        <a data-ng-click="ctrl.unchk(item, ctrl.docs_selected)" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-close-big"></use></svg></a>
-                      </div>
-                      <div data-ng-if="ctrl.args_selected.length !== ctrl.argomenti.length" data-ng-repeat="item in ctrl.args_selected" class="btn-badge">
-                        <span data-ng-bind-html="item">-</span>
-                        <a data-ng-click="ctrl.unchk(item, ctrl.args_selected)" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-close-big"></use></svg></a>
-                      </div>
-                      <div data-ng-if="ctrl.active_chk" class="btn-badge">
-                        Contenuti attivi <a data-ng-click="ctrl.active_chk = null" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-close-big"></use></svg></a>
-                      </div>
-                      <div data-ng-if="ctrl.data_inizio && ctrl.data_fine" class="btn-badge">
-                        Dal&nbsp;{% raw %}{{ ctrl.data_inizio }}{% endraw %}&nbsp;al&nbsp;{% raw %}{{ ctrl.data_fine }}{% endraw %} <a data-ng-click="ctrl.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-close-big"></use></svg></a>
-                      </div>
-                      <div data-ng-if="ctrl.data_inizio && !ctrl.data_fine" class="btn-badge">
-                        Dal&nbsp;{% raw %}{{ ctrl.data_inizio }}{% endraw %} <a data-ng-click="ctrl.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-close-big"></use></svg></a>
-                      </div>
-                      <div data-ng-if="!ctrl.data_inizio && ctrl.data_fine" class="btn-badge">
-                        Fino a&nbsp;{% raw %}{{ ctrl.data_fine }}{% endraw %} <a data-ng-click="ctrl.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/bootstrap-italia.svg#it-close-big"></use></svg></a>
-                      </div>
-                      <a class="btn btn-default btn-trasparente" data-ng-click="ctrl.filtri = true">...</a>
-                    </div>
-                    <div class="form-suggerimenti">
-                      <h2>Ricerche frequenti</h2>
-                      <ul>
-                        <li><a href="#" title="Vai alla pagina: Uffici comunali"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> Uffici comunali</a></li>
-                        <li><a href="#" title="Vai alla pagina: Servizi demografici"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Servizi demografici</a></li>
-                        <li><a href="#" title="Vai alla pagina: SUAP"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> SUAP</a></li>
-                        <li><a href="#" title="Vai alla pagina: Sostegno alle famiglie"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Sostegno alle famiglie</a></li>
-                        <li><a href="#" title="Vai alla pagina: Segnalazioni"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Segnalazioni</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Agevolazioni per la casa')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Animali')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Anziani')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Assistenza e inclusione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Associazioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Bambini e ragazzi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Cantieri e progetti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Comunicare con il comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Corsi e tempo libero')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Costruire e ristrutturare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Cultura')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Edilizia')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Famiglia')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Formazione professionale')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Fornitori del comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Immigrazione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Imparare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Imprese e investitori')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Inquinamento')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('La città che cambia')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Lavorare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Muoversi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Parcheggi e ZTL')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Partecipare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Rete idrica e fognaria')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Rifiuti, pulizia a riciclaggio')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Salute')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi anagrafici')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi per i cittadini')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi per le imprese')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizi e supporto all%educazione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Servizio civile')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Sicurezza')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Spazi del comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Spazi verdi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Sport')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Sposarsi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Strade e viabilità')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Studenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Trasferirsi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Uffici comunali')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Visitare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Vivere la città')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setArgomenti('Votare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza / Attività produttive')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Enti e società partecipate')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Dipendenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Consiglio Comunale')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Giunta Comunale')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Luoghi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Amministrazione / Uffici di Città')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio / Richiesta d’accesso agli atti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Archivio atti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Atti del Comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Limiti di rumore per attività')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Statuto e regolamenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Verde privato')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Affidamento verde pubblico')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Assegnazioni spazi del Comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Bandi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Concessioni d%uso impianti sportivi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Gare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi / Selezioni personale')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Attività di impresa')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Bonifiche')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Edilizia privata')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Innovazione tecnologica')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione del verde')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione strade')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Misure riduzione dell’inquinamento')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Organizzazione e promozione di iniziative sportive')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / PGT e pianificazione urbanistica')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Pianificazione mobilità')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti educazione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti lavori pubblici')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti solidarietà')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Rifiuti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Servizio civile')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Sicurezza urbana')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Traffico e cantieri')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Vendita di immobili')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità / Comunicati stampa')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità / Eventi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Novità / Notizie')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Autorizzazioni e concessioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Certificati e dichiarazioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Domande e iscrizioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Pagamenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Segnalazioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Servizi pubblici')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.setCategorie('Generale / Tipologie contenuti / Servizi / Sostegno')"></data-ng-container>
-
-                <div role="tabpanel" data-ng-show="ctrl.filtri" class="ng-hide">
-                  <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="categoriaTab">
-                      <div class="row">
-                        <div class="offset-md-1 col-md-10 col-sm-12">
-                          <div class="search-filter-ckgroup">
-                            <md-checkbox aria-label="Amministrazione"
-                                         data-ng-checked="ctrl.ammins_isChecked()"
-                                         md-indeterminate="ctrl.ammins_isIndeterminate()"
-                                         data-ng-click="ctrl.ammins_toggleAll()"><label class="search-filter-ckgroup-title">Amministrazione</label>
-                            </md-checkbox>
-                            <div class="flex-100" data-ng-repeat="item in ctrl.ammins_chk">
-                              <md-checkbox data-ng-checked="ctrl.exists(item, ctrl.ammins_selected)" data-ng-click="ctrl.toggle(item, ctrl.ammins_selected)" aria-label="{% raw %}{{item}}{% endraw %}">
-                                <label data-ng-bind-html="item"></label>
-                              </md-checkbox>
-                            </div>
-                          </div>
-                          <div class="search-filter-ckgroup">
-                            <md-checkbox aria-label="Servizi"
-                                         data-ng-checked="ctrl.servizi_isChecked()"
-                                         md-indeterminate="ctrl.servizi_isIndeterminate()"
-                                         data-ng-click="ctrl.servizi_toggleAll()"><label class="search-filter-ckgroup-title">Servizi</label>
-                            </md-checkbox>
-                            <div class="flex-100" data-ng-repeat="item in ctrl.servizi_chk">
-                              <md-checkbox data-ng-checked="ctrl.exists(item, ctrl.servizi_selected)" data-ng-click="ctrl.toggle(item, ctrl.servizi_selected)" aria-label="{% raw %}{{item}}{% endraw %}">
-                                <label data-ng-bind-html="item"></label>
-                              </md-checkbox>
-                            </div>
-                          </div>
-                          <div class="search-filter-ckgroup">
-                            <md-checkbox aria-label="Novità"
-                                         data-ng-checked="ctrl.novita_isChecked()"
-                                         md-indeterminate="ctrl.novita_isIndeterminate()"
-                                         data-ng-click="ctrl.novita_toggleAll()"><label class="search-filter-ckgroup-title">Novità</label>
-                            </md-checkbox>
-                            <div class="flex-100" data-ng-repeat="item in ctrl.novita_chk">
-                              <md-checkbox data-ng-checked="ctrl.exists(item, ctrl.novita_selected)" data-ng-click="ctrl.toggle(item, ctrl.novita_selected)" aria-label="{% raw %}{{item}}{% endraw %}">
-                                <label data-ng-bind-html="item"></label>
-                              </md-checkbox>
-                            </div>
-                          </div>
-                          <div class="search-filter-ckgroup">
-                            <md-checkbox aria-label="Documenti"
-                                         data-ng-checked="ctrl.docs_isChecked()"
-                                         md-indeterminate="ctrl.docs_isIndeterminate()"
-                                         data-ng-click="ctrl.docs_toggleAll()"><label class="search-filter-ckgroup-title">Documenti</label>
-                            </md-checkbox>
-                            <div class="flex-100" data-ng-repeat="item in ctrl.docs_chk">
-                              <md-checkbox data-ng-checked="ctrl.exists(item, ctrl.docs_selected)" data-ng-click="ctrl.toggle(item, ctrl.docs_selected)" aria-label="{% raw %}{{item}}{% endraw %}">
-                                <label data-ng-bind-html="item"></label>
-                              </md-checkbox>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="argomentoTab">
-                      <div class="row">
-                        <div class="offset-md-1 col-md-10 col-sm-12">
-                          <div class="search-filter-ckgroup">
-                            <div class="flex-100" data-ng-repeat="item in ctrl.argomenti">
-                              <md-checkbox data-ng-click="ctrl.toggle(item, ctrl.args_selected)" aria-label="{% raw %}{{item}}{% endraw %}"><label data-ng-bind-html="item"></label></md-checkbox>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="opzioniTab">
-                      <div class="row">
-                        <div class="offset-md-1 col-md-10 col-sm-12">
-                          <div class="form-check form-check-group">
-                            <div class="toggles">
-                              <label for="active_chk">
-                                Cerca solo tra i contenuti attivi
-                                <input type="checkbox" id="active_chk" data-ng-model="ctrl.active_chk">
-                                <span class="lever"></span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="offset-md-1 col-md-10 col-sm-12">
-                          <p class="small">Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti.</p>
-                        </div>
-                      </div>
-                      <div class="row search-filter-dategroup">
-                        <div class="offset-md-1 col-md-5 col-sm-12">
-                          <div class="form-group">
-                            <label for="datepicker_start">Data inizio</label>
-                            <input type="text" class="form-control" id="datepicker_start" data-ng-model="ctrl.data_inizio" placeholder="gg/mm/aaaa" />
-                            <button aria-label="Apri calendario" type="button" class="ico-sufix" onclick="$('#datepicker_start').focus();" onkeypress="$('#datepicker_start').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
-                          </div>
-                        </div>
-                        <div class="col-md-5 col-sm-12">
-                          <div class="form-group">
-                            <label for="datepicker_end">Data fine</label>
-                            <input type="text" class="form-control" id="datepicker_end" data-ng-model="ctrl.data_fine" placeholder="gg/mm/aaaa" />
-                            <button aria-label="Apri calendario" type="button" class="ico-sufix" onclick="$('#datepicker_end').focus();" onkeypress="$('#datepicker_end').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- page styleshees and scripts -->
 {% case page.title %}
 {% when 'Home' %}
-<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/home.min.css" rel="stylesheet" type="text/css" />
-
-<script src="static/js/filtri-controller.js"></script>
-<script src="static/js/general-service.js"></script>
-<script src="static/js/filtri-service.js"></script>
 <script src="static/js/owl.carousel.min.js"></script>
 
 <script>
@@ -474,10 +132,6 @@
     });
 </script>
 {% when 'Notizia' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
 <script src="static/js/owl.carousel.min.js"></script>
 
 <script>
@@ -529,10 +183,6 @@
     });
 </script>
 {% when 'Iscrizioni agli asili nido' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
 <script src="static/js/owl.carousel.min.js"></script>
 
 <script>
@@ -583,33 +233,389 @@
 
     });	</script>
 {% when 'Muoversi' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/bricklayer.min.css" rel="stylesheet" type="text/css" />
 <script src="static/js/bricklayer.min.js"></script>
-<script src="static/js/filtri-controller.js"></script>
-<script src="static/js/general-service.js"></script>
-<script src="static/js/filtri-service.js"></script>
 
 <script>
     $(document).ready(function() {
         var bricklayer = new Bricklayer(document.querySelector('.bricklayer'));
     });	</script>
-
 {% when 'Prenota un appuntamento' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-
 <script src="static/js/prenotazione.js"></script>
-{% when 'Giunta Comunale' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-{% when 'Cerca' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-{% else %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
 {% endcase %}
+
+<!-- COOKIE BAR -->
+<div class="cookiebar hide bg-bluscuro" aria-hidden="true">
+  <p class="text-white">
+    Questo sito utilizza cookie tecnici, analytics e di terze parti. Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br />
+    <button data-accept="cookiebar" class="btn btn-info mr-2 btn-verde">Accetto</button>
+    <a href="#" class="btn btn-outline-info btn-trasp">Privacy policy</a>
+  </p>
+</div>
+
+<!-- ACCESSO AREA RISERVATA -->
+<div class="modal fade" id="accessModal" tabindex="-1" role="dialog" aria-labelledby="modalaccess">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Chiudi accesso area riservata"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="modalaccess">Accesso ai servizi online</h1>
+      </div>
+      <div class="modal-body">
+        <div class="modal-footer">
+          <h2>Accesso al portale</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="username" class="control-label">Username</label>
+              <input type="text" class="form-control" name="username" id="username" placeholder="inserisci il tuo username" />
+            </div>
+            <div class="form-group">
+              <label for="password_modal" class="control-label">Password</label>
+              <input type="password" class="form-control" name="password" id="password_modal" placeholder="inserisci la password" />
+            </div>
+            <div class="form-group small text-center mt15 mb15">
+              <input type="submit" class="btn btn-primary" value="Login" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="dvRicerca">
+  <div data-ng-cloak data-ng-controller="ctrlRicerca as ctrl">
+    <!-- CERCA -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalTitle" aria-hidden="true">
+      <script>
+          $(function() {
+              $("#datepicker_start").datepicker();
+              $("#datepicker_end").datepicker();
+          });
+      </script>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form action="ricerca.html" method="post">
+            <div class="modal-header-fullsrc">
+              <div class="container">
+                <div class="row">
+                  <div class="offset-md-12 col-sm-12 text-center" data-ng-class="{pb12: !ctrl.General.getFiltriMode().filtri}">
+                    <button data-ng-hide="ctrl.General.getFiltriMode().filtri && !ctrl.General.getFiltriMode().internal" type="button" class="close" data-dismiss="modal" aria-label="Chiudi filtri di ricerca" data-ng-click="ctrl.General.setFiltriMode(false, false)">
+                      <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_back"></use></svg>
+                    </button>
+                    <button data-ng-show="ctrl.General.getFiltriMode().filtri && !ctrl.General.getFiltriMode().internal" type="button" class="close" aria-label="Chiudi filtri di ricerca" data-ng-click="ctrl.General.setFiltriMode(false, false)">
+                      <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_back"></use></svg> Cerca
+                    </button>
+                    <h1 class="modal-title" id="searchModalTitle">
+                      <span data-ng-hide="ctrl.General.getFiltriMode().filtri">Cerca</span>
+                      <span data-ng-show="ctrl.General.getFiltriMode().filtri">Filtri</span>
+                    </h1>
+                    <button data-ng-show="ctrl.General.getFiltriMode().filtri" class="confirm btn btn-default btn-trasparente float-right">Conferma</button>
+                  </div>
+                </div>
+              </div>
+              <div class="search-filter-type ng-hide" data-ng-show="ctrl.General.getFiltriMode().filtri">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation">
+                    <a data-ng-if="ctrl.General.getFiltriMode().categoria == ''" href="" aria-controls="categoriaTab" role="tab" data-toggle="tab" data-ng-click="ctrl.Ricerca.setActive('categorie')" data-ng-class="ctrl.Ricerca.get_categoriaTab()">Categorie</a>
+                    <a data-ng-if="ctrl.General.getFiltriMode().categoria != ''" href="" aria-controls="categoriaTab" role="tab" data-toggle="tab" data-ng-click="ctrl.Ricerca.setActive('categorie')" data-ng-class="ctrl.Ricerca.get_categoriaTab()">{% raw %}{{ctrl.General.getFiltriMode().categoria}}{% endraw %}</a>
+                  </li>
+                  <li role="presentation"><a href="" aria-controls="argomentoTab" role="tab" data-toggle="tab"
+                    data-ng-click="ctrl.Ricerca.setActive('argomenti')" data-ng-class="ctrl.Ricerca.get_argomentoTab()">Argomenti</a></li>
+                  <li role="presentation"><a href="" aria-controls="opzioniTab" role="tab" data-toggle="tab"
+                    data-ng-click="ctrl.Ricerca.setActive('opzioni')" data-ng-class="ctrl.Ricerca.get_opzioniTab()">Opzioni</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body-search">
+              <div class="container">
+                <div class="row" data-ng-hide="ctrl.General.getFiltriMode().filtri">
+                  <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
+                    <div class="form-group">
+                      <label class="sr-only active" for="cercatxt">Cerca</label>
+                      <input type="text" class="form-control" id="cerca-txt" name="cercatxt" placeholder="Cerca" data-ng-model="ctrl.Ricerca.cercatxt">
+                      <button type="submit" class="ico-sufix" value="Cerca"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-search"></use></svg></button>
+                    </div>
+                    <div class="form-filtro">
+                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_tutti('categorie')" data-ng-click="ctrl.Ricerca.toggleAll('categorie')">Tutto</a>
+                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_ammins_selected(), ctrl.Ricerca.get_ammins_chk())" data-ng-click="ctrl.Ricerca.ammins_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> Amministrazione</a>
+                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_servizi_selected(), ctrl.Ricerca.get_servizi_chk())" data-ng-click="ctrl.Ricerca.servizi_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Servizi</a>
+                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_novita_selected(), ctrl.Ricerca.get_novita_chk())" data-ng-click="ctrl.Ricerca.novita_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg> Novit&agrave;</a>
+                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_docs_selected(), ctrl.Ricerca.get_docs_chk())" data-ng-click="ctrl.Ricerca.docs_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-description"></use></svg> Documenti</a>
+                      <a class="btn btn-default btn-trasparente" data-ng-click="ctrl.Ricerca.setActive(); ctrl.General.setFiltriMode(true, false)" aria-label="Filtra per categorie">...</a>
+                    </div>
+                    <div class="form-blockopz">
+                      <h2>Argomenti</h2>
+                      <a href="" data-ng-class="(ctrl.Ricerca.get_args_selected().length > 0 && ctrl.Ricerca.get_args_selected().length !== ctrl.Ricerca.get_argomenti().length)? 'badge badge-pill badge-argomenti' : 'badge badge-pill badge-argomenti active'" id="categoriaTab" data-ng-click="ctrl.Ricerca.toggleAll('argomenti')">
+                        Tutti gli argomenti
+                      </a>
+                      <div data-ng-if="ctrl.Ricerca.get_args_selected().length !== ctrl.Ricerca.get_argomenti().length" data-ng-repeat="item in ctrl.Ricerca.get_args_selected()"
+                           class="badge badge-pill badge-argomenti active">
+                        <span data-ng-bind-html="item">-</span>
+                        <a data-ng-click="ctrl.Ricerca.unchk(item, ctrl.Ricerca.get_args_selected())" class="btn-badge-close">
+                          <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg>
+                        </a>
+                      </div>
+                      <a href="" class="badge badge-pill badge-argomenti puntini" data-ng-click="ctrl.Ricerca.setActive('argomenti'); ctrl.General.setFiltriMode(true, false)" aria-label="Filtra per argomenti">...</a>
+                    </div>
+                    <div class="form-blockopz">
+                      <h2>Opzioni</h2>
+                      <a href="" data-ng-class="(ctrl.Ricerca.active_chk || ctrl.Ricerca.data_inizio || ctrl.Ricerca.data_fine)? 'badge badge-pill badge-argomenti' : 'badge badge-pill badge-argomenti active'" id="categoriaTab" data-ng-click="ctrl.Ricerca.active_chk = null; ctrl.Ricerca.clean_date()">
+                        Tutte le date
+                      </a>
+                      <div data-ng-if="ctrl.Ricerca.active_chk" class="badge badge-pill badge-argomenti active">
+                        Contenuti attivi <a data-ng-click="ctrl.Ricerca.active_chk = null" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></svg></a>
+                      </div>
+                      <div data-ng-if="ctrl.Ricerca.data_inizio && ctrl.Ricerca.data_fine" class="badge badge-pill badge-argomenti active">
+                        Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %}&nbsp;al&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %} <a data-ng-click="ctrl.Ricerca.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+                      </div>
+                      <div data-ng-if="ctrl.Ricerca.data_inizio && !ctrl.Ricerca.data_fine" class="badge badge-pill badge-argomenti active">
+                        Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %} <a data-ng-click="ctrl.Ricerca.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+                      </div>
+                      <div data-ng-if="!ctrl.Ricerca.data_inizio && ctrl.Ricerca.data_fine" class="badge badge-pill badge-argomenti active">
+                        Fino a&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %} <a data-ng-click="ctrl.Ricerca.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
+                      </div>
+                      <a href="" class="badge badge-pill badge-argomenti puntini" data-ng-click="ctrl.Ricerca.setActive('opzioni'); ctrl.General.setFiltriMode(true, false)" aria-label="Filtra per opzioni">...</a>
+                    </div>
+                    <div class="form-blockopz">
+                      <h2>Suggerimenti</h2>
+                      <ul>
+                        <li><a href="#" title="Vai alla pagina: Uffici comunali"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> Uffici comunali</a></li>
+                        <li><a href="#" title="Vai alla pagina: Servizi demografici"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Servizi demografici</a></li>
+                        <li><a href="#" title="Vai alla pagina: SUAP"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> SUAP</a></li>
+                        <li><a href="#" title="Vai alla pagina: Sostegno alle famiglie"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Sostegno alle famiglie</a></li>
+                        <li><a href="#" title="Vai alla pagina: Segnalazioni"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Segnalazioni</a></li>
+                      </ul>
+                    </div>
+                    <input type="hidden" id="amminstrazione" name="amminstrazione" value="{% raw %}{{ctrl.Ricerca.get_ammins_selected()}}{% endraw %}">
+                    <input type="hidden" id="servizi" name="servizi" value="{% raw %}{{ctrl.Ricerca.get_servizi_selected()}}{% endraw %}">
+                    <input type="hidden" id="novita" name="novita" value="{% raw %}{{ctrl.Ricerca.get_novita_selected()}}{% endraw %}">
+                    <input type="hidden" id="documenti" name="documenti" value="{% raw %}{{ctrl.Ricerca.get_docs_selected()}}{% endraw %}">
+                    <input type="hidden" id="argomenti" name="argomenti" value="{% raw %}{{ctrl.Ricerca.get_args_selected()}}{% endraw %}">
+                    <input type="hidden" id="attivi" name="attivi" value="{% raw %}{{ctrl.Ricerca.active_chk}}{% endraw %}">
+                    <input type="hidden" id="inizio" name="inizio" value="{% raw %}{{ctrl.Ricerca.data_inizio}}{% endraw %}">
+                    <input type="hidden" id="fine" name="fine" value="{% raw %}{{ctrl.Ricerca.data_fine}}{% endraw %}">
+                  </div>
+                </div>
+
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Agevolazioni per la casa')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Animali')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Anziani')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Assistenza e inclusione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Associazioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Bambini e ragazzi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Cantieri e progetti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Comunicare con il comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Corsi e tempo libero')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Costruire e ristrutturare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Cultura')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Edilizia')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Famiglia')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Formazione professionale')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Fornitori del comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Immigrazione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Imparare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Imprese e investitori')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Inquinamento')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('La città che cambia')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Lavorare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Muoversi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Parcheggi e ZTL')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Partecipare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Rete idrica e fognaria')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Rifiuti, pulizia a riciclaggio')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Salute')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizi anagrafici')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizi per i cittadini')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizi per le imprese')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizi e supporto all%educazione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizio civile')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Sicurezza')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Spazi del comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Spazi verdi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Sport')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Sposarsi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Strade e viabilità')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Studenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Trasferirsi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Uffici comunali')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Visitare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Vivere la città')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Votare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza / Attività produttive')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Enti e società partecipate')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Dipendenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Consiglio Comunale')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Giunta Comunale')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Luoghi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Uffici di Città')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio / Richiesta d’accesso agli atti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Archivio atti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Atti del Comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Limiti di rumore per attività')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Statuto e regolamenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Verde privato')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Affidamento verde pubblico')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Assegnazioni spazi del Comune')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Bandi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Concessioni d%uso impianti sportivi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Gare')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi / Selezioni personale')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Attività di impresa')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Bonifiche')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Edilizia privata')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Innovazione tecnologica')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione del verde')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione strade')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Misure riduzione dell’inquinamento')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Organizzazione e promozione di iniziative sportive')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / PGT e pianificazione urbanistica')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Pianificazione mobilità')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti educazione')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti lavori pubblici')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti solidarietà')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Rifiuti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Servizio civile')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Sicurezza urbana')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Traffico e cantieri')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Vendita di immobili')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità / Comunicati stampa')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità / Eventi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità / Notizie')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Autorizzazioni e concessioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Certificati e dichiarazioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Domande e iscrizioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Pagamenti')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Segnalazioni')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Servizi pubblici')"></data-ng-container>
+                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Sostegno')"></data-ng-container>
+                <div role="tabpanel" data-ng-show="ctrl.General.getFiltriMode().filtri" class="ng-hide">
+                  <div class="tab-content">
+                    <div role="tabpanel" data-ng-class="ctrl.Ricerca.get_categoriaTab() == 'active'? 'tab-pane active' : 'tab-pane'" id="categoriaTab">
+                      <div class="row">
+                        <div class="offset-md-1 col-md-10 col-sm-12">
+                          <div class="search-filter-ckgroup">
+                            <md-checkbox aria-label="Amministrazione"
+                                         data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
+                                         data-ng-checked="ctrl.Ricerca.ammins_isChecked()"
+                                         md-indeterminate="ctrl.Ricerca.ammins_isIndeterminate()"
+                                         data-ng-click="ctrl.Ricerca.ammins_toggleAll()"><label class="search-filter-ckgroup-title">Amministrazione</label>
+                            </md-checkbox>
+                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_ammins_chk()"
+                                 data-ng-if="ctrl.General.getFiltriMode().categoria == 'Amministrazione' || ctrl.General.getFiltriMode().categoria == ''">
+                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_ammins_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_ammins_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
+                                <label data-ng-bind-html="item"></label>
+                              </md-checkbox>
+                            </div>
+                          </div>
+                          <div class="search-filter-ckgroup">
+                            <md-checkbox aria-label="Servizi"
+                                         data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
+                                         data-ng-checked="ctrl.Ricerca.servizi_isChecked()"
+                                         md-indeterminate="ctrl.Ricerca.servizi_isIndeterminate()"
+                                         data-ng-click="ctrl.Ricerca.servizi_toggleAll()"><label class="search-filter-ckgroup-title">Servizi</label>
+                            </md-checkbox>
+                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_servizi_chk()"
+                                 data-ng-if="ctrl.General.getFiltriMode().categoria == 'Servizi' || ctrl.General.getFiltriMode().categoria == ''">
+                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_servizi_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_servizi_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
+                                <label data-ng-bind-html="item"></label>
+                              </md-checkbox>
+                            </div>
+                          </div>
+                          <div class="search-filter-ckgroup">
+                            <md-checkbox aria-label="Novità"
+                                         data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
+                                         data-ng-checked="ctrl.Ricerca.novita_isChecked()"
+                                         md-indeterminate="ctrl.Ricerca.novita_isIndeterminate()"
+                                         data-ng-click="ctrl.Ricerca.novita_toggleAll()"><label class="search-filter-ckgroup-title">Novità</label>
+                            </md-checkbox>
+                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_novita_chk()"
+                                 data-ng-if="ctrl.General.getFiltriMode().categoria == 'Novità' || ctrl.General.getFiltriMode().categoria == ''">
+                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_novita_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_novita_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
+                                <label data-ng-bind-html="item"></label>
+                              </md-checkbox>
+                            </div>
+                          </div>
+                          <div class="search-filter-ckgroup">
+                            <md-checkbox aria-label="Documenti"
+                                         data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
+                                         data-ng-checked="ctrl.Ricerca.docs_isChecked()"
+                                         md-indeterminate="ctrl.Ricerca.docs_isIndeterminate()"
+                                         data-ng-click="ctrl.Ricerca.docs_toggleAll()"><label class="search-filter-ckgroup-title">Documenti</label>
+                            </md-checkbox>
+                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_docs_chk()"
+                                 data-ng-if="ctrl.General.getFiltriMode().categoria == 'Documenti' || ctrl.General.getFiltriMode().categoria == ''">
+                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_docs_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_docs_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
+                                <label data-ng-bind-html="item"></label>
+                              </md-checkbox>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div role="tabpanel" data-ng-class="ctrl.Ricerca.get_argomentoTab() == 'active'? 'tab-pane active' : 'tab-pane'" id="argomentoTab">
+                      <div class="row">
+                        <div class="offset-md-1 col-md-10 col-sm-12">
+                          <div class="search-filter-ckgroup">
+                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_argomenti()">
+                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_args_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_args_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
+                                <label data-ng-bind-html="item"></label></md-checkbox>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div role="tabpanel" data-ng-class="ctrl.Ricerca.get_opzioniTab() == 'active'? 'tab-pane active' : 'tab-pane'" id="opzioniTab">
+                      <div class="row">
+                        <div class="offset-lg-1 col-lg-4 col-md-6 col-sm-12">
+                          <div class="form-check form-check-group">
+                            <div class="toggles">
+                              <label for="active_chk">
+                                Cerca solo tra i contenuti attivi
+                                <input type="checkbox" id="active_chk" data-ng-model="ctrl.Ricerca.active_chk">
+                                <span class="lever"></span>
+                              </label>
+                            </div>
+                          </div>
+                          <p class="small">Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti.</p>
+                        </div>
+                        <div class="col-md-3 col-sm-12 search-filter-dategroup">
+                          <div class="form-group">
+                            <label for="datepicker_start">Data inizio</label>
+                            <input type="text" class="form-control" id="datepicker_start" data-ng-model="ctrl.Ricerca.data_inizio" placeholder="gg/mm/aaaa" />
+                            <button aria-label="Apri calendario" type="button" class="ico-sufix" onclick="$('#datepicker_start').focus();" onkeypress="$('#datepicker_start').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 search-filter-dategroup">
+                          <div class="form-group">
+                            <label for="datepicker_end">Data fine</label>
+                            <input type="text" class="form-control" id="datepicker_end" data-ng-model="ctrl.Ricerca.data_fine" placeholder="gg/mm/aaaa" />
+                            <button aria-label="Apri calendario" type="button" class="ico-sufix" onclick="$('#datepicker_end').focus();" onkeypress="$('#datepicker_end').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

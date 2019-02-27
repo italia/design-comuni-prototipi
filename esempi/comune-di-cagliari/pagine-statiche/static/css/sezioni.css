@@ -33,10 +33,19 @@ section#briciole {
     border: 2px solid #FF8C00 !important;
 }
 
+#briciole .breadcrumb .breadcrumb-item.active a {
+    color: #555;
+    font-weight: bold;
+}
+
 #intro .titolo-sezione, 
 #intro #menu-sezione,
 #intro-argomenti .titolo-sezione {
     margin-top:32px;
+}
+
+#intro #menu-sezione {
+    margin-top: 53px;
 }
 
 #introricerca .titolo-sezione {
@@ -138,7 +147,7 @@ section#briciole {
     top: 0;
     bottom: 0;
     vertical-align: middle;
-    background-color: #74A681;
+    background-color: #4E7E5B;
     border-radius: 0 4px 4px 0;
     border: 0;
     padding: 8px;
@@ -154,6 +163,12 @@ section#briciole {
 #intro .form-group .ico-sufix:focus, 
 #introricerca .form-group .ico-sufix:focus {
     border: 2px solid #FF8C00 !important; outline: 0;
+}
+
+#intro .form-filtro h5,
+#introricerca .form-filtro h5 {
+    margin-top: 22px;
+    font-size: 0.778em;
 }
 
 .cerca-risultati {
@@ -189,6 +204,59 @@ section#briciole {
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-top: 40px;
+    margin-bottom: 24px;
+}
+
+#articolo-dettaglio-testo #menu-sinistro-cerca h5 {
+    font-size: 1.111em;
+    color: #003882;
+    vertical-align: middle;
+    margin: 0;
+}
+
+#articolo-dettaglio-testo #menu-sinistro-cerca .cerca-section-group {
+    border-bottom: 1px solid #E5E5E5;
+    padding: 8px 0;
+}
+
+#articolo-dettaglio-testo #menu-sinistro-cerca .list-group {
+    padding: 0;
+    margin:0 0 0 40px;
+}
+
+#articolo-dettaglio-testo #menu-sinistro-cerca .list-group-item-action:focus,
+#articolo-dettaglio-testo #menu-sinistro-cerca .list-group-item-action:hover {
+    background: #fff;
+}
+
+#articolo-dettaglio-testo #menu-sinistro-cerca .list-group .list-group-item {
+    border: 0;
+    padding: 8px 0 0 0;
+    margin:0;
+    color: #003882;
+}
+ 
+#articolo-dettaglio-testo #menu-sinistro-cerca svg.icon {
+    fill: #003882;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#articolo-dettaglio-testo #menu-sinistro-cerca a svg.iconexpand {
+    fill: #003882;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 16px;
+    margin-top: 4px;
+    float: right;
+}
+
+#articolo-dettaglio-testo #menu-sinistro-cerca a.collapsed svg.iconexpand {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
 }
 
 #menu-sinistro-cerca ul {
@@ -498,7 +566,7 @@ section#briciole {
 
 .tutte svg.icon {
     vertical-align: bottom;
-    width: 20px;
+    width: 18px;
     height:20px;
     fill: #4E7E5B;
 }
@@ -728,31 +796,44 @@ section#briciole {
 
 .scheda-sito {
     border-radius: 4px;
-    background-color: #74A681;
+    background-color: #4E7E5B;
     box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1);
     color: #fff;
     padding: 16px;
     margin-bottom: 20px;
 }
 
-.scheda-sito .thumbs-round {
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    float: left;
+.scheda-sito .icona-sito {
+    display: table-cell;
+    vertical-align: middle;
+    width: 64px;
+    text-align: center;
 }
 
+.scheda-sito .icona-sito svg.icon {
+    fill: #fff;
+    width: 40px;
+    height: 40px;
+}
+
+.scheda-sito .icona-sito svg.icon.ca-portaporta {width: 65px;}
+.scheda-sito .icona-sito svg.icon.ca-ponmetro {width: 63px;}
+.scheda-sito .icona-sito svg.icon.ca-iti {width: 52px;}
+
 .scheda-sito p {
-    margin-left: 56px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.889em;
+    padding-left: 8px;
 }
 
 .scheda-sito a {
     color: #fff;
-    font-size: 0.889em;
 }
 
 .scheda-sito a strong {
-    font-size: 1.250em;
+    font-size: 1.125em;
+    font-weight: bold;
 }
 
 #argomenti-amministrazione .widget, #argomenti-documenti .widget, #sezioni-amministrazione .widget {
@@ -904,10 +985,24 @@ section#briciole {
 }
 
 #intro-sititematici h2 {
-    color: #EAF2EC;
+    color: #fff;
     font-size: 3.111em;
-    margin-bottom: 72px;
+    margin-bottom: 24px;
+    vertical-align: bottom;
+    letter-spacing: 0;
 }
+
+#intro-sititematici h2 svg.icon {
+    fill: #fff;
+    width: 64px;
+    height: 64px;
+    vertical-align: bottom;
+    margin-right: 16px;
+}
+
+#intro-sititematici h2 svg.icon.ca-ponmetro {width: 104px;}
+#intro-sititematici h2 svg.icon.ca-portaporta {width: 83px;}
+#intro-sititematici h2 svg.icon.ca-iti {width: 83px;}
 
 #briciole-sititematici .nav {
     margin-bottom: 24px;
@@ -1059,13 +1154,15 @@ section#briciole {
     font-weight: bold;
     font-size: 1.778em;
     height: 80px;
-    width: 256px;
+    /* width: 256px; */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
+#centro-info .img-banner-largo {}
 
 
 @media (min-width: 767px) and (max-width: 991px) {
@@ -1281,7 +1378,7 @@ section#briciole {
         background: none;
         padding: 4px 8px;
         font-size: 0.875em;
-        color: #74A681 !important;
+        color: #4E7E5B !important;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
@@ -1295,7 +1392,7 @@ section#briciole {
         vertical-align: bottom;
         width: 18px;
         height: 18px;
-        fill: #74A681;
+        fill: #4E7E5B;
     }
 
     .veditutti button:hover svg.icon {

@@ -24,14 +24,22 @@ title: "Cerca"
           <div class="col-lg-12 col-md-12 col-sm-12 entesup">
             <a aria-label="Collegamento a sito esterno - Sito della Regione Sardegna - nuova finestra" title="Regione Autonoma della Sardegna" href="http://www.regione.sardegna.it" target="_blank">
               Regione Autonoma della Sardegna 								</a>
-            <!-- accedi -->
-            <div class="accedi float-right text-right">
-              <button class="btn btn-default btn-accedi" data-toggle="modal" data-target="xxx">
-                <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_circle"></use></svg>
-                <span>Accedi all&#8217;area personale</span>
-              </button>
+            <div class="float-right">
+              <!-- siti verticali -->
+              <div class="sitiverticali float-left text-right d-none d-xl-block d-lg-block">
+                <a aria-label="Collegamento a sito esterno - Sito CagliariTurismo - nuova finestra" title="CagliariTurismo" href="http://www.cagliariturismo.it" target="_blank">CagliariTurismo</a>
+                <a aria-label="Collegamento a sito esterno - Sito CagliariSportiva - nuova finestra" title="CagliariSportiva" href="http://www.cagliarisportiva.it" target="_blank">CagliariSportiva</a>
+              </div>
+              <!-- siti verticali -->
+              <!-- accedi -->
+              <div class="accedi float-left text-right">
+                <button class="btn btn-default btn-accedi" data-toggle="modal" data-target="xxx">
+                  <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_circle"></use></svg>
+                  <span>Accedi all&#8217;area personale</span>
+                </button>
+              </div>
+              <!-- accedi -->
             </div>
-            <!-- accedi -->
           </div>
         </div>
       </div>
@@ -409,30 +417,60 @@ title: "Cerca"
             <nav class="breadcrumb-container" aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html" title="Vai alla pagina: Home">Home</a><span class="separator">/</span></li>
-                <li class="breadcrumb-item active" aria-current="page"><a>Risultati Ricerca</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a>Risultati ricerca</a></li>
               </ol>
             </nav>
           </div>
         </div>
       </div>
     </section>
+    <section data-ng-cloak data-ng-controller="ctrlRicerca as ctrl">
+      <data-ng-container data-ng-init="ctrl.Ricerca.setArgsSelected('');
+						ctrl.Ricerca.setCatSelected('amministrazione','');
+						ctrl.Ricerca.setCatSelected('servizi','');
+						ctrl.Ricerca.setCatSelected('novita','');
+						ctrl.Ricerca.setCatSelected('documenti','');
+						ctrl.Ricerca.cercatxt = '';
+						ctrl.Ricerca.active_chk = false;
+						ctrl.Ricerca.data_inizio = '';
+						ctrl.Ricerca.data_fine = ''">
+      </data-ng-container>
     <section id="introricerca">
       <div class="container">
         <div class="row">
           <div class="offset-lg-2 col-lg-8 col-md-12">
-            <form action="#" method="post">
+            <form action="ricerca.html" method="post">
               <div class="form-group">
                 <label class="sr-only active" for="cerca-intro">Cerca</label>
-                <input type="text" class="form-control" id="cerca-intro" value="Pagamento TARI">
+                <input type="text" class="form-control" id="cerca-intro" name="cercatxt" placeholder="Cerca" data-ng-model="ctrl.Ricerca.cercatxt" />
                 <button type="submit" class="ico-sufix" value="Cerca"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-search"></use></svg></button>
               </div>
+              <div class="form-filtro">
+                <h5>Filtri</h5>
+                <div data-ng-if="ctrl.Ricerca.get_args_selected().length !== ctrl.Ricerca.get_argomenti().length" data-ng-repeat="item in ctrl.Ricerca.get_args_selected()"
+                     class="btn-badge active">
+                  <span data-ng-bind-html="item">-</span>
+                  <a data-ng-click="ctrl.Ricerca.unchk(item, ctrl.Ricerca.get_args_selected())" class="btn-badge-close">
+                    <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg>
+                  </a>
+                </div>
+                <a href="" class="btn btn-default btn-trasparente" data-ng-click="ctrl.Ricerca.setActive('argomenti'); ctrl.General.setFiltriMode(true, true)" aria-label="Dettaglio filtri" data-toggle="modal" data-target="#searchModal">...</a>
+              </div>
+              <input type="hidden" id="amminstrazione" name="amminstrazione" value="{% raw %}{{ctrl.Ricerca.get_ammins_selected()}}{% endraw %}">
+              <input type="hidden" id="servizi" name="servizi" value="{% raw %}{{ctrl.Ricerca.get_servizi_selected()}}{% endraw %}">
+              <input type="hidden" id="novita" name="novita" value="{% raw %}{{ctrl.Ricerca.get_novita_selected()}}{% endraw %}">
+              <input type="hidden" id="documenti" name="documenti" value="{% raw %}{{ctrl.Ricerca.get_docs_selected()}}{% endraw %}">
+              <input type="hidden" id="argomenti" name="argomenti" value="{% raw %}{{ctrl.Ricerca.get_args_selected()}}{% endraw %}">
+              <input type="hidden" id="attivi" name="attivi" value="{% raw %}{{ctrl.Ricerca.active_chk}}{% endraw %}">
+              <input type="hidden" id="inizio" name="inizio" value="{% raw %}{{ctrl.Ricerca.data_inizio}}{% endraw %}">
+              <input type="hidden" id="fine" name="fine" value="{% raw %}{{ctrl.Ricerca.data_fine}}{% endraw %}">
             </form>
           </div>
         </div>
         <div class="row">
           <div class="offset-lg-1 col-lg-10 col-md-12">
             <div class="titolo-sezione">
-              <h2>Risultati per “Pagamento TARI”</h2>
+              <h2>Risultati della ricerca “Pagamento TARI”</h2>
             </div>
           </div>
         </div>
@@ -443,9 +481,60 @@ title: "Cerca"
         <div class="row">
           <div class="col-lg-3 col-md-4 lineright linetop">
             <aside id="menu-sinistro-cerca">
-              <h4>
-                Ricerche frequenti
-              </h4>
+              <h4 data-ng-if="ctrl.Ricerca.get_ammins_selected().length > 0 || ctrl.Ricerca.get_servizi_selected().length > 0 || ctrl.Ricerca.get_novita_selected().length > 0 || ctrl.Ricerca.get_docs_selected().length > 0">Categorie</h4>
+              <div class="cerca-section-group" data-ng-if="ctrl.Ricerca.get_ammins_selected().length > 0">
+                <h5 class="dropdown">
+                  <a data-toggle="collapse" class="collapsed" href="#amministrazione" role="button" aria-expanded="true" aria-controls="amministrazione">
+                    <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg>Amministrazione (<strong>{% raw %}{{ctrl.Ricerca.get_ammins_selected().length * 9}}{% endraw %}</strong>)
+                    <svg class="iconexpand"><use xlink:href="static/img//bootstrap-italia.svg#it-collapse"></use></svg>
+                  </a>
+                </h5>
+                <div id="amministrazione" class="list-group collapse">
+                  <a data-ng-repeat="elem in ctrl.Ricerca.get_ammins_selected()" class="list-group-item list-group-item-action" href="" title="{% raw %}{{elem}}{% endraw %}">{% raw %}{{elem}}{% endraw %} (<strong>{% raw %}{{$index + 9}}{% endraw %}</strong>)</a>
+                </div>
+              </div>
+              <div class="cerca-section-group" data-ng-if="ctrl.Ricerca.get_servizi_selected().length > 0">
+                <h5 class="dropdown">
+                  <a data-toggle="collapse" class="collapsed" href="#servizi" role="button" aria-expanded="true" aria-controls="servizi">
+                    <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg>Servizi (<strong>{% raw %}{{ctrl.Ricerca.get_servizi_selected().length * 4}}{% endraw %}</strong>)
+                    <svg class="iconexpand"><use xlink:href="static/img//bootstrap-italia.svg#it-collapse"></use></svg>
+                  </a>
+                </h5>
+                <div id="servizi" class="list-group collapse">
+                  <a data-ng-repeat="elem in ctrl.Ricerca.get_servizi_selected()" class="list-group-item list-group-item-action" href="" title="{% raw %}{{elem}}{% endraw %}">{% raw %}{{elem}}{% endraw %} (<strong>{% raw %}{{$index + 4}}{% endraw %}</strong>)</a>
+                </div>
+              </div>
+              <div class="cerca-section-group" data-ng-if="ctrl.Ricerca.get_novita_selected().length > 0">
+                <h5 class="dropdown">
+                  <a data-toggle="collapse" class="collapsed" href="#novita" role="button" aria-expanded="true" aria-controls="novita">
+                    <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg>Novità (<strong>{% raw %}{{ctrl.Ricerca.get_novita_selected().length * 7}}{% endraw %}</strong>)
+                    <svg class="iconexpand"><use xlink:href="static/img//bootstrap-italia.svg#it-collapse"></use></svg>
+                  </a>
+                </h5>
+                <div id="novita" class="list-group collapse">
+                  <a data-ng-repeat="elem in ctrl.Ricerca.get_novita_selected()" class="list-group-item list-group-item-action" href="" title="{% raw %}{{elem}}{% endraw %}">{% raw %}{{elem}}{% endraw %} (<strong>{% raw %}{{$index + 7}}{% endraw %}</strong>)</a>
+                </div>
+              </div>
+              <div class="cerca-section-group" data-ng-if="ctrl.Ricerca.get_docs_selected().length > 0">
+                <h5 class="dropdown">
+                  <a data-toggle="collapse" class="collapsed" href="#documenti" role="button" aria-expanded="true" aria-controls="documenti">
+                    <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-description"></use></svg>Documenti (<strong>{% raw %}{{ctrl.Ricerca.get_docs_selected().length * 3}}{% endraw %}</strong>)
+                    <svg class="iconexpand"><use xlink:href="static/img//bootstrap-italia.svg#it-collapse"></use></svg>
+                  </a>
+                </h5>
+                <div id="documenti" class="list-group collapse">
+                  <a data-ng-repeat="elem in ctrl.Ricerca.get_docs_selected()" class="list-group-item list-group-item-action" href="" title="{% raw %}{{elem}}{% endraw %}">{% raw %}{{elem}}{% endraw %} (<strong>{% raw %}{{$index + 3}}{% endraw %}</strong>)</a>
+                </div>
+              </div>
+
+              <h4 data-ng-if="ctrl.Ricerca.active_chk || ctrl.Ricerca.data_inizio || ctrl.Ricerca.data_fine">Opzioni</h4>
+              <ul>
+                <li><a href="" data-ng-if="ctrl.Ricerca.active_chk" title="Contenuti attivi"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg>Contenuti attivi</a></li>
+                <li><a href="" data-ng-if="ctrl.Ricerca.data_inizio && ctrl.Ricerca.data_fine" title="Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %}&nbsp;al&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %}"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg>Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %}<br />al&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %}</a></li>
+                <li><a href="" data-ng-if="ctrl.Ricerca.data_inizio && !ctrl.Ricerca.data_fine" title="Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %}"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg>Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %}</a></li>
+                <li><a href="" data-ng-if="!ctrl.Ricerca.data_inizio && ctrl.Ricerca.data_fine" title="Fino a&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %}"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg>Fino a&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %}</a></li>
+              </ul>
+              <h4>Ricerche frequenti</h4>
               <ul>
                 <li><a href="#" title="Vai alla pagina: Uffici comunali"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg>Uffici comunali</a></li>
                 <li><a href="#" title="Vai alla pagina: Servizi demografici"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg>Servizi demografici</a></li>
@@ -573,7 +662,9 @@ title: "Cerca"
           </div>
         </div>
       </div>
-    </section>				<section id="sezioni-servizi-interno">
+    </section>
+    </section>
+    <section id="sezioni-servizi-interno">
     <div class="container">
     </div>
   </section>

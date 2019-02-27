@@ -78,7 +78,8 @@ app.controller('ctrlPrenotazione', [ '$scope', '$location', '$anchorScroll', fun
 	this.quintoSubmit = function() {
 		selfp.quintostep = false;
 		selfp.sestostep = true;
-		selfp.appuntamento = "L'appuntamento con "+selfp.referenti[selfp.referente].name+" &egrave; stato confermato per "+selfp.giorno+", Ore "+selfp.ora;
+		selfp.appuntamento_tit = "L'appuntamento con "+selfp.referenti[selfp.referente].name+" &egrave; stato confermato";
+                selfp.appuntamento_data = selfp.giorno+" | Ore "+selfp.ora;
 		$location.hash('intro');
 		$anchorScroll();
 	}
