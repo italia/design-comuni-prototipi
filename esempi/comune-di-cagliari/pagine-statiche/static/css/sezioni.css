@@ -1,7 +1,11 @@
 /* INTRO BRICIOLE E TITOLO */
 
-#intro, #introricerca {
+#intro {
     margin: 0 0 80px 0;
+}
+
+#introricerca {
+    margin: 0 0 56px 0;
 }
 
 #briciole {
@@ -49,7 +53,7 @@ section#briciole {
 }
 
 #introricerca .titolo-sezione {
-    margin-top: 64px;
+    margin-top: 32px;
 }
 
 #intro .titolo-sezione h2, 
@@ -91,6 +95,7 @@ section#briciole {
     border: 0;
     padding: 4px 0;
     font-size: 0.889em;
+    background: transparent;
 }
 
 #intro #menu-sezione .list-group-item a {
@@ -151,6 +156,7 @@ section#briciole {
     border-radius: 0 4px 4px 0;
     border: 0;
     padding: 8px;
+    cursor: pointer;
 }
 
 #intro .form-group .ico-sufix svg.icon,
@@ -172,18 +178,67 @@ section#briciole {
 }
 
 .cerca-risultati {
-    margin-top: 32px;
+    margin-top: 64px;
     font-size: 0.889em;
+    vertical-align: middle;
+    padding: 8px 0;
+    line-height: 30px;
+}
+
+.cerca-risultati label {
+    color: #555555;
+}
+
+.cerca-risultati #ordinamento {
+    color: #003882;
+    box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.33);
+    border-radius: 4px;
+    border: 1px solid rgba(85,85,85,0.24);
+    margin-left: 24px;
+    font-weight: 600;
+    font-size: 0.889em;
+    padding: 4px 8px;
+}
+
+.cerca-risultati .show-filters {
+    border-left: 1px solid #E5E5E5;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 600;
+    margin-left:16px;
+    padding: 0 16px;
 }
 
 .cerca-risultato-item {
     margin-top: 16px;
-    border-bottom: 1px solid #E5E5E5;
     padding-bottom: 24px;
 }
 
-.cerca-risultato-item:last-child {
-    border: 0;
+.cerca-risultato-item .categoria {
+    color: #003882;
+    font-size: 0.778em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.cerca-risultato-item .categoria svg.icon {
+    fill: #003882;
+    width: 20px;
+    height: 20px;
+}
+
+#articolo-dettaglio-testo .cerca-risultato-item h4 {
+    font-size: 1.222em;
+    margin-top: 12px;
+    line-height: 24px;
+}
+
+#articolo-dettaglio-testo .cerca-risultato-item p {
+    color: #555555;
+    font-family: Lora, serif;
+    font-size: 1em;
 }
 
 #articolo-dettaglio-testo p.cerca-path {
@@ -195,6 +250,10 @@ section#briciole {
 
 #articolo-dettaglio-testo .pagination-wrapper {
     margin-top: 40px;
+}
+
+#articolo-dettaglio-testo #menu-sinistro-cerca {
+    margin-top: 64px;
 }
 
 #articolo-dettaglio-testo #menu-sinistro-cerca h4 {
@@ -235,7 +294,7 @@ section#briciole {
     margin:0;
     color: #003882;
 }
- 
+
 #articolo-dettaglio-testo #menu-sinistro-cerca svg.icon {
     fill: #003882;
     width: 20px;
@@ -257,6 +316,11 @@ section#briciole {
 #articolo-dettaglio-testo #menu-sinistro-cerca a.collapsed svg.iconexpand {
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
+}
+
+#articolo-dettaglio-testo #menu-sinistro-cerca .search-mostra {
+    margin-bottom: 40px;
+    display: block;
 }
 
 #menu-sinistro-cerca ul {
@@ -592,7 +656,8 @@ section#briciole {
     object-fit: cover;
 }
 
-.scheda-news .scheda-data {
+.scheda-news .scheda-data,
+.scheda-evento .scheda-data {
     height: 80px;
     width: 80px;
     border-radius: 4px;
@@ -612,7 +677,8 @@ section#briciole {
     text-transform: capitalize; 
 }
 
-.scheda-news .scheda-data strong {
+.scheda-news .scheda-data strong,
+.scheda-evento .scheda-data strong {
     font-size: 1.667em;
     font-weight: 700;
     display: block;
@@ -652,6 +718,10 @@ section#briciole {
     background-color: #003882;
     color: #fff;
     text-decoration: none;
+}
+
+.scheda-news .scheda-argomenti a:focus {
+    outline: 1px solid #FF8C00 !important;
 }
 
 .veditutti {
@@ -831,9 +901,17 @@ section#briciole {
     color: #fff;
 }
 
+.scheda-sito a:focus {
+    outline: 1px solid #FF8C00 !important;
+}
+
 .scheda-sito a strong {
     font-size: 1.125em;
     font-weight: bold;
+}
+
+#siti_tematici .scheda-sito a:focus {
+    outline: 1px solid #FF8C00 !important;
 }
 
 #argomenti-amministrazione .widget, #argomenti-documenti .widget, #sezioni-amministrazione .widget {
@@ -1028,6 +1106,8 @@ section#briciole {
     letter-spacing: 0;
 }
 
+
+
 .scheda-app {
     border-radius: 4px;
     box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1);
@@ -1179,7 +1259,7 @@ section#briciole {
 @media (max-width: 767px) {
 
     #introricerca {
-        margin: 32px 0 0 0;
+        margin: 0 0 0 0;
     }
 
     #intro .titolo-sezione, 
@@ -1189,13 +1269,14 @@ section#briciole {
     }
 
     #introricerca .titolo-sezione {
-        margin-top:32px;
+        margin-top: 8px;
     }
 
     #intro .titolo-sezione h2, 
     #intro-argomenti .titolo-sezione h2,
     #introricerca .titolo-sezione h2 {
         font-size: 2.000em;
+        line-height: 1;
     }
 
     #intro #menu-sezione h4 {
@@ -1280,11 +1361,11 @@ section#briciole {
         padding: 32px 0;
         margin: 0;
     }
-    
+
     #sezioni-infoutili .mt64 {
         margin-top: 32px !important;
     }
-    
+
     #sezioni-infoutili .mb64 {
         margin-bottom: 32px !important;
     }
@@ -1582,6 +1663,49 @@ section#briciole {
         height: 64px;
         font-size: 1.625em;
     }
+
+    .cerca-risultati {
+        margin-top: 16px;
+    }
+
+    .cerca-risultati .btn-trasparente {
+        font-size: 1em;
+    }
+
+    #articolo-dettaglio-testo #menu-sinistro-cerca {
+        margin-top: 16px;
+    }
+
+    #articolo-dettaglio-testo #menu-sinistro-cerca h4 {
+        margin-top: 22px;
+        font-size: 1em;
+    }
+
+    .cerca-risultato-item {
+        margin-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .cerca-risultato-item .categoria span {
+        display: none;
+    }
+
+    #articolo-dettaglio-testo .cerca-risultato-item {
+        border-bottom: 1px solid #D8D8D8;
+    }
+
+    #articolo-dettaglio-testo .cerca-risultato-item h4 {
+        margin-left: 32px;
+        margin-top: -24px;
+    } 
+
+    #articolo-dettaglio-testo .cerca-risultato-item p {
+        margin-left: 32px;
+    }
+
+    #articolo-dettaglio-testo .cerca-risultato-item .tutte {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1595,5 +1719,28 @@ section#briciole {
 
     .scheda-news .scheda-testo {
         margin-right: 114px;
+    }
+}
+
+
+
+
+/* IE10+ hack */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .scheda-news .scheda-foto {
+    }
+
+    .scheda-news .scheda-foto figure {
+    }
+
+    .scheda-news .scheda-foto img {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

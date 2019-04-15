@@ -78,13 +78,13 @@
 
 /* NOTIZIE */
 
-#novita {
+#home-novita {
     background-color: #ECEFF1;
     padding: 56px 0;
     clear: both;
 }
 
-#novita .container {
+#home-novita .container {
     clear: both;
 }
 
@@ -257,7 +257,7 @@
 }
 
 #calendario .scheda-calendario .progress-spinner {
-    margin: 0 auto;
+    margin: 16px auto;
 }
 
 #calendario .scheda-calendario .progress-spinner.progress-spinner-active:not(.progress-spinner-double) {
@@ -485,18 +485,18 @@
     -moz-box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1);
 }
 
-#servizi input::placeholder, #servizi input:-ms-input-placeholder, #servizi input::-ms-input-placeholder {
+#home-servizi input::placeholder, #home-servizi input:-ms-input-placeholder, #home-servizi input::-ms-input-placeholder {
     color: #9B9B9B;
     font-size: 0.889em;
     line-height: 21px;
 }
 
-#servizi .form-group {
+#home-servizi .form-group {
     padding: 0;
     margin: 16px 0;
 }
 
-#servizi .form-group .ico-sufix {
+#home-servizi .form-group .ico-sufix {
     position: absolute;
     width: 48px;
     text-align: center;
@@ -510,13 +510,13 @@
     padding: 8px;
 }
 
-#servizi .form-group .ico-sufix svg.icon {
+#home-servizi .form-group .ico-sufix svg.icon {
     fill: #fff;
     width: 24px;
     height: 24px;
 }
 
-#servizi .box-servizi {
+#home-servizi .box-servizi {
     position: absolute;
     top: 124px;
 }
@@ -563,7 +563,7 @@
         height: auto;
     }
 
-    #novita div[class^='col']:first-of-type .mt-88n, #novita div[class*=' col-']:first-of-type .mt-88n {
+    #home-novita div[class^='col']:first-of-type .mt-88n, #home-novita div[class*=' col-']:first-of-type .mt-88n {
         margin-top: -88px;
     }
 
@@ -646,17 +646,17 @@
         height: 320px;
     }
 
-    #servizi .box-servizi {
+    #home-servizi .box-servizi {
         top: 48px;
     }
 
-    #servizi .btn-verde, .btn-verde {
+    #home-servizi .btn-verde, .btn-verde {
         font-size: 0.875em;
         padding: 8px 16px;
         margin: 0 8px 8px 0;
     }
 
-    #servizi input::placeholder, #servizi input:-ms-input-placeholder, #servizi input::-ms-input-placeholder { 
+    #home-servizi input::placeholder, #home-servizi input:-ms-input-placeholder, #home-servizi input::-ms-input-placeholder { 
         font-size: 1em;
     }
 }

@@ -37,47 +37,51 @@
 
   <meta name="robots" content="noindex, nofollow">
 
-</head>
-<body class="push-body" data-ng-app="ponmetroca">
-{{ content }}
-
-<link href="static/css/jquery-ui.css" rel="stylesheet" type="text/css" />
 {% case page.title %}
-{% when 'Home' %}
+  {% when 'Home' %}
 <link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/home.min.css" rel="stylesheet" type="text/css" />
-{% when 'Notizia' %}
+  {% when 'Notizia' %}
 <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
-{% when 'Iscrizioni agli asili nido' %}
+  {% when 'Iscrizioni agli asili nido' %}
 <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
 
-{% when 'Muoversi' %}
-<link href="static/css/bricklayer.min.css" rel="stylesheet" type="text/css" />
+  {% when 'Muoversi' %}
 <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
 
-{% when 'Prenota un appuntamento' %}
+  {% when 'Evento' %}
 <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-{% when 'Giunta comunale' %}
+<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+
+  {% when 'Prenota un appuntamento' %}
 <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-{% when 'Cerca' %}
+  {% when 'Giunta Comunale' %}
 <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
 <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-{% else %}
+  {% when 'Cerca' %}
+<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+  {% else %}
 <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
 {% endcase %}
 
+<link href="static/css/jquery-ui.css" rel="stylesheet" type="text/css" />
 <link href="static/css/angular-material.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/bricklayer.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="push-body" data-ng-app="ponmetroca">
+{{ content }}
 
 <script src="static/js/jquery-3.3.1.min.js"></script>
 <script src="static/js/popper.min.js"></script>
@@ -93,8 +97,6 @@
 <script src="static/js/angular-messages.min.js"></script>
 <script src="static/js/angular-material.min.js"></script>
 <script src="static/js/angular-sanitize.min.js"></script>
-<script src="static/js/bricklayer.min.js"></script>
-<script src="static/js/angular-bricklayer.min.js"></script>
 <script src="static/js/app.js"></script>
 <script src="static/js/ricerca.js"></script>
 <script src="static/js/ricerca-service.js"></script>
@@ -233,12 +235,62 @@
 
     });	</script>
 {% when 'Muoversi' %}
-<script src="static/js/bricklayer.min.js"></script>
 
 <script>
     $(document).ready(function() {
         var bricklayer = new Bricklayer(document.querySelector('.bricklayer'));
     });	</script>
+
+{% when 'Evento' %}
+
+<script>
+      $(document).ready(function() {
+        var owl = $("#owl-correlati");
+        owl.owlCarousel({
+          nav: false,
+          startPosition: 0,
+          autoPlay: false,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            768: {
+              items: 2
+            },
+            991: {
+              items: 4
+            }
+          }
+        });
+
+        var owl2 = $("#owl-galleria");
+        owl2.owlCarousel({
+          nav: false,
+          startPosition: 0,
+          autoPlay: false,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            768: {
+              items: 2
+            },
+            991: {
+              items: 3
+            }
+          }
+        });
+      });
+    </script>
+
 {% when 'Prenota un appuntamento' %}
 <script src="static/js/prenotazione.js"></script>
 {% endcase %}
