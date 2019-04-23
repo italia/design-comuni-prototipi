@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
@@ -57,6 +58,9 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8)
+
+RUBY VERSION
+   ruby 2.6.0p0
 
 BUNDLED WITH
    2.0.1
