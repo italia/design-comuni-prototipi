@@ -1,249 +1,352 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="it">
-<head>
-  <!-- <base href="https://prototipo.comune.cagliari.it/"> -->
-  <!--[if IE]><script type="text/javascript">
-  (function() {
-    var baseTag = document.getElementsByTagName('base')[0];
-    baseTag.href = baseTag.href;
-  })();
-</script><![endif]-->
-  <title>comune.cagliari.it - {{ page.title | smartify }}</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Comune di Cagliari - Sito istituzionale">
+  <head>
+    <!-- <base href="https://prototipo.comune.cagliari.it/"> -->
+    <!--[if IE
+      ]><script type="text/javascript">
+        (function() {
+          var baseTag = document.getElementsByTagName("base")[0];
+          baseTag.href = baseTag.href;
+        })();
+      </script><!
+    [endif]-->
+    <title>comune.cagliari.it - {{ page.title | smartify }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Comune di Cagliari - Sito istituzionale"
+    />
 
-  <link rel="apple-touch-icon" sizes="57x57" href="static/img/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="static/img/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="static/img/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="static/img/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="static/img/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="static/img/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="static/img/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="static/img/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="static/img/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" href="static/img/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="static/img/android-chrome-192x192.png" sizes="192x192" />
-  <link rel="icon" type="image/png" href="static/img/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="static/img/favicon-16x16.png" sizes="16x16" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="static/img/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="static/img/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="static/img/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="static/img/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="static/img/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="static/img/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="static/img/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="static/img/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="static/img/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="static/img/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="static/img/android-chrome-192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="static/img/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="static/img/favicon-16x16.png"
+      sizes="16x16"
+    />
 
-  <link rel="stylesheet" href="{{ site.cdn.bootstrap_italia_css }}" />
+    <link rel="stylesheet" href="{{ site.cdn.bootstrap_italia_css }}" />
 
-  <script>window.__PUBLIC_PATH__ = 'static/font'</script>
+    <script>
+      window.__PUBLIC_PATH__ = "static/font";
+    </script>
 
-  <link href="static/css/cagliari.min.css" rel="stylesheet" type="text/css" />
-  <link href="static/css/cagliari-print.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/cagliari.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="static/css/cagliari-print.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-  <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow" />
 
-{% case page.title %}
-  {% when 'Home' %}
-<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/home.min.css" rel="stylesheet" type="text/css" />
-  {% when 'Notizia' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
-  {% when 'Iscrizioni agli asili nido' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+    {% case page.title %} {% when 'Home' %}
+    <link
+      href="static/css/owl.carousel.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="static/css/owl.theme.default.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="static/css/home.min.css" rel="stylesheet" type="text/css" />
+    {% when 'Notizia' %}
+    <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="static/css/owl.carousel.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="static/css/owl.theme.default.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    {% when 'Iscrizioni agli asili nido' %}
+    <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="static/css/owl.carousel.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="static/css/owl.theme.default.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-  {% when 'Muoversi' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+    {% when 'Muoversi' %}
+    <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
 
-  {% when 'Evento' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+    {% when 'Evento' %}
+    <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="static/css/owl.carousel.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="static/css/owl.theme.default.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-  {% when 'Prenota un appuntamento' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-  {% when 'Giunta Comunale' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-  {% when 'Cerca' %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-<link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
-  {% else %}
-<link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
-{% endcase %}
+    {% when 'Prenota un appuntamento' %}
+    <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+    {% when 'Giunta Comunale' %}
+    <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+    {% when 'Cerca' %}
+    <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/interne.min.css" rel="stylesheet" type="text/css" />
+    {% else %}
+    <link href="static/css/sezioni.min.css" rel="stylesheet" type="text/css" />
+    {% endcase %}
 
-<link href="static/css/jquery-ui.css" rel="stylesheet" type="text/css" />
-<link href="static/css/angular-material.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link
+      href="static/css/angular-material.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="push-body" data-ng-app="ponmetroca">
+    {{ content }}
 
-</head>
-<body class="push-body" data-ng-app="ponmetroca">
-{{ content }}
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
 
-<script src="static/js/jquery-3.3.1.min.js"></script>
-<script src="static/js/popper.min.js"></script>
+    <script src="{{ site.cdn.bootstrap_italia_js_bundle }}"></script>
 
-<script src="{{ site.cdn.bootstrap_italia_js_bundle }}"></script>
+    <script src="static/js/cagliari.min.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
+    <script src="static/js/i18n/datepicker-it.js"></script>
+    <script src="static/js/angular.min.js"></script>
+    <script src="static/js/angular-animate.min.js"></script>
+    <script src="static/js/angular-aria.min.js"></script>
+    <script src="static/js/angular-messages.min.js"></script>
+    <script src="static/js/angular-material.min.js"></script>
+    <script src="static/js/angular-sanitize.min.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/ricerca.js"></script>
+    <script src="static/js/ricerca-service.js"></script>
+    <script src="static/js/general-service.js"></script>
+    <script src="static/js/filtri-controller.js"></script>
+    <script src="static/js/filtri-service.js"></script>
 
-<script src="static/js/cagliari.min.js"></script>
-<script src="static/js/jquery-ui.js"></script>
-<script src="static/js/i18n/datepicker-it.js"></script>
-<script src="static/js/angular.min.js"></script>
-<script src="static/js/angular-animate.min.js"></script>
-<script src="static/js/angular-aria.min.js"></script>
-<script src="static/js/angular-messages.min.js"></script>
-<script src="static/js/angular-material.min.js"></script>
-<script src="static/js/angular-sanitize.min.js"></script>
-<script src="static/js/app.js"></script>
-<script src="static/js/ricerca.js"></script>
-<script src="static/js/ricerca-service.js"></script>
-<script src="static/js/general-service.js"></script>
-<script src="static/js/filtri-controller.js"></script>
-<script src="static/js/filtri-service.js"></script>
+    {% case page.title %} {% when 'Home' %}
+    <script src="static/js/owl.carousel.min.js"></script>
 
-{% case page.title %}
-{% when 'Home' %}
-<script src="static/js/owl.carousel.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        var owl = $('#owl-calendario');
+    <script>
+      $(document).ready(function() {
+        var owl = $("#owl-calendario");
         owl.owlCarousel({
-            nav:false,
-            startPosition: 0,
-            autoPlay:false,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                },
-                576: {
-                    items:2,
-                },
-                768: {
-                    items:3,
-                },
-                991: {
-                    items:4,
-                },
+          nav: false,
+          startPosition: 0,
+          autoPlay: false,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            768: {
+              items: 3
+            },
+            991: {
+              items: 4
             }
+          }
         });
-    });
-</script>
-{% when 'Notizia' %}
-<script src="static/js/owl.carousel.min.js"></script>
+      });
+    </script>
+    {% when 'Notizia' %}
+    <script src="static/js/owl.carousel.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        var owl = $('#owl-correlati');
+    <script>
+      $(document).ready(function() {
+        var owl = $("#owl-correlati");
         owl.owlCarousel({
-            nav:false,
-            startPosition: 0,
-            autoPlay:false,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                },
-                576: {
-                    items:2,
-                },
-                768: {
-                    items:2,
-                },
-                991: {
-                    items:4,
-                },
+          nav: false,
+          startPosition: 0,
+          autoPlay: false,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            768: {
+              items: 2
+            },
+            991: {
+              items: 4
             }
+          }
         });
 
-        var owl2 = $('#owl-galleria');
+        var owl2 = $("#owl-galleria");
         owl2.owlCarousel({
-            nav:false,
-            startPosition: 0,
-            autoPlay:false,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                },
-                576: {
-                    items:2,
-                },
-                768: {
-                    items:2,
-                },
-                991: {
-                    items:3,
-                },
+          nav: false,
+          startPosition: 0,
+          autoPlay: false,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            768: {
+              items: 2
+            },
+            991: {
+              items: 3
             }
+          }
         });
+      });
+    </script>
+    {% when 'Iscrizioni agli asili nido' %}
+    <script src="static/js/owl.carousel.min.js"></script>
 
-    });
-</script>
-{% when 'Iscrizioni agli asili nido' %}
-<script src="static/js/owl.carousel.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        var owl = $('#owl-correlati');
+    <script>
+      $(document).ready(function() {
+        var owl = $("#owl-correlati");
         owl.owlCarousel({
-            nav:false,
-            startPosition: 0,
-            autoPlay:false,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                },
-                576: {
-                    items:2,
-                },
-                768: {
-                    items:2,
-                },
-                991: {
-                    items:4,
-                },
+          nav: false,
+          startPosition: 0,
+          autoPlay: false,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            768: {
+              items: 2
+            },
+            991: {
+              items: 4
             }
+          }
         });
 
-        var owl2 = $('#owl-galleria');
+        var owl2 = $("#owl-galleria");
         owl2.owlCarousel({
-            nav:false,
-            startPosition: 0,
-            autoPlay:false,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                },
-                576: {
-                    items:2,
-                },
-                768: {
-                    items:2,
-                },
-                991: {
-                    items:3,
-                },
+          nav: false,
+          startPosition: 0,
+          autoPlay: false,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            768: {
+              items: 2
+            },
+            991: {
+              items: 3
             }
+          }
         });
+      });
+    </script>
+    {% when 'Muoversi' %}
 
-    });	</script>
-{% when 'Muoversi' %}
+    <script>
+      $(document).ready(function() {
+        var bricklayer = new Bricklayer(document.querySelector(".bricklayer"));
+      });
+    </script>
 
-<script>
-    $(document).ready(function() {
-        var bricklayer = new Bricklayer(document.querySelector('.bricklayer'));
-    });	</script>
+    {% when 'Evento' %}
 
-{% when 'Evento' %}
-
-<script>
+    <script>
       $(document).ready(function() {
         var owl = $("#owl-correlati");
         owl.owlCarousel({
@@ -291,383 +394,1179 @@
       });
     </script>
 
-{% when 'Prenota un appuntamento' %}
-<script src="static/js/prenotazione.js"></script>
-{% endcase %}
+    {% when 'Prenota un appuntamento' %}
+    <script src="static/js/prenotazione.js"></script>
+    {% endcase %}
 
-<!-- COOKIE BAR -->
-<div class="cookiebar hide bg-bluscuro" aria-hidden="true">
-  <p class="text-white">
-    Questo sito utilizza cookie tecnici, analytics e di terze parti. Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br />
-    <button data-accept="cookiebar" class="btn btn-info mr-2 btn-verde">Accetto</button>
-    <a href="#" class="btn btn-outline-info btn-trasp">Privacy policy</a>
-  </p>
-</div>
-
-<!-- ACCESSO AREA RISERVATA -->
-<div class="modal fade" id="accessModal" tabindex="-1" role="dialog" aria-labelledby="modalaccess">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Chiudi accesso area riservata"><span aria-hidden="true">&times;</span></button>
-        <h1 class="modal-title" id="modalaccess">Accesso ai servizi online</h1>
-      </div>
-      <div class="modal-body">
-        <div class="modal-footer">
-          <h2>Accesso al portale</h2>
-          <form action="#" method="post">
-            <div class="form-group">
-              <label for="username" class="control-label">Username</label>
-              <input type="text" class="form-control" name="username" id="username" placeholder="inserisci il tuo username" />
-            </div>
-            <div class="form-group">
-              <label for="password_modal" class="control-label">Password</label>
-              <input type="password" class="form-control" name="password" id="password_modal" placeholder="inserisci la password" />
-            </div>
-            <div class="form-group small text-center mt15 mb15">
-              <input type="submit" class="btn btn-primary" value="Login" />
-            </div>
-          </form>
-        </div>
-      </div>
+    <!-- COOKIE BAR -->
+    <div class="cookiebar hide bg-bluscuro" aria-hidden="true">
+      <p class="text-white">
+        Questo sito utilizza cookie tecnici, analytics e di terze parti.
+        Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br />
+        <button data-accept="cookiebar" class="btn btn-info mr-2 btn-verde">
+          Accetto
+        </button>
+        <a href="#" class="btn btn-outline-info btn-trasp">Privacy policy</a>
+      </p>
     </div>
-  </div>
-</div>
 
-<div id="dvRicerca">
-  <div data-ng-cloak data-ng-controller="ctrlRicerca as ctrl">
-    <!-- CERCA -->
-    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalTitle" aria-hidden="true">
-      <script>
-          $(function() {
-              $("#datepicker_start").datepicker();
-              $("#datepicker_end").datepicker();
-          });
-      </script>
+    <!-- ACCESSO AREA RISERVATA -->
+    <div
+      class="modal fade"
+      id="accessModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalaccess"
+    >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <form action="ricerca.html" method="post">
-            <div class="modal-header-fullsrc">
-              <div class="container">
-                <div class="row">
-                  <div class="offset-md-12 col-sm-12 text-center" data-ng-class="{pb12: !ctrl.General.getFiltriMode().filtri}">
-                    <button data-ng-hide="ctrl.General.getFiltriMode().filtri && !ctrl.General.getFiltriMode().internal" type="button" class="close" data-dismiss="modal" aria-label="Chiudi filtri di ricerca" data-ng-click="ctrl.General.setFiltriMode(false, false)">
-                      <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_back"></use></svg>
-                    </button>
-                    <button data-ng-show="ctrl.General.getFiltriMode().filtri && !ctrl.General.getFiltriMode().internal" type="button" class="close" aria-label="Chiudi filtri di ricerca" data-ng-click="ctrl.General.setFiltriMode(false, false)">
-                      <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-arrow_back"></use></svg> Cerca
-                    </button>
-                    <h1 class="modal-title" id="searchModalTitle">
-                      <span data-ng-hide="ctrl.General.getFiltriMode().filtri">Cerca</span>
-                      <span data-ng-show="ctrl.General.getFiltriMode().filtri">Filtri</span>
-                    </h1>
-                    <button data-ng-show="ctrl.General.getFiltriMode().filtri" class="confirm btn btn-default btn-trasparente float-right">Conferma</button>
-                  </div>
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Chiudi accesso area riservata"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h1 class="modal-title" id="modalaccess">
+              Accesso ai servizi online
+            </h1>
+          </div>
+          <div class="modal-body">
+            <div class="modal-footer">
+              <h2>Accesso al portale</h2>
+              <form action="#" method="post">
+                <div class="form-group">
+                  <label for="username" class="control-label">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    id="username"
+                    placeholder="inserisci il tuo username"
+                  />
                 </div>
-              </div>
-              <div class="search-filter-type ng-hide" data-ng-show="ctrl.General.getFiltriMode().filtri">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li role="presentation">
-                    <a data-ng-if="ctrl.General.getFiltriMode().categoria == ''" href="" aria-controls="categoriaTab" role="tab" data-toggle="tab" data-ng-click="ctrl.Ricerca.setActive('categorie')" data-ng-class="ctrl.Ricerca.get_categoriaTab()">Categorie</a>
-                    <a data-ng-if="ctrl.General.getFiltriMode().categoria != ''" href="" aria-controls="categoriaTab" role="tab" data-toggle="tab" data-ng-click="ctrl.Ricerca.setActive('categorie')" data-ng-class="ctrl.Ricerca.get_categoriaTab()">{% raw %}{{ctrl.General.getFiltriMode().categoria}}{% endraw %}</a>
-                  </li>
-                  <li role="presentation"><a href="" aria-controls="argomentoTab" role="tab" data-toggle="tab"
-                    data-ng-click="ctrl.Ricerca.setActive('argomenti')" data-ng-class="ctrl.Ricerca.get_argomentoTab()">Argomenti</a></li>
-                  <li role="presentation"><a href="" aria-controls="opzioniTab" role="tab" data-toggle="tab"
-                    data-ng-click="ctrl.Ricerca.setActive('opzioni')" data-ng-class="ctrl.Ricerca.get_opzioniTab()">Opzioni</a></li>
-                </ul>
-              </div>
+                <div class="form-group">
+                  <label for="password_modal" class="control-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    id="password_modal"
+                    placeholder="inserisci la password"
+                  />
+                </div>
+                <div class="form-group small text-center mt15 mb15">
+                  <input type="submit" class="btn btn-primary" value="Login" />
+                </div>
+              </form>
             </div>
-            <div class="modal-body-search">
-              <div class="container">
-                <div class="row" data-ng-hide="ctrl.General.getFiltriMode().filtri">
-                  <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
-                    <div class="form-group">
-                      <label class="sr-only active" for="cercatxt">Cerca</label>
-                      <input type="text" class="form-control" id="cerca-txt" name="cercatxt" placeholder="Cerca" data-ng-model="ctrl.Ricerca.cercatxt">
-                      <button type="submit" class="ico-sufix" value="Cerca"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-search"></use></svg></button>
-                    </div>
-                    <div class="form-filtro">
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_tutti('categorie')" data-ng-click="ctrl.Ricerca.toggleAll('categorie')">Tutto</a>
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_ammins_selected(), ctrl.Ricerca.get_ammins_chk())" data-ng-click="ctrl.Ricerca.ammins_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> Amministrazione</a>
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_servizi_selected(), ctrl.Ricerca.get_servizi_chk())" data-ng-click="ctrl.Ricerca.servizi_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Servizi</a>
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_novita_selected(), ctrl.Ricerca.get_novita_chk())" data-ng-click="ctrl.Ricerca.novita_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg> Novit&agrave;</a>
-                      <a class="btn btn-default btn-trasparente" data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_docs_selected(), ctrl.Ricerca.get_docs_chk())" data-ng-click="ctrl.Ricerca.docs_toggleAll()"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-description"></use></svg> Documenti</a>
-                      <a class="btn btn-default btn-trasparente" data-ng-click="ctrl.Ricerca.setActive(); ctrl.General.setFiltriMode(true, false)" aria-label="Filtra per categorie">...</a>
-                    </div>
-                    <div class="form-blockopz">
-                      <h2>Argomenti</h2>
-                      <a href="" data-ng-class="(ctrl.Ricerca.get_args_selected().length > 0 && ctrl.Ricerca.get_args_selected().length !== ctrl.Ricerca.get_argomenti().length)? 'badge badge-pill badge-argomenti' : 'badge badge-pill badge-argomenti active'" id="categoriaTab" data-ng-click="ctrl.Ricerca.toggleAll('argomenti')">
-                        Tutti gli argomenti
-                      </a>
-                      <div data-ng-if="ctrl.Ricerca.get_args_selected().length !== ctrl.Ricerca.get_argomenti().length" data-ng-repeat="item in ctrl.Ricerca.get_args_selected()"
-                           class="badge badge-pill badge-argomenti active">
-                        <span data-ng-bind-html="item">-</span>
-                        <a data-ng-click="ctrl.Ricerca.unchk(item, ctrl.Ricerca.get_args_selected())" class="btn-badge-close">
-                          <svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg>
-                        </a>
-                      </div>
-                      <a href="" class="badge badge-pill badge-argomenti puntini" data-ng-click="ctrl.Ricerca.setActive('argomenti'); ctrl.General.setFiltriMode(true, false)" aria-label="Filtra per argomenti">...</a>
-                    </div>
-                    <div class="form-blockopz">
-                      <h2>Opzioni</h2>
-                      <a href="" data-ng-class="(ctrl.Ricerca.active_chk || ctrl.Ricerca.data_inizio || ctrl.Ricerca.data_fine)? 'badge badge-pill badge-argomenti' : 'badge badge-pill badge-argomenti active'" id="categoriaTab" data-ng-click="ctrl.Ricerca.active_chk = null; ctrl.Ricerca.clean_date()">
-                        Tutte le date
-                      </a>
-                      <div data-ng-if="ctrl.Ricerca.active_chk" class="badge badge-pill badge-argomenti active">
-                        Contenuti attivi <a data-ng-click="ctrl.Ricerca.active_chk = null" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></svg></a>
-                      </div>
-                      <div data-ng-if="ctrl.Ricerca.data_inizio && ctrl.Ricerca.data_fine" class="badge badge-pill badge-argomenti active">
-                        Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %}&nbsp;al&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %} <a data-ng-click="ctrl.Ricerca.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
-                      </div>
-                      <div data-ng-if="ctrl.Ricerca.data_inizio && !ctrl.Ricerca.data_fine" class="badge badge-pill badge-argomenti active">
-                        Dal&nbsp;{% raw %}{{ ctrl.Ricerca.data_inizio }}{% endraw %} <a data-ng-click="ctrl.Ricerca.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
-                      </div>
-                      <div data-ng-if="!ctrl.Ricerca.data_inizio && ctrl.Ricerca.data_fine" class="badge badge-pill badge-argomenti active">
-                        Fino a&nbsp;{% raw %}{{ ctrl.Ricerca.data_fine }}{% endraw %} <a data-ng-click="ctrl.Ricerca.clean_date()" class="btn-badge-close"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-clear"></use></svg></a>
-                      </div>
-                      <a href="" class="badge badge-pill badge-argomenti puntini" data-ng-click="ctrl.Ricerca.setActive('opzioni'); ctrl.General.setFiltriMode(true, false)" aria-label="Filtra per opzioni">...</a>
-                    </div>
-                    <div class="form-blockopz">
-                      <h2>Suggerimenti</h2>
-                      <ul>
-                        <li><a href="#" title="Vai alla pagina: Uffici comunali"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> Uffici comunali</a></li>
-                        <li><a href="#" title="Vai alla pagina: Servizi demografici"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Servizi demografici</a></li>
-                        <li><a href="#" title="Vai alla pagina: SUAP"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-account_balance"></use></svg> SUAP</a></li>
-                        <li><a href="#" title="Vai alla pagina: Sostegno alle famiglie"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Sostegno alle famiglie</a></li>
-                        <li><a href="#" title="Vai alla pagina: Segnalazioni"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-settings"></use></svg> Segnalazioni</a></li>
-                      </ul>
-                    </div>
-                    <input type="hidden" id="amminstrazione" name="amminstrazione" value="{% raw %}{{ctrl.Ricerca.get_ammins_selected()}}{% endraw %}">
-                    <input type="hidden" id="servizi" name="servizi" value="{% raw %}{{ctrl.Ricerca.get_servizi_selected()}}{% endraw %}">
-                    <input type="hidden" id="novita" name="novita" value="{% raw %}{{ctrl.Ricerca.get_novita_selected()}}{% endraw %}">
-                    <input type="hidden" id="documenti" name="documenti" value="{% raw %}{{ctrl.Ricerca.get_docs_selected()}}{% endraw %}">
-                    <input type="hidden" id="argomenti" name="argomenti" value="{% raw %}{{ctrl.Ricerca.get_args_selected()}}{% endraw %}">
-                    <input type="hidden" id="attivi" name="attivi" value="{% raw %}{{ctrl.Ricerca.active_chk}}{% endraw %}">
-                    <input type="hidden" id="inizio" name="inizio" value="{% raw %}{{ctrl.Ricerca.data_inizio}}{% endraw %}">
-                    <input type="hidden" id="fine" name="fine" value="{% raw %}{{ctrl.Ricerca.data_fine}}{% endraw %}">
-                  </div>
-                </div>
-
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Agevolazioni per la casa')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Animali')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Anziani')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Assistenza e inclusione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Associazioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Bambini e ragazzi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Cantieri e progetti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Comunicare con il comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Corsi e tempo libero')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Costruire e ristrutturare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Cultura')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Edilizia')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Famiglia')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Formazione professionale')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Fornitori del comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Immigrazione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Imparare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Imprese e investitori')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Inquinamento')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('La città che cambia')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Lavorare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Muoversi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Parcheggi e ZTL')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Partecipare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Rete idrica e fognaria')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Rifiuti, pulizia a riciclaggio')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Salute')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizi anagrafici')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizi per i cittadini')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizi per le imprese')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizi e supporto all%educazione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Servizio civile')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Sicurezza')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Spazi del comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Spazi verdi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Sport')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Sposarsi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Strade e viabilità')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Studenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Trasferirsi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Uffici comunali')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Visitare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Vivere la città')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setArgomenti('Votare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza / Attività produttive')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Enti e società partecipate')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Dipendenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Consiglio Comunale')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Giunta Comunale')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Luoghi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Uffici di Città')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio / Richiesta d’accesso agli atti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Archivio atti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Atti del Comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Limiti di rumore per attività')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Statuto e regolamenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Verde privato')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Affidamento verde pubblico')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Assegnazioni spazi del Comune')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Bandi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Concessioni d%uso impianti sportivi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Gare')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi / Selezioni personale')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Attività di impresa')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Bonifiche')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Edilizia privata')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Innovazione tecnologica')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione del verde')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione strade')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Misure riduzione dell’inquinamento')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Organizzazione e promozione di iniziative sportive')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / PGT e pianificazione urbanistica')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Pianificazione mobilità')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti educazione')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti lavori pubblici')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti solidarietà')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Rifiuti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Servizio civile')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Sicurezza urbana')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Traffico e cantieri')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Vendita di immobili')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità / Comunicati stampa')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità / Eventi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità / Notizie')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Autorizzazioni e concessioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Certificati e dichiarazioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Domande e iscrizioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Pagamenti')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Segnalazioni')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Servizi pubblici')"></data-ng-container>
-                <data-ng-container data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Sostegno')"></data-ng-container>
-                <div role="tabpanel" data-ng-show="ctrl.General.getFiltriMode().filtri" class="ng-hide">
-                  <div class="tab-content">
-                    <div role="tabpanel" data-ng-class="ctrl.Ricerca.get_categoriaTab() == 'active'? 'tab-pane active' : 'tab-pane'" id="categoriaTab">
-                      <div class="row">
-                        <div class="offset-md-1 col-md-10 col-sm-12">
-                          <div class="search-filter-ckgroup">
-                            <md-checkbox aria-label="Amministrazione"
-                                         data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
-                                         data-ng-checked="ctrl.Ricerca.ammins_isChecked()"
-                                         md-indeterminate="ctrl.Ricerca.ammins_isIndeterminate()"
-                                         data-ng-click="ctrl.Ricerca.ammins_toggleAll()"><label class="search-filter-ckgroup-title">Amministrazione</label>
-                            </md-checkbox>
-                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_ammins_chk()"
-                                 data-ng-if="ctrl.General.getFiltriMode().categoria == 'Amministrazione' || ctrl.General.getFiltriMode().categoria == ''">
-                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_ammins_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_ammins_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
-                                <label data-ng-bind-html="item"></label>
-                              </md-checkbox>
-                            </div>
-                          </div>
-                          <div class="search-filter-ckgroup">
-                            <md-checkbox aria-label="Servizi"
-                                         data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
-                                         data-ng-checked="ctrl.Ricerca.servizi_isChecked()"
-                                         md-indeterminate="ctrl.Ricerca.servizi_isIndeterminate()"
-                                         data-ng-click="ctrl.Ricerca.servizi_toggleAll()"><label class="search-filter-ckgroup-title">Servizi</label>
-                            </md-checkbox>
-                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_servizi_chk()"
-                                 data-ng-if="ctrl.General.getFiltriMode().categoria == 'Servizi' || ctrl.General.getFiltriMode().categoria == ''">
-                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_servizi_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_servizi_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
-                                <label data-ng-bind-html="item"></label>
-                              </md-checkbox>
-                            </div>
-                          </div>
-                          <div class="search-filter-ckgroup">
-                            <md-checkbox aria-label="Novità"
-                                         data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
-                                         data-ng-checked="ctrl.Ricerca.novita_isChecked()"
-                                         md-indeterminate="ctrl.Ricerca.novita_isIndeterminate()"
-                                         data-ng-click="ctrl.Ricerca.novita_toggleAll()"><label class="search-filter-ckgroup-title">Novità</label>
-                            </md-checkbox>
-                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_novita_chk()"
-                                 data-ng-if="ctrl.General.getFiltriMode().categoria == 'Novità' || ctrl.General.getFiltriMode().categoria == ''">
-                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_novita_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_novita_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
-                                <label data-ng-bind-html="item"></label>
-                              </md-checkbox>
-                            </div>
-                          </div>
-                          <div class="search-filter-ckgroup">
-                            <md-checkbox aria-label="Documenti"
-                                         data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
-                                         data-ng-checked="ctrl.Ricerca.docs_isChecked()"
-                                         md-indeterminate="ctrl.Ricerca.docs_isIndeterminate()"
-                                         data-ng-click="ctrl.Ricerca.docs_toggleAll()"><label class="search-filter-ckgroup-title">Documenti</label>
-                            </md-checkbox>
-                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_docs_chk()"
-                                 data-ng-if="ctrl.General.getFiltriMode().categoria == 'Documenti' || ctrl.General.getFiltriMode().categoria == ''">
-                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_docs_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_docs_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
-                                <label data-ng-bind-html="item"></label>
-                              </md-checkbox>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div role="tabpanel" data-ng-class="ctrl.Ricerca.get_argomentoTab() == 'active'? 'tab-pane active' : 'tab-pane'" id="argomentoTab">
-                      <div class="row">
-                        <div class="offset-md-1 col-md-10 col-sm-12">
-                          <div class="search-filter-ckgroup">
-                            <div class="flex-100" data-ng-repeat="item in ctrl.Ricerca.get_argomenti()">
-                              <md-checkbox data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_args_selected())" data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_args_selected())" aria-label="{% raw %}{{item}}{% endraw %}">
-                                <label data-ng-bind-html="item"></label></md-checkbox>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div role="tabpanel" data-ng-class="ctrl.Ricerca.get_opzioniTab() == 'active'? 'tab-pane active' : 'tab-pane'" id="opzioniTab">
-                      <div class="row">
-                        <div class="offset-lg-1 col-lg-4 col-md-6 col-sm-12">
-                          <div class="form-check form-check-group">
-                            <div class="toggles">
-                              <label for="active_chk">
-                                Cerca solo tra i contenuti attivi
-                                <input type="checkbox" id="active_chk" data-ng-model="ctrl.Ricerca.active_chk">
-                                <span class="lever"></span>
-                              </label>
-                            </div>
-                          </div>
-                          <p class="small">Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti.</p>
-                        </div>
-                        <div class="col-md-3 col-sm-12 search-filter-dategroup">
-                          <div class="form-group">
-                            <label for="datepicker_start">Data inizio</label>
-                            <input type="text" class="form-control" id="datepicker_start" data-ng-model="ctrl.Ricerca.data_inizio" placeholder="gg/mm/aaaa" />
-                            <button aria-label="Apri calendario" type="button" class="ico-sufix" onclick="$('#datepicker_start').focus();" onkeypress="$('#datepicker_start').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
-                          </div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 search-filter-dategroup">
-                          <div class="form-group">
-                            <label for="datepicker_end">Data fine</label>
-                            <input type="text" class="form-control" id="datepicker_end" data-ng-model="ctrl.Ricerca.data_fine" placeholder="gg/mm/aaaa" />
-                            <button aria-label="Apri calendario" type="button" class="ico-sufix" onclick="$('#datepicker_end').focus();" onkeypress="$('#datepicker_end').focus();"><svg class="icon"><use xlink:href="static/img/ponmetroca.svg#ca-event"></use></svg></button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-</body>
+    <div id="dvRicerca">
+      <div data-ng-cloak data-ng-controller="ctrlRicerca as ctrl">
+        <!-- CERCA -->
+
+        <div
+          class="modal fade"
+          id="searchModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="searchModalTitle"
+          aria-hidden="false"
+        >
+          <script>
+            $(function() {
+              $("#datepicker_start").datepicker();
+              $("#datepicker_end").datepicker();
+            });
+          </script>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <form id="ricerca" action="ricerca.html" method="post">
+                <div class="modal-header-fullsrc">
+                  <div class="container">
+                    <div class="row">
+                      <div
+                        class="col-sm-1"
+                        data-ng-class="{pb12: !ctrl.General.getFiltriMode().filtri}"
+                      >
+                        <button
+                          data-ng-hide="ctrl.General.getFiltriMode().filtri && !ctrl.General.getFiltriMode().internal"
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Chiudi filtri di ricerca"
+                          data-ng-click="ctrl.Ricerca.toggleAll(); ctrl.Ricerca.cercatxt = ''; ctrl.General.setFiltriMode(false, false)"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="static/img/ponmetroca.svg#ca-arrow_back"
+                            ></use>
+                          </svg>
+                        </button>
+                        <button
+                          data-ng-show="ctrl.General.getFiltriMode().filtri && !ctrl.General.getFiltriMode().internal"
+                          type="button"
+                          class="close"
+                          aria-label="Chiudi filtri di ricerca"
+                          data-ng-click="ctrl.Ricerca.toggleAll(); ctrl.Ricerca.cercatxt = ''; ctrl.General.setFiltriMode(false, false)"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="static/img/ponmetroca.svg#ca-arrow_back"
+                            ></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="col-sm-11">
+                        <h1 class="modal-title" id="searchModalTitle">
+                          <span
+                            data-ng-hide="ctrl.General.getFiltriMode().filtri"
+                            >Cerca</span
+                          >
+                          <span
+                            data-ng-show="ctrl.General.getFiltriMode().filtri"
+                            >Filtri</span
+                          >
+                        </h1>
+                        <button
+                          data-ng-show="ctrl.General.getFiltriMode().filtri"
+                          class="confirm btn btn-default btn-trasparente float-right"
+                        >
+                          Conferma
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="search-filter-type ng-hide"
+                    data-ng-show="ctrl.General.getFiltriMode().filtri"
+                  >
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation">
+                        <a
+                          data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
+                          href=""
+                          aria-controls="categoriaTab"
+                          role="tab"
+                          data-toggle="tab"
+                          data-ng-click="ctrl.Ricerca.setActive('categorie')"
+                          data-ng-class="ctrl.Ricerca.get_categoriaTab()"
+                          >Categorie</a
+                        >
+                        <a
+                          data-ng-if="ctrl.General.getFiltriMode().categoria != ''"
+                          href=""
+                          aria-controls="categoriaTab"
+                          role="tab"
+                          data-toggle="tab"
+                          data-ng-click="ctrl.Ricerca.setActive('categorie')"
+                          data-ng-class="ctrl.Ricerca.get_categoriaTab()"
+                          >{% raw %}{{
+                            ctrl.General.getFiltriMode().categoria
+                          }}{% endraw %}</a
+                        >
+                      </li>
+                      <li role="presentation">
+                        <a
+                          href=""
+                          aria-controls="argomentoTab"
+                          role="tab"
+                          data-toggle="tab"
+                          data-ng-click="ctrl.Ricerca.setActive('argomenti')"
+                          data-ng-class="ctrl.Ricerca.get_argomentoTab()"
+                          >Argomenti</a
+                        >
+                      </li>
+                      <li role="presentation">
+                        <a
+                          href=""
+                          aria-controls="opzioniTab"
+                          role="tab"
+                          data-toggle="tab"
+                          data-ng-click="ctrl.Ricerca.setActive('opzioni')"
+                          data-ng-class="ctrl.Ricerca.get_opzioniTab()"
+                          >Opzioni</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="modal-body-search">
+                  <div class="container">
+                    <div
+                      class="row"
+                      data-ng-hide="ctrl.General.getFiltriMode().filtri"
+                    >
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                          <label class="sr-only active">Cerca</label>
+                          <md-autocomplete
+                            type="text"
+                            md-input-name="cercatxt"
+                            md-input-id="cerca-txt"
+                            placeholder="Cerca informazioni, persone, servizi"
+                            md-selected-item="ctrl.Ricerca.cercatxt"
+                            md-search-text="searchStringRicercaTxt"
+                            md-selected-item-change="ctrl.Ricerca.selectedRicercaTxtItemChanged(item)"
+                            md-items="item in ctrl.Ricerca.getRisultatiRicerca(searchStringRicercaTxt)"
+                            md-item-text="item.contentName"
+                            md-min-length="1"
+                            md-select-on-match="true"
+                            md-clear-button="true"
+                            md-dropdown-items="10"
+                          >
+                            <md-item-template>
+                              <div data-ng-if="item.contentName != ''">
+                                <svg
+                                  data-ng-show="item.category == 'Pagamenti'"
+                                  class="icon icon-sm"
+                                >
+                                  <use
+                                    xlink:href="static/img/ponmetroca.svg#ca-settings"
+                                  ></use>
+                                </svg>
+                                <svg
+                                  data-ng-show="item.category == 'Modulistica'"
+                                  class="icon icon-sm"
+                                >
+                                  <use
+                                    xlink:href="static/img/ponmetroca.svg#ca-description"
+                                  ></use>
+                                </svg>
+                                <svg
+                                  data-ng-show="item.category == 'Concorsi'"
+                                  class="icon icon-sm"
+                                >
+                                  <use
+                                    xlink:href="static/img/ponmetroca.svg#ca-account_balance"
+                                  ></use>
+                                </svg>
+                                <span class="autocomplete-list-text">
+                                  <span
+                                    data-md-highlight-text="searchStringRicercaTxt"
+                                    data-md-highlight-flags="i"
+                                    >{% raw %}{{ item.contentName }}{% endraw
+                                    %}</span
+                                  >
+                                  <em
+                                    >{% raw %}{{ item.category }}{% endraw
+                                    %}</em
+                                  >
+                                </span>
+                              </div>
+                            </md-item-template>
+                            <md-not-found>
+                              Nessun elemento trovato
+                            </md-not-found>
+                          </md-autocomplete>
+                          <svg class="icon ico-prefix">
+                            <use
+                              xlink:href="static/img/bootstrap-italia.svg#it-search"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="form-filtro"
+                          data-ng-show="searchStringRicercaTxt == '' || ctrl.Ricerca.cercatxt != undefined"
+                        >
+                          <a
+                            class="btn btn-default btn-trasparente"
+                            data-ng-class="ctrl.Ricerca.class_tutti('categorie')"
+                            data-ng-click="ctrl.Ricerca.toggleAll('categorie')"
+                            >Tutto</a
+                          >
+                          <a
+                            class="btn btn-default btn-trasparente"
+                            data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_ammins_selected(), ctrl.Ricerca.get_ammins_chk())"
+                            data-ng-click="ctrl.Ricerca.ammins_toggleAll()"
+                            ><svg class="icon">
+                              <use
+                                xlink:href="static/img/ponmetroca.svg#ca-account_balance"
+                              ></use>
+                            </svg>
+                            Amministrazione</a
+                          >
+                          <a
+                            class="btn btn-default btn-trasparente"
+                            data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_servizi_selected(), ctrl.Ricerca.get_servizi_chk())"
+                            data-ng-click="ctrl.Ricerca.servizi_toggleAll()"
+                            ><svg class="icon">
+                              <use
+                                xlink:href="static/img/ponmetroca.svg#ca-settings"
+                              ></use>
+                            </svg>
+                            Servizi</a
+                          >
+                          <a
+                            class="btn btn-default btn-trasparente"
+                            data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_novita_selected(), ctrl.Ricerca.get_novita_chk())"
+                            data-ng-click="ctrl.Ricerca.novita_toggleAll()"
+                            ><svg class="icon">
+                              <use
+                                xlink:href="static/img/ponmetroca.svg#ca-event"
+                              ></use>
+                            </svg>
+                            Novit&agrave;</a
+                          >
+                          <a
+                            class="btn btn-default btn-trasparente"
+                            data-ng-class="ctrl.Ricerca.class_categorie(ctrl.Ricerca.get_docs_selected(), ctrl.Ricerca.get_docs_chk())"
+                            data-ng-click="ctrl.Ricerca.docs_toggleAll()"
+                            ><svg class="icon">
+                              <use
+                                xlink:href="static/img/ponmetroca.svg#ca-description"
+                              ></use>
+                            </svg>
+                            Documenti</a
+                          >
+                          <a
+                            class="btn btn-default btn-trasparente"
+                            data-ng-click="ctrl.Ricerca.setActive(); ctrl.General.setFiltriMode(true, false)"
+                            aria-label="Filtra per categorie"
+                            >...</a
+                          >
+                        </div>
+                        <div
+                          class="form-blockopz"
+                          data-ng-show="searchStringRicercaTxt == '' || ctrl.Ricerca.cercatxt != undefined"
+                        >
+                          <div data-ng-if="getCookie('search') == ''">
+                            <h2>Suggerimenti</h2>
+                            <ul>
+                              <li>
+                                <a
+                                  href="#"
+                                  title="Vai alla pagina: Uffici comunali"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-account_balance"
+                                    ></use>
+                                  </svg>
+                                  Uffici comunali</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  title="Vai alla pagina: Servizi demografici"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-settings"
+                                    ></use>
+                                  </svg>
+                                  Servizi demografici</a
+                                >
+                              </li>
+                              <li>
+                                <a href="#" title="Vai alla pagina: SUAP"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-account_balance"
+                                    ></use>
+                                  </svg>
+                                  SUAP</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  title="Vai alla pagina: Sostegno alle famiglie"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-settings"
+                                    ></use>
+                                  </svg>
+                                  Sostegno alle famiglie</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  title="Vai alla pagina: Segnalazioni"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-settings"
+                                    ></use>
+                                  </svg>
+                                  Segnalazioni</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div data-ng-if="getCookie('search')">
+                            <h2>Ricerche frequenti</h2>
+                            <ul>
+                              <li>
+                                <a href="#" title="Vai alla pagina: SUAPE"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-settings"
+                                    ></use>
+                                  </svg>
+                                  SUAPE
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  title="Vai alla pagina: Pagamento tassa di cicolazione"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-settings"
+                                    ></use>
+                                  </svg>
+                                  Pagamento tassa di cicolazione
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  title="Vai alla pagina: Modulo iscrizione Asilo nido"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-description"
+                                    ></use>
+                                  </svg>
+                                  Modulo iscrizione Asilo nido
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  title="Vai alla pagina: Municipi di Cagliari"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-account_balance"
+                                    ></use>
+                                  </svg>
+                                  Municipi di Cagliari
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  title="Vai alla pagina: Pagamento Imposte comunali"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-settings"
+                                    ></use>
+                                  </svg>
+                                  Albo pretorio
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  title="Vai alla pagina: Albo pretorio"
+                                  ><svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-description"
+                                    ></use>
+                                  </svg>
+                                  Albo pretorio
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <button
+                          class="search-start"
+                          data-ng-show="ctrl.Ricerca.cercatxt != undefined && ctrl.Ricerca.cercatxt != ''"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="static/img/bootstrap-italia.svg#it-search"
+                            ></use></svg
+                          >Cerca in tutto il sito
+                        </button>
+                        <input
+                          type="hidden"
+                          id="amministrazione"
+                          name="amministrazione"
+                          value="{% raw %}{{
+                            ctrl.Ricerca.get_ammins_selected()
+                          }}{% endraw %}"
+                        />
+                        <input
+                          type="hidden"
+                          id="servizi"
+                          name="servizi"
+                          value="{% raw %}{{
+                            ctrl.Ricerca.get_servizi_selected()
+                          }}{% endraw %}"
+                        />
+                        <input
+                          type="hidden"
+                          id="novita"
+                          name="novita"
+                          value="{% raw %}{{
+                            ctrl.Ricerca.get_novita_selected()
+                          }}{% endraw %}"
+                        />
+                        <input
+                          type="hidden"
+                          id="documenti"
+                          name="documenti"
+                          value="{% raw %}{{
+                            ctrl.Ricerca.get_docs_selected()
+                          }}{% endraw %}"
+                        />
+                        <input
+                          type="hidden"
+                          id="argomenti"
+                          name="argomenti"
+                          value="{% raw %}{{
+                            ctrl.Ricerca.get_args_selected()
+                          }}{% endraw %}"
+                        />
+                        <input
+                          type="hidden"
+                          id="attivi"
+                          name="attivi"
+                          value="{% raw %}{{
+                            ctrl.Ricerca.active_chk
+                          }}{% endraw %}"
+                        />
+                        <input
+                          type="hidden"
+                          id="inizio"
+                          name="inizio"
+                          value="{% raw %}{{
+                            ctrl.Ricerca.data_inizio
+                          }}{% endraw %}"
+                        />
+                        <input
+                          type="hidden"
+                          id="fine"
+                          name="fine"
+                          value="{% raw %}{{
+                            ctrl.Ricerca.data_fine
+                          }}{% endraw %}"
+                        />
+                      </div>
+                    </div>
+
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Agevolazioni per la casa')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Animali')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Anziani')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Assistenza e inclusione')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Associazioni')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Bambini e ragazzi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Cantieri e progetti')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Comune')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Comunicare con il comune')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Corsi e tempo libero')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Costruire e ristrutturare')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Cultura')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Edilizia')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Famiglia')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Formazione professionale')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Fornitori del comune')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Immigrazione')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Imparare')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Imprese e investitori')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Inquinamento')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('La città che cambia')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Lavorare')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Muoversi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Parcheggi e ZTL')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Partecipare')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Rete idrica e fognaria')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Rifiuti, pulizia a riciclaggio')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Salute')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Servizi anagrafici')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Servizi per i cittadini')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Servizi per le imprese')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Servizi e supporto all%educazione')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Servizio civile')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Sicurezza')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Spazi del comune')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Spazi verdi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Sport')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Sposarsi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Strade e viabilità')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Studenti')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Trasferirsi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Uffici comunali')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Visitare')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Vivere la città')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setArgomenti('Votare')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Aree di competenza / Attività produttive')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Enti e società partecipate')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Dipendenti')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Consiglio Comunale')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Giunta e Consiglio / Giunta Comunale')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Luoghi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Amministrazione / Uffici di Città')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Albo pretorio / Richiesta d’accesso agli atti')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Archivio atti')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Atti del Comune')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Limiti di rumore per attività')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Statuto e regolamenti')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Atti amministrativi / Verde privato')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Affidamento verde pubblico')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Assegnazioni spazi del Comune')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Bandi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Concessioni d%uso impianti sportivi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Bandi / Gare')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Concorsi / Selezioni personale')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Attività di impresa')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Bonifiche')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Edilizia privata')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Innovazione tecnologica')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione del verde')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Manutenzione strade')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Misure riduzione dell’inquinamento')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Organizzazione e promozione di iniziative sportive')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / PGT e pianificazione urbanistica')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Pianificazione mobilità')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti educazione')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti lavori pubblici')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Progetti solidarietà')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Rifiuti')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Servizio civile')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Sicurezza urbana')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Traffico e cantieri')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Documenti / Progetti e attività / Vendita di immobili')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità / Comunicati stampa')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità / Eventi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Novità / Notizie')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Autorizzazioni e concessioni')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Certificati e dichiarazioni')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Domande e iscrizioni')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Pagamenti')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Segnalazioni')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Servizi pubblici')"
+                    ></data-ng-container>
+                    <data-ng-container
+                      data-ng-init="ctrl.Ricerca.setCategorie('Generale / Tipologie contenuti / Servizi / Sostegno')"
+                    ></data-ng-container>
+                    <div
+                      role="tabpanel"
+                      data-ng-show="ctrl.General.getFiltriMode().filtri"
+                      class="ng-hide"
+                      data-ng-init="showallcat = false; showallarg = false"
+                    >
+                      <div class="tab-content">
+                        <div
+                          role="tabpanel"
+                          data-ng-class="ctrl.Ricerca.get_categoriaTab() == 'active'? 'tab-pane active' : 'tab-pane'"
+                          id="categoriaTab"
+                        >
+                          <div class="row">
+                            <div class="offset-md-1 col-md-10 col-sm-12">
+                              <div class="search-filter-ckgroup">
+                                <md-checkbox
+                                  aria-label="Amministrazione"
+                                  data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
+                                  data-ng-checked="ctrl.Ricerca.ammins_isChecked()"
+                                  md-indeterminate="ctrl.Ricerca.ammins_isIndeterminate()"
+                                  data-ng-click="ctrl.Ricerca.ammins_toggleAll()"
+                                  ><label class="search-filter-ckgroup-title"
+                                    >Amministrazione</label
+                                  >
+                                </md-checkbox>
+                                <div
+                                  class="flex-100"
+                                  data-ng-repeat="item in ctrl.Ricerca.get_ammins_chk()"
+                                  data-ng-if="ctrl.General.getFiltriMode().categoria == 'Amministrazione' || ctrl.General.getFiltriMode().categoria == ''"
+                                >
+                                  <md-checkbox
+                                    data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_ammins_selected())"
+                                    data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_ammins_selected())"
+                                    aria-label="{% raw %}{{ item }}{% endraw %}"
+                                  >
+                                    <label data-ng-bind-html="item"></label>
+                                  </md-checkbox>
+                                </div>
+                              </div>
+                              <div class="search-filter-ckgroup">
+                                <md-checkbox
+                                  aria-label="Servizi"
+                                  data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
+                                  data-ng-checked="ctrl.Ricerca.servizi_isChecked()"
+                                  md-indeterminate="ctrl.Ricerca.servizi_isIndeterminate()"
+                                  data-ng-click="ctrl.Ricerca.servizi_toggleAll()"
+                                  ><label class="search-filter-ckgroup-title"
+                                    >Servizi</label
+                                  >
+                                </md-checkbox>
+                                <div
+                                  class="flex-100"
+                                  data-ng-repeat="item in ctrl.Ricerca.get_servizi_chk()"
+                                  data-ng-if="ctrl.General.getFiltriMode().categoria == 'Servizi' || ctrl.General.getFiltriMode().categoria == ''"
+                                >
+                                  <div data-ng-if="$index <= 2">
+                                    <md-checkbox
+                                      data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_servizi_selected())"
+                                      data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_servizi_selected())"
+                                      aria-label="{% raw %}{{
+                                        item
+                                      }}{% endraw %}"
+                                    >
+                                      <label data-ng-bind-html="item"></label>
+                                    </md-checkbox>
+                                  </div>
+                                  <div data-ng-if="$index >= 3">
+                                    <div
+                                      data-ng-show="showallcat || ctrl.General.getFiltriMode().categoria != ''"
+                                    >
+                                      <md-checkbox
+                                        data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_servizi_selected())"
+                                        data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_servizi_selected())"
+                                        aria-label="{% raw %}{{
+                                          item
+                                        }}{% endraw %}"
+                                      >
+                                        <label data-ng-bind-html="item"></label>
+                                      </md-checkbox>
+                                    </div>
+                                  </div>
+                                </div>
+                                <a
+                                  href=""
+                                  data-ng-hide="showallcat || ctrl.General.getFiltriMode().categoria != ''"
+                                  data-ng-click="showallcat=true"
+                                  ><b>Mostra tutto</b></a
+                                >
+                              </div>
+                              <div
+                                data-ng-show="showallcat || ctrl.General.getFiltriMode().categoria != ''"
+                              >
+                                <div class="search-filter-ckgroup">
+                                  <md-checkbox
+                                    aria-label="Novità"
+                                    data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
+                                    data-ng-checked="ctrl.Ricerca.novita_isChecked()"
+                                    md-indeterminate="ctrl.Ricerca.novita_isIndeterminate()"
+                                    data-ng-click="ctrl.Ricerca.novita_toggleAll()"
+                                    ><label class="search-filter-ckgroup-title"
+                                      >Novità</label
+                                    >
+                                  </md-checkbox>
+                                  <div
+                                    class="flex-100"
+                                    data-ng-repeat="item in ctrl.Ricerca.get_novita_chk()"
+                                    data-ng-if="ctrl.General.getFiltriMode().categoria == 'Novità' || ctrl.General.getFiltriMode().categoria == ''"
+                                  >
+                                    <md-checkbox
+                                      data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_novita_selected())"
+                                      data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_novita_selected())"
+                                      aria-label="{% raw %}{{
+                                        item
+                                      }}{% endraw %}"
+                                    >
+                                      <label data-ng-bind-html="item"></label>
+                                    </md-checkbox>
+                                  </div>
+                                </div>
+                                <div class="search-filter-ckgroup">
+                                  <md-checkbox
+                                    aria-label="Documenti"
+                                    data-ng-if="ctrl.General.getFiltriMode().categoria == ''"
+                                    data-ng-checked="ctrl.Ricerca.docs_isChecked()"
+                                    md-indeterminate="ctrl.Ricerca.docs_isIndeterminate()"
+                                    data-ng-click="ctrl.Ricerca.docs_toggleAll()"
+                                    ><label class="search-filter-ckgroup-title"
+                                      >Documenti</label
+                                    >
+                                  </md-checkbox>
+                                  <div
+                                    class="flex-100"
+                                    data-ng-repeat="item in ctrl.Ricerca.get_docs_chk()"
+                                    data-ng-if="ctrl.General.getFiltriMode().categoria == 'Documenti' || ctrl.General.getFiltriMode().categoria == ''"
+                                  >
+                                    <md-checkbox
+                                      data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_docs_selected())"
+                                      data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_docs_selected())"
+                                      aria-label="{% raw %}{{
+                                        item
+                                      }}{% endraw %}"
+                                    >
+                                      <label data-ng-bind-html="item"></label>
+                                    </md-checkbox>
+                                  </div>
+                                  <a
+                                    href=""
+                                    data-ng-hide="ctrl.General.getFiltriMode().categoria != ''"
+                                    data-ng-click="showallcat=false"
+                                    ><b>Mostra meno</b></a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          role="tabpanel"
+                          data-ng-class="ctrl.Ricerca.get_argomentoTab() == 'active'? 'tab-pane active' : 'tab-pane'"
+                          id="argomentoTab"
+                        >
+                          <div class="row">
+                            <div class="offset-md-1 col-md-10 col-sm-12">
+                              <div class="search-filter-ckgroup">
+                                <div
+                                  class="flex-100"
+                                  data-ng-repeat="item in ctrl.Ricerca.get_argomenti()"
+                                >
+                                  <div data-ng-if="$index <= 11">
+                                    <md-checkbox
+                                      data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_args_selected())"
+                                      data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_args_selected())"
+                                      aria-label="{% raw %}{{
+                                        item
+                                      }}{% endraw %}"
+                                    >
+                                      <label data-ng-bind-html="item"></label
+                                    ></md-checkbox>
+                                  </div>
+                                  <div data-ng-if="$index >= 12">
+                                    <div data-ng-show="showallarg">
+                                      <md-checkbox
+                                        data-ng-checked="ctrl.Ricerca.exists(item, ctrl.Ricerca.get_args_selected())"
+                                        data-ng-click="ctrl.Ricerca.toggle(item, ctrl.Ricerca.get_args_selected())"
+                                        aria-label="{% raw %}{{
+                                          item
+                                        }}{% endraw %}"
+                                      >
+                                        <label data-ng-bind-html="item"></label
+                                      ></md-checkbox>
+                                    </div>
+                                  </div>
+                                </div>
+                                <a
+                                  href=""
+                                  data-ng-hide="showallarg"
+                                  data-ng-click="showallarg=true"
+                                  ><b>Mostra tutto</b></a
+                                >
+                                <a
+                                  href=""
+                                  data-ng-show="showallarg"
+                                  data-ng-click="showallarg=false"
+                                  ><b>Mostra meno</b></a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          role="tabpanel"
+                          data-ng-class="ctrl.Ricerca.get_opzioniTab() == 'active'? 'tab-pane active' : 'tab-pane'"
+                          id="opzioniTab"
+                        >
+                          <div class="row">
+                            <div
+                              class="offset-lg-1 col-lg-4 col-md-6 col-sm-12"
+                            >
+                              <div class="form-check form-check-group">
+                                <div class="toggles">
+                                  <label for="active_chk">
+                                    Cerca solo tra i contenuti attivi
+                                    <input
+                                      type="checkbox"
+                                      id="active_chk"
+                                      data-ng-model="ctrl.Ricerca.active_chk"
+                                    />
+                                    <span class="lever"></span>
+                                  </label>
+                                </div>
+                              </div>
+                              <p class="small">
+                                Verranno esclusi dalla ricerca i contenuti
+                                archiviati e non più validi come gli eventi
+                                terminati o i bandi scaduti.
+                              </p>
+                            </div>
+                            <div
+                              class="col-md-3 col-sm-12 search-filter-dategroup"
+                            >
+                              <div class="form-group">
+                                <label for="datepicker_start"
+                                  >Data inizio</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="datepicker_start"
+                                  data-ng-model="ctrl.Ricerca.data_inizio"
+                                  placeholder="gg/mm/aaaa"
+                                />
+                                <button
+                                  aria-label="Apri calendario"
+                                  type="button"
+                                  class="ico-sufix"
+                                  onclick="$('#datepicker_start').focus();"
+                                  onkeypress="$('#datepicker_start').focus();"
+                                >
+                                  <svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-event"
+                                    ></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div
+                              class="col-md-3 col-sm-12 search-filter-dategroup"
+                            >
+                              <div class="form-group">
+                                <label for="datepicker_end">Data fine</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="datepicker_end"
+                                  data-ng-model="ctrl.Ricerca.data_fine"
+                                  placeholder="gg/mm/aaaa"
+                                />
+                                <button
+                                  aria-label="Apri calendario"
+                                  type="button"
+                                  class="ico-sufix"
+                                  onclick="$('#datepicker_end').focus();"
+                                  onkeypress="$('#datepicker_end').focus();"
+                                >
+                                  <svg class="icon">
+                                    <use
+                                      xlink:href="static/img/ponmetroca.svg#ca-event"
+                                    ></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
