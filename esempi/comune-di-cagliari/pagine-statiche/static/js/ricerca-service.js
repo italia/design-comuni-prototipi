@@ -27,6 +27,13 @@ app.factory('RicercaService', ['$http', '$q', 'GeneralService', function($http, 
 	var categorie = [];
 	var cercatxt = "";
 	
+	var searchList = [{contentName: "Pagamento della TARI", category:"Pagamenti"}, 
+		{contentName: "Pagamento tassa di circolazione", category:"Pagamenti"},
+		{contentName: "Modulo pagamento tasse universitarie", category:"Modulistica"},
+		{contentName: "Pagamento tributi a Pirri", category:"Pagamenti"},
+		{contentName: "Concorso ragioniere - Ufficio pagamenti", category:"Concorsi"},
+		{contentName: "Modulistica pagamento TARSU", category:"Modulistica"}]
+	
 	var factory = {
 		Init : Init,
 		setArgomenti : setArgomenti,
@@ -71,6 +78,8 @@ app.factory('RicercaService', ['$http', '$q', 'GeneralService', function($http, 
 		get_data_fine : get_data_fine,
 		get_argomenti : get_argomenti,
 		get_categorie : get_categorie,
+		getRisultatiRicerca : getRisultatiRicerca,
+		selectedRicercaTxtItemChanged : selectedRicercaTxtItemChanged
     };
     return factory;
 	
@@ -86,19 +95,19 @@ app.factory('RicercaService', ['$http', '$q', 'GeneralService', function($http, 
 		var categoria = [];
 		categoria = cat.split("/ ");
 		
-		if (cat.includes("/ Amministrazione")){
+		if (cat.indexOf("/ Amministrazione")>=0){
 			if(categoria.length == 4)
 				ammins_chk.push(categoria[3].replace("%", "'"));
 		}
-		if (cat.includes("/ Novit")){
+		if (cat.indexOf("/ Novit")>=0){
 			if(categoria.length == 4)
 				novita_chk.push(categoria[3].replace("%", "'"));
 		}
-		if (cat.includes("/ Servizi")){
+		if (cat.indexOf("/ Servizi")>=0){
 			if(categoria.length == 4)	
 				servizi_chk.push(categoria[3].replace("%", "'"));
 		}
-		if (cat.includes("/ Documenti")){
+		if (cat.indexOf("/ Documenti")>=0){
 			if(categoria.length == 4)
 				docs_chk.push(categoria[3].replace("%", "'"));
 		}
@@ -373,5 +382,21 @@ app.factory('RicercaService', ['$http', '$q', 'GeneralService', function($http, 
 	function get_categorie() {
 		return categorie;
 	}
+	
+	function getRisultatiRicerca(search){
+		var deferred = $q.defer();
+		deferred.resolve(searchList);
+		return deferred.promise;
+	};
+	
+	function selectedRicercaTxtItemChanged(item) {
+		if (item !== undefined && item.contentName !== undefined){
+			cercatxt = item.contentName;
+		}
+        // Clear fields
+        if (item === undefined) {
+			cercatxt = "";
+        }
+    }
 	
 }]);

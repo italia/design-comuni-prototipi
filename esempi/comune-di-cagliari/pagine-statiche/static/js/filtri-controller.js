@@ -1,4 +1,4 @@
-app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService', '$location', '$anchorScroll', '$sce', '$timeout', 
+app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService', '$location', '$anchorScroll', '$sce', '$timeout',
 	function($scope, FiltriService, GeneralService, $location, $anchorScroll, $sce, $timeout){
 	
 	$scope.contents = [];
@@ -12,7 +12,10 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 	$scope.categoryContent = [];
 	$scope.dayName = [];
 	$scope.loader = [];
+	$scope.full = [];
+	$scope.empty = false;
 	
+	const monthNames = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
 		
 	$scope.setParameters = function (pageSize, maxElem, contentType, modelId, categoryCode, elemId, secondModelId, filters, contents) {
 		$scope.pageSize = parseInt(pageSize);
@@ -31,24 +34,31 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 	}
 	
 	$scope.setCalendarParameters = function (day, finemese, nextMonth) {
+		$scope.oneMonth = true;
 		$scope.day = day;
 		$scope.finemese = finemese;
 		$scope.days = finemese - day;
 		for (i = 0; i <= $scope.days; i++) { 
 			$scope.calendar[i] = i+parseInt($scope.day);
+			$scope.full[$scope.calendar[i]] = true;
 		}
-		if ($scope.days <= 2) {
+		if ($scope.days <= 9) {
+			$scope.oneMonth = false;
+			var d = new Date();
+			$scope.nextMonth = monthNames[d.getMonth()+1];
 			$scope.daysOld = angular.copy($scope.days)+1;
 			$scope.day = 1;
-			$scope.finemese = 3 - $scope.days;
+			$scope.finemese = 10 - $scope.days;
 			$scope.days = $scope.finemese - $scope.day;
 			for (i = 0; i <= $scope.days; i++) { 
 				$scope.calendar[i+$scope.daysOld] = i+parseInt($scope.day);
+				$scope.full[$scope.calendar[i+$scope.daysOld]] = true;
 			}
 		}
 	}
 	
 	$scope.getContents = function (contentType, modelId, categoryCode, elemId, filters, date) {
+		$scope.countEmpty = 0;
 		if (filters != undefined)
 			$scope.filters = filters;
 		$scope.currentPage = 0;
@@ -60,9 +70,12 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 		FiltriService.getContents(contentType, categoryCode, $scope.filters, date).then(
 			function(response) {
 				$scope.events[date]=[];
-				if(response != undefined)
-					$scope.loader[date]= true;
+				if(response == undefined){
+					$scope.full[date] = false;
+					$scope.countEmpty = $scope.countEmpty + 1;
+				}
 				if (response != undefined) {
+					$scope.loader[date]= true;
 					if (!Array.isArray(response)) {
 						if (response.$){
 							$scope.contents = [];
@@ -124,6 +137,11 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 				} else {
 					$scope.contents = [];
 				}
+				if ($scope.countEmpty != $scope.calendar.length && contentType == 'EVN')
+					$timeout(owlInit, 1000);
+				else {
+					$scope.empty = true;
+				}
 			}, function(errResponse) {
 				$scope.contents = [];
 				$scope.loader[date]= false;
@@ -184,7 +202,32 @@ app.controller('FiltriController', [ '$scope', 'FiltriService', 'GeneralService'
 					console.error("Errore durante il caricamento del contenuto");
 			});
 		}
-}
+	}
+	
+	function owlInit(){
+		var owl = $('#owl-calendario');
+		owl.owlCarousel({
+			nav:false,
+			startPosition: 0,
+			autoPlay:false,
+			responsiveClass:true,
+			responsive:{
+					0:{
+						items:1,
+					},
+					576: {
+						items:2,
+					},
+					768: {
+						items:3,
+					},
+					991: {
+						items:4,
+					},
+				}
+		});
+	}
+	
 	
 }]);
 
