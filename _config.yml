@@ -11,6 +11,7 @@ exclude:
   - AUTHORS
   - CODE_OF_CONDUCT.md
   - CONTRIBUTING.md
+  - cover-image.png
   - LICENSE.md
   - Gemfile
   - Gemfile.lock
