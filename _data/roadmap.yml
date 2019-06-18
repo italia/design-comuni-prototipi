@@ -1,0 +1,13 @@
+it:
+  - date: Aprile 2019
+    title: Rilascio dei template del prototipo per il Comune di Cagliari
+    text: >-
+      Cagliari ha rilasciato i propri template, realizzati con la libreria
+      <a href="https://italia.github.io/bootstrap-italia/">Bootstrap Italia</a> e
+      la libreria Angular.
+    link: /it/strumenti.html
+  - date: Luglio 2019
+    title: Completamento template per le pagine principali
+    text: >-
+      Rilascio di tutti i template di pagina, costruiti con la liberia
+      <a href="https://italia.github.io/bootstrap-italia/">Bootstrap Italia</a>

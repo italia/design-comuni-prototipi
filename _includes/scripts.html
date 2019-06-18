@@ -1,0 +1,12 @@
+{% assign buildTime =  site.time | date: '%Y%m%d%H%M' %}
+
+<!-- window.__PUBLIC_PATH__ points to fonts folder location -->
+<script>window.__PUBLIC_PATH__ = "{{ site.baseurl }}/assets/bootstrap-italia/dist/fonts"</script>
+
+<!-- Bootstrap core JS -->
+<script src="{{ site.baseurl }}/assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
+
+
+{%- if page.layout == "bootstrap-italia" -%}
+{%- include esempi/comuni/notifica.html -%}
+{%- endif -%}

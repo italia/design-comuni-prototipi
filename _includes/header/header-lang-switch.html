@@ -1,0 +1,31 @@
+{% assign pages_in_other_langs = site.pages | where: "ref", page.ref | sort: 'lang' | reverse %}
+
+{% if pages_in_other_langs.size > 0 %}
+<div class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+    <span>{{ page.lang | upcase }}</span>
+    <svg class="icon d-none d-lg-block">
+      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+    </svg>
+  </a>
+  <div class="dropdown-menu">
+    <div class="row">
+      <div class="col-12">
+        <div class="link-list-wrapper">
+          <ul class="link-list">
+            {% for linked_page in pages_in_other_langs %}
+            {% if linked_page.lang == "it" %}
+            <li><a class="list-item" href="{{ site.baseurl }}{{ linked_page.url }}" title="{{ site.data.t.italian-version[page.lang] }}" {% if linked_page.lang == page.lang %}class="active"{% endif %}><span>{{ linked_page.lang | upcase }}</span></a></li>
+            {% else %}
+            <li><a class="list-item" href="{{ site.baseurl }}{{ linked_page.url }}" title="{{ site.data.t.english-version[page.lang] }}" {% if linked_page.lang == page.lang %}class="active"{% endif %}><span>{{ linked_page.lang | upcase }}</span></a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% else %}
+
+{% endif %}

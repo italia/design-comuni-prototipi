@@ -1,0 +1,56 @@
+<div class="it-header-slim-wrapper theme-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="https://teamdigitale.governo.it/">{{ site.data.t.author[page.lang] }}</a>
+
+            <nav class="navbar-institutional navbar navbar-expand-lg navbar-dark py-1 px-3">
+              <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu1" role="button" aria-expanded="false" aria-controls="menu1">
+                <span>{{ site.data.t.author[page.lang] }}</span>
+                <svg class="icon">
+                  <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                </svg>
+              </a>
+              <div class="collapse navbar-collapse" id="menu1">
+
+                <ul class="navbar-nav ml-auto mr-0 border-right-0">
+                  <li class="nav-item nav-item-w-divider">
+                    <a class="nav-link" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://developers.italia.it/">Developers</a>
+                  </li>
+                  <li class="nav-item nav-item-w-divider">
+                    <a class="nav-link" href="http://designers.italia.it/">Designers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://forum.italia.it/">Forum</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://docs.italia.it/">Docs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/italia/">GitHub</a>
+                  </li>
+                  <li class="nav-item d-lg-none">
+                    <a class="nav-link" href="https://teamdigitale.governo.it/">Team per la Trasformazione Digitale</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          {% comment %}
+          <div class="header-slim-right-zone">
+            <!-- Language Switch -->
+            {% include header/header-lang-switch.html %}
+            <!-- Account options -->
+            <div class="it-access-top-wrapper">
+              <button class="btn btn-primary btn-sm" href="#" type="button">Accedi</button>
+            </div>
+          </div>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
