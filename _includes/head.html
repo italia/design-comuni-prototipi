@@ -1,0 +1,15 @@
+{% assign buildTime =  site.time | date: '%Y%m%d%H%M' %}
+{% include meta.html %}
+<title>
+  {%- if page.title -%}
+    {{ page.title | smartify }} · {{ site.title | smartify }}
+  {%- else -%}
+    {{ site.title | smartify }} · {{ site.description | smartify }}
+  {%- endif -%}
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap-italia/dist/css/bootstrap-italia.min.css">
+
+{% include analytics/google-analytics.html %}
+
