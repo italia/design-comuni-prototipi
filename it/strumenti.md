@@ -23,7 +23,37 @@ Di seguito si possono trovare i template con codice già pronto, costruiti sulle
       <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-amministrazione.html" target="_blank">
         <div class="it-right-zone">
           <span class="text">Pagina di primo livello - Amministrazione
-            <em>Esempio di pagina di primo livello per il menu Amministrazione</em>
+            <em>Esempio di pagina di primo livello per il menu "Amministrazione"</em>
+          </span>
+          <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-servizi.html" target="_blank">
+        <div class="it-right-zone">
+          <span class="text">Pagina di primo livello - Servizi
+            <em>Esempio di pagina di primo livello per il menu "Servizi"</em>
+          </span>
+          <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-novita.html" target="_blank">
+        <div class="it-right-zone">
+          <span class="text">Pagina di primo livello - Novità
+            <em>Esempio di pagina di primo livello per il menu "Novità"</em>
+          </span>
+          <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-documenti.html" target="_blank">
+        <div class="it-right-zone">
+          <span class="text">Pagina di primo livello - Documenti
+            <em>Esempio di pagina di primo livello per il menu "Documenti"</em>
           </span>
           <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
         </div>
