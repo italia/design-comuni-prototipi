@@ -17,6 +17,8 @@ Nel corso del 2018, è stata effettuata una [approfondita fase di studio](https:
 - Interviste a tutti gli attori coinvolti, per fare tesoro dell’esperienza dei funzionari della PA e degli esperti.
 - Analisi delle pratiche di usabilità studiando i siti di altri comuni in Italia e all’estero.
 
+### Approfondisci
+
 Questa pagina raccoglie i risultati di tale ricerca concretizzando un modello per i siti dei Comuni Italiani. Se vuoi scoprire di più sul progetto, puoi leggere i nostri post su Medium:
 
 <div class="it-list-wrapper">

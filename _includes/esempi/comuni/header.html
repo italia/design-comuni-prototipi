@@ -56,7 +56,7 @@
           <div class="col-12">
             <div class="it-header-center-content-wrapper">
               <div class="it-brand-wrapper">
-                <a href="#">
+                <a href="{{ site.baseurl }}/esempi/bootstrap-italia/">
                   <svg class="icon">
                     <use
                       xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-pa"></use>
@@ -138,25 +138,25 @@
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
                     <li class="nav-item {% if section == 'amministrazione' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'amministrazione' %}active{%endif%}" href="#">
+                      <a class="nav-link {% if section == 'amministrazione' %}active{%endif%}" href="{{ site.baseurl }}/esempi/bootstrap-italia/template-amministrazione.html">
                         <span>Amministrazione</span>
                         {% if section == 'amministrazione' %}<span class="sr-only">menu selezionato</span>{%endif%}
                       </a>
                     </li>
                     <li class="nav-item {% if section == 'servizi' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'servizi' %}active{%endif%}" href="#">
+                      <a class="nav-link {% if section == 'servizi' %}active{%endif%}" href="{{ site.baseurl }}/esempi/bootstrap-italia/template-servizi.html">
                         <span>Servizi</span>
                         {% if section == 'servizi' %}<span class="sr-only">menu selezionato</span>{%endif%}
                       </a>
                     </li>
                     <li class="nav-item {% if section == 'novità' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'novità' %}active{%endif%}" href="#">
+                      <a class="nav-link {% if section == 'novità' %}active{%endif%}" href="{{ site.baseurl }}/esempi/bootstrap-italia/template-novita.html">
                         <span>Novità</span>
                         {% if section == 'novità' %}<span class="sr-only">menu selezionato</span>{%endif%}
                       </a>
                     </li>
                     <li class="nav-item {% if section == 'documenti' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'documenti' %}active{%endif%}" href="#">
+                      <a class="nav-link {% if section == 'documenti' %}active{%endif%}" href="{{ site.baseurl }}/esempi/bootstrap-italia/template-documenti.html">
                         <span>Documenti</span>
                         {% if section == 'documenti' %}<span class="sr-only">menu selezionato</span>{%endif%}
                       </a>
@@ -170,10 +170,6 @@
                     <li class="nav-item">
                       <a class="nav-link" href="#">
                         Argomento in evidenza 2</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        Argomento in evidenza 3</a>
                     </li>
                     <li class="nav-item {% if section == 'argomenti' %}active{%endif%}">
                       <a class="nav-link {% if section == 'argomenti' %}active{%endif%}" href="#">

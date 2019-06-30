@@ -11,7 +11,7 @@ title: Template Amministrazione
         <nav aria-label="breadcrumb" class="breadcrumb-container">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="#">Home</a><span class="separator">/</span>
+              <a href="{{ site.baseurl }}/esempi/bootstrap-italia/">Home</a><span class="separator">/</span>
             </li>
             <li aria-current="page" class="breadcrumb-item active">
               Novità
@@ -25,10 +25,7 @@ title: Template Amministrazione
     <div class="row">
       <div class="col-lg-8 px-lg-4 py-lg-2">
         <h1>Novità</h1>
-        <p>
-          Tutte le informazioni sulla Giunta e sul Consiglio comunale, uffici,
-          aree di competenza e personale, luoghi e servizi per il cittadino.
-        </p>
+        <p>Donec in consequat nunc. Duis semper fermentum lacus, ac condimentum justo auctor a. Nam erat erat, porta vel pharetra in, ullamcorper vel turpis.</p>
         <div class="form-group mt-5">
           <form>
             <input id="ricerca-amministrazione" type="search">
@@ -64,7 +61,7 @@ title: Template Amministrazione
               <h3 id="heading-senza-link">Tutte le novità</h3>
             </li>
             <li>
-              <a class="list-item" href="#">Novità</a>
+              <a class="list-item" href="#">Ultime notizie</a>
             </li>
             <li>
               <a class="list-item" href="#">Comunicati</a>
@@ -96,18 +93,20 @@ title: Template Amministrazione
                       <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
                     </figure>
                     <div class="card-calendar d-flex flex-column justify-content-center">
-                      <span class="card-date">31</span>
-                      <span class="card-day">dicembre</span>
+                      <span class="card-date">1</span>
+                      <span class="card-day">Maggio</span>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Sagra di paese</h5>
-                  <p class="card-text">Una breve descrizione della sagra e dei suoi momenti salienti.</p>
-                  <a class="read-more" href="#"><span class="text">Leggi di più</span>
-                  <svg class="icon">
-                    <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                  </svg></a>
+                  <h5 class="card-title">363^ Festa di Sant'Efisio</h5>
+                  <p class="card-text">Il 1° maggio 2019 Cagliari e tutta la Sardegna festeggiano la 363ª Festa di Sant'Efisio. Un intenso momento di devozione, fede, cultura e tradizioni centenarie che si fondono in una processione che non ha eguali.</p>
+                  <a class="read-more" href="{{ site.baseurl }}/esempi/bootstrap-italia/template-novita-notizia.html">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon">
+                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </article>
@@ -125,9 +124,9 @@ title: Template Amministrazione
                   <span>Notizie</span>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                  <h5 class="card-title">Osservatorio sul turismo</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
+                  <a class="read-more" href="{{ site.baseurl }}/esempi/bootstrap-italia/template-novita-notizia.html">
                     <span class="text">Leggi di più</span>
                     <svg class="icon">
                       <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
@@ -174,7 +173,7 @@ title: Template Amministrazione
       <div class="container px-4">
         <div class="row">
           <div class="col">
-            <h3 class="mb-4 text-primary">Tutti i servizi</h3>
+            <h3 class="mb-4 text-primary">Tutte le novità</h3>
           </div>
         </div>
         <div class="row">
@@ -183,7 +182,7 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title big-heading">Anagrafe e carta identità</h5>
+                  <h5 class="card-title big-heading">Ultime notizie</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
@@ -201,7 +200,7 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title big-heading">Arte, cultura e sport</h5>
+                  <h5 class="card-title big-heading">Comunicati</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
@@ -219,187 +218,7 @@ title: Template Amministrazione
             <div class="card-wrapper">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title big-heading">Attività produttive</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Bandi, contratti e concorsi pubblici</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Casa, edilizia e terreni</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Elezioni e partecipazione</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Eventi personali e familiari</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Mobilità</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Sanità e Sociale</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Scuola e formazione</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Sicurezza e multe</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Tributi e imposte</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <a class="read-more" href="#">
-                    <span class="text">Leggi di più</span>
-                    <svg class="icon">
-                      <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!--end card-->
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4">
-            <!--start card-->
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title big-heading">Urbanistica e ambiente</h5>
+                  <h5 class="card-title big-heading">Eventi</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <a class="read-more" href="#">
                     <span class="text">Leggi di più</span>
