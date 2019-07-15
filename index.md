@@ -1,6 +1,6 @@
 ---
 layout: default
-title: I siti dei Comuni Italiani
+title: Homepage
 description: Tutte le risorse per realizzare siti moderni e accessibili per i comuni italiani.
 lang: it
 ref: homepage

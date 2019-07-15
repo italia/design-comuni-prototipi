@@ -26,13 +26,13 @@ author:
 ## Social
 social-links:
   en:
-    docs-italia:
-      name: "files"
+    - title: "Design dei siti web dei Comuni italiani"
       url: "https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/"
+      icon-name: "files"
   it:
-    docs-italia:
-      name: "files"
+    - title: "Design dei siti web dei Comuni italiani"
       url: "https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/"
+      icon-name: "files"
 
 ## Labels
 italian-version:

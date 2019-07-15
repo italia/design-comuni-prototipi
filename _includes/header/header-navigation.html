@@ -13,11 +13,11 @@ Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le p
         <div class="col-12">
           <div class="it-header-center-content-wrapper">
             <div class="it-brand-wrapper">
-              <a href="{{ site.baseurl }}">
+              <a href="{{ site.baseurl }}/">
                 <img class="icon" src="{{ site.baseurl }}{{ site.data.t.icon }}" alt="{{ site.name }} logo">
                 <div class="it-brand-text">
                   <h2 class="no_toc">{{ site.data.t.name[page.lang] }}</h2>
-                  <h3 class="no_toc d-none d-md-block">{{ site.data.t.description[page.lang] }}</h3>
+                  {% comment %}<h3 class="no_toc d-none d-md-block">{{ site.data.t.description[page.lang] }}</h3>{% endcomment %}
                 </div>
               </a>
             </div>
@@ -25,16 +25,14 @@ Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le p
               <div class="it-socials d-none d-md-flex">
                 <ul>
                   {% for social-link in site.data.t.social-links[page.lang] %}
-                  <li class="list-inline-item">
-                    <a rel="noreferrer" href="{{ social-link[1].url }}" title="{{ social-link[1].name }}"
+                  <li class="list-inline-item"><span class="d-none d-lg-inline">Leggi la guida:</span>
+                    <a rel="noreferrer" href="{{ social-link.url }}" title="{{ social-link.title }}"
                       target="_blank">
-                      <span>Leggi di più su Docs Italia</span>
-                      <svg class="icon">
+                      <span>{{ social-link.title }}</span><svg class="icon d-none d-lg-inline">
                         <use
-                          xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-{{ social-link[1].name }}">
+                          xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-{{ social-link.icon-name }}">
                         </use>
-                      </svg>
-                      <span class="sr-only">{{ social-link[1].name }}</span>
+                      </svg><span class="sr-only">{{ social-link.title }}</span>
                     </a>
                   </li>
                   {% endfor %}

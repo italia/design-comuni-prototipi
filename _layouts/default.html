@@ -2,9 +2,9 @@
 <html lang="it">
 
 <head>
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
-  {%- include styles.html -%}
   {%- include meta.html -%}
+  {%- include title.html -%}
+  {%- include styles.html -%}
   {%- if jekyll.environment == 'production' -%}
   {%- include analytics/google-analytics.html -%}
   {%- endif -%}

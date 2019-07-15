@@ -73,5 +73,40 @@
 }
 
 
-
+.bg-muted {
+  background-color: #f2f7fc;
+}
+.col-right-bg,
+.col-left-bg {
+  background-size: cover;
+  min-height: 250px;
+}
+.col-right-bg-inner,
+.col-left-bg-inner {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: -60px;
+  height: 120px;
+  bottom: auto;
+  transform: skew(0deg, 4deg);
+  @media (min-width: 992px) {
+    width: 200px;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    transform: skew(-8deg, 0deg);
+  }
+}
+@media (min-width: 992px) {
+  .col-left-bg-inner {
+    right: -120px;
+    left: auto;
+  }
+  .col-right-bg-inner {
+    left: -120px;
+    right: auto;
+  }
+}
 
