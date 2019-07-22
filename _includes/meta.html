@@ -19,13 +19,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT">
 <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
-<meta name="twitter:title" content="{{ page.title | default: site.title | smartify }}">
+<meta name="twitter:title" content="{%- include title.html -%}">
 <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt| strip_html }}{% else %}{{ site.data.t.description[page.lang] }}{% endif %}">
 <meta name="twitter:image" content="{{ site.url | append: site.baseurl | append: site.data.t.social-card-twitter }}">
 
 <!-- Facebook -->
 <meta property="og:url" content="/">
-<meta property="og:title" content="{{ page.title }} - {{ site.name }}">
+<meta property="og:title" content="{%- include title.html -%}">
 <meta property="og:description"
     content="{% if page.excerpt %}{{ page.excerpt| strip_html }}{% else %}{{ site.data.t.description[page.lang] }}{% endif %}">
 <meta property="og:type" content="website">

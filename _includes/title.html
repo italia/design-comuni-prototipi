@@ -1,8 +1,5 @@
-<title>
-  {%- if page.title -%}
-  {{ site.data.t.name[page.lang] | smartify }} · {{ page.title | smartify }}
-  {%- else -%}
-  {{ site.data.t.name[page.lang] | smartify }} · {{ site.data.t.description | smartify }}
-  {%- endif -%}
-</title>
-
+{%- if page.title -%}
+{{ site.data.t.name[page.lang] | smartify }} · {{ page.title | smartify }}
+{%- else -%}
+{{ site.data.t.name[page.lang] | smartify }} · {{ site.data.t.description | smartify }}
+{%- endif -%}
