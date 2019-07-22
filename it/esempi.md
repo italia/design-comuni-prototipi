@@ -12,14 +12,27 @@ redirect_from:
   - /esempi.html
 ---
 
-<div class="section p-0">
+<style>
+@media (max-width: 992px) {
+    .col-right-bg,
+    .col-left-bg {
+        background: url({{ site.baseurl }}/assets/images/patterns/pattern-08.svg) repeat;
+    }
+}
+@media (min-width: 992px) {
+    .section-1 {
+        background: linear-gradient(90deg, #f2f7fc 50%, transparent 50%), url({{ site.baseurl }}/assets/images/patterns/pattern-08.svg)
+    }
+}
+</style>
+<div class="section p-0 section-1">
   <div class="section-content">
-    <div class="container-full bg-muted">
+    <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-08.svg)">
+        <div class="col-12 col-lg-4 col-right-bg order-2">
           <div class="col-right-bg-inner bg-muted"></div>
         </div>
-        <div class="col-12 col-lg-8 p-5 order-1">
+        <div class="col-12 col-lg-8 p-4 order-1 bg-muted">
           <h2>Il riuso nella Pubblica Amministrazione</h2>
           <p class="mw-50">In questa pagina vogliamo raccogliere una serie di esempi di Pubbliche Amministrazioni virtuose, che hanno scelto di adottare le linee guida proposte dal modello che vi abbiamo raccontato.</p>
           <p class="mw-50">Non solo: queste Pubbliche Amministrazioni hanno deciso di condividere il codice sorgente utilizzato per la realizzazione dei propri siti così come previsto dall’<a class="font-weight-bold" href="https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2017-12-13/_rst/capo6_art69.html">art. 69 del Codice dell’Amministrazione Digitale</a>.</p>
@@ -29,14 +42,21 @@ redirect_from:
   </div>
 </div> 
 
-<div class="section section-muted p-0">
+<style>
+@media (min-width: 992px) {
+    .section-2 {
+        background: linear-gradient(90deg, transparent 50%, #FFF 50%), url({{ site.baseurl }}/assets/images/patterns/pattern-08.svg) repeat;
+    }
+}
+</style>
+<div class="section p-0 bg-cover section-2">
   <div class="section-content">
-    <div class="container-full bg-white">
+    <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1 bg-cover" style="background-image:url({{ site.baseurl }}/assets/images/davide-baraldi-tPATI5prQJA-unsplash.jpg)">
+        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1">
           <div class="col-left-bg-inner bg-white"></div>
         </div>
-        <div class="col-12 col-lg-8 p-5 order-1 order-lg-2">
+        <div class="col-12 col-lg-8 p-4 order-1 order-lg-2 bg-white">
           <h2>Il Comune di Cagliari</h2>
           <p>Il Comune di Cagliari è stato uno dei primi comuni italiani ad adottare le nuove linee guida di design e quindi a rinnovare il proprio sito web. Di seguito elenchiamo i <span class="font-weight-bold">prototipi statici del Comune di Cagliari</span> realizzati e i file sorgente:</p>
           <div id="collapseDiv1" class="collapse-div" role="tablist">
@@ -140,25 +160,30 @@ redirect_from:
               </li>
             </ul>
           </div>
-          <small class="x-small text-primary">(fotografia di <a class="font-weight-semibold" href="https://unsplash.com/@davideibiza?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Davide Baraldi</a> su <a class="font-weight-semibold" href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</small>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="section section-primary p-0">
+<style>
+@media (min-width: 992px) {
+    .section-3 {
+        background: linear-gradient(90deg, #17324d 50%, transparent 50%), url({{ site.baseurl }}/assets/images/patterns/pattern-08.svg) repeat;
+    }
+}
+</style>
+<div class="section p-0 section-3">
   <div class="section-content">
-    <div class="container-full white-color">
+    <div class="container white-color">
       <div class="row">
-        <div class="col-12 col-lg-4 col-right-bg order-2 bg-cover" style="background-image:url({{ site.baseurl }}/assets/images/reiseuhu-PkIApVNP4AI-unsplash.jpg)">
-          <div class="col-right-bg-inner bg-primary"></div>
+        <div class="col-12 col-lg-4 col-right-bg order-2">
+          <div class="col-right-bg-inner bg-dark"></div>
         </div>
-        <div class="col-12 col-lg-8 p-5 order-1">
+        <div class="col-12 col-lg-8 p-4 order-1 bg-dark">
           <h2>Il Consorzio dei Comuni Trentini</h2>
           <p>Il Consorzio dei Comuni Trentini rappresenta oggi oltre un centinaio di comuni del Trentino Alto Adige.</p>
           <p>Il Consorzio sta lavorando con il Team per la Trasformazione Digitale per condividere il proprio lavoro sulla ricerca con gli utenti, i prototipi, e i template che stanno realizzando.</p>
-          <small class="x-small text-white">(fotografia di <a class="text-light font-weight-semibold" href="https://unsplash.com/@reiseuhu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Reiseuhu</a> su <a class="text-light font-weight-semibold" href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</small>
         </div>
       </div>
     </div>

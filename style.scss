@@ -79,11 +79,6 @@
 .col-left-bg {
   background-repeat: repeat;
   min-height: 250px;
-  &.bg-cover {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
 }
 .col-right-bg-inner,
 .col-left-bg-inner {

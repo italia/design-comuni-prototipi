@@ -12,14 +12,26 @@ redirect_from:
   - /kit.html
 ---
 
-<div class="section p-0">
+<style>
+@media (max-width: 992px) {
+    .section-1 .col-right-bg {
+        background: url({{ site.baseurl }}/assets/images/patterns/pattern-05.svg) repeat;
+    }
+}
+@media (min-width: 992px) {
+    .section-1 {
+        background: linear-gradient(90deg, #f2f7fc 50%, transparent 50%), url({{ site.baseurl }}/assets/images/patterns/pattern-05.svg)
+    }
+}
+</style>
+<div class="section p-0 section-1">
   <div class="section-content">
-    <div class="container-full bg-muted">
+    <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-05.svg)">
+        <div class="col-12 col-lg-4 col-right-bg order-2">
           <div class="col-right-bg-inner bg-muted"></div>
         </div>
-        <div class="col-12 col-lg-8 p-5 order-1">
+        <div class="col-12 col-lg-8 p-4 order-1 bg-muted">
           <h2>Comincia da qui</h2>
           <p>Vogliamo farti conoscere meglio questo progetto, e per questo abbiamo preparato una serie di risorse che riteniamo utili a tale scopo.</p>
           <p>Il progetto è supportato dal documento “<a class="font-weight-bold" href="https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/">Design dei siti web comunali</a>” e da un repository GitHub dedicato.</p>
@@ -29,14 +41,26 @@ redirect_from:
   </div>
 </div> 
 
-<div class="section p-0">
+<style>
+@media (max-width: 992px) {
+    .section-2 .col-left-bg {
+        background: url({{ site.baseurl }}/assets/images/patterns/pattern-09.svg) repeat;
+    }
+}
+@media (min-width: 992px) {
+    .section-2 {
+        background: linear-gradient(90deg, transparent 50%, #FFF 50%), url({{ site.baseurl }}/assets/images/patterns/pattern-09.svg)
+    }
+}
+</style>
+<div class="section p-0 section-2">
   <div class="section-content">
-    <div class="container-full">
+    <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-09.svg)">
+        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1">
           <div class="col-left-bg-inner bg-white"></div>
         </div>
-        <div class="col-12 col-lg-8 p-5 order-1 order-lg-2">
+        <div class="col-12 col-lg-8 p-4 order-1 order-lg-2  bg-white">
           <h2>Design dei siti web comunali. Una guida.</h2>
           <p>Il documento “<a class="font-weight-bold" href="https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/">Design dei siti web comunali</a>”, è il punto di partenza.</p> 
           <p>Riteniamo importante la sua lettura per due motivi:</p>
@@ -84,14 +108,26 @@ redirect_from:
   </div>
 </div>
 
-<div class="section bg-dark p-0">
+<style>
+@media (max-width: 992px) {
+    .section-3 .col-right-bg {
+        background: url({{ site.baseurl }}/assets/images/patterns/pattern-07.svg) repeat;
+    }
+}
+@media (min-width: 992px) {
+    .section-3 {
+        background: linear-gradient(90deg, #17324d 50%, transparent 50%), url({{ site.baseurl }}/assets/images/patterns/pattern-07.svg)
+    }
+}
+</style>
+<div class="section bg-dark p-0 section-3">
   <div class="section-content">
-    <div class="container-full white-color">
+    <div class="container white-color">
       <div class="row">
-        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-07.svg)">
+        <div class="col-12 col-lg-4 col-right-bg order-2">
           <div class="col-right-bg-inner bg-dark"></div>
         </div>
-        <div class="col-12 col-lg-8 p-5 order-1">
+        <div class="col-12 col-lg-8 p-4 order-1 bg-dark">
           <h2>Repository GitHub</h2>
           <p>Abbiamo pensato di costruire un repository su GitHub dedicato al progetto. Al suo interno troverai:</p>
           <ul style="list-style-type:none">
@@ -126,14 +162,26 @@ redirect_from:
   </div>
 </div>
 
-<div class="section p-0">
+<style>
+@media (max-width: 992px) {
+    .section-4 .col-left-bg {
+        background: url({{ site.baseurl }}/assets/images/patterns/pattern-06.svg) repeat;
+    }
+}
+@media (min-width: 992px) {
+    .section-4 {
+        background: linear-gradient(90deg, transparent 50%, #FFF 50%), url({{ site.baseurl }}/assets/images/patterns/pattern-06.svg)
+    }
+}
+</style>
+<div class="section p-0 section-4">
   <div class="section-content">
-    <div class="container-full bg-white">
+    <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-06.svg)">
+        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1">
           <div class="col-left-bg-inner bg-white"></div>
         </div>
-        <div class="col-12 col-lg-8 p-5 order-1 order-lg-2">
+        <div class="col-12 col-lg-8 p-4 order-1 order-lg-2 bg-white">
           <h2 id="template-html">I template HTML</h2>
           <div class="it-list-wrapper">
             <ul class="it-list">
