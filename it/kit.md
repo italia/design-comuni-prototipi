@@ -3,18 +3,21 @@ layout: page
 title: Il Kit
 description: Il Kit
 lang: it
-ref: il-kit
+ref: kit
 order: 2
 toc: false
 full-width: true
+redirect_from:
+  - /kit
+  - /kit.html
 ---
 
 <div class="section p-0">
   <div class="section-content">
-    <div class="container-full bg-white">
+    <div class="container-full bg-muted">
       <div class="row">
-        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/karol-kaczorek-mWxhlAxJies-unsplash.jpg)">
-          <div class="col-right-bg-inner bg-white"></div>
+        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-05.svg)">
+          <div class="col-right-bg-inner bg-muted"></div>
         </div>
         <div class="col-12 col-lg-8 p-5 order-1">
           <h2>Comincia da qui</h2>
@@ -26,12 +29,12 @@ full-width: true
   </div>
 </div> 
 
-<div class="section section-muted p-0">
+<div class="section p-0">
   <div class="section-content">
     <div class="container-full">
       <div class="row">
-        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1" style="background-image:url({{ site.baseurl }}/assets/images/jack-ward-rknrvCrfS1k-unsplash.jpg)">
-          <div class="col-left-bg-inner bg-muted"></div>
+        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-09.svg)">
+          <div class="col-left-bg-inner bg-white"></div>
         </div>
         <div class="col-12 col-lg-8 p-5 order-1 order-lg-2">
           <h2>Design dei siti web comunali. Una guida.</h2>
@@ -81,12 +84,12 @@ full-width: true
   </div>
 </div>
 
-<div class="section section-primary p-0">
+<div class="section bg-dark p-0">
   <div class="section-content">
     <div class="container-full white-color">
       <div class="row">
-        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/karol-kaczorek-mWxhlAxJies-unsplash.jpg)">
-          <div class="col-right-bg-inner bg-primary"></div>
+        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-07.svg)">
+          <div class="col-right-bg-inner bg-dark"></div>
         </div>
         <div class="col-12 col-lg-8 p-5 order-1">
           <h2>Repository GitHub</h2>
@@ -127,7 +130,7 @@ full-width: true
   <div class="section-content">
     <div class="container-full bg-white">
       <div class="row">
-        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1" style="background-image:url({{ site.baseurl }}/assets/images/karol-kaczorek-mWxhlAxJies-unsplash.jpg)">
+        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-06.svg)">
           <div class="col-left-bg-inner bg-white"></div>
         </div>
         <div class="col-12 col-lg-8 p-5 order-1 order-lg-2">

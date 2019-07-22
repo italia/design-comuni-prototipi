@@ -6,6 +6,7 @@ lang: it
 ref: privacy-policy
 ---
 
+<div class="container mt-5 mw-50" markdown="1">
 ## **Informativa sul trattamento dei dati personali**
 
 La presente informativa descrive le modalità del trattamento dei dati personali
@@ -151,3 +152,4 @@ riferiti effettuato attraverso questo sito avvenga in violazione di quanto
 previsto dal Regolamento hanno il diritto di proporre reclamo al Garante, come
 previsto dall’art. 77 del Regolamento stesso, o di adire le opportune sedi
 giudiziarie (art. 79 del Regolamento).
+</div>

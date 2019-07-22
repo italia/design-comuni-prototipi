@@ -3,20 +3,20 @@
 icon: "/assets/images/icons/logo-comune.svg"
 
 ## Social Card [1200x630]
-social-card-og: "/assets/images/cloud-pa-logo-og.jpg" ## TODO
+social-card-og: "/assets/images/favicons/social-card.png"
 
 ## Social Card [1280x640]
-social-card-twitter: "/assets/images/cloud-pa-logo-twitter.jpg" ## TODO
+social-card-twitter: "/assets/images/favicons/social-card-twitter.png"
 
 ## Site name
 name:
-  en: "I siti web dei comuni italiani" ## TODO
-  it: "I siti web dei comuni italiani" ## TODO
+  en: "I siti web dei Comuni Italiani"
+  it: "I siti web dei Comuni Italiani"
 
 ## Site description
 description:
-  en: "TODO" ## TODO
-  it: "TODO" ## TODO
+  en: "Un modello unico per siti semplici e alla portata di tutti"
+  it: "Un modello unico per siti semplici e alla portata di tutti"
 
 ## Site author
 author:

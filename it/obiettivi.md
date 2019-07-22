@@ -7,14 +7,17 @@ ref: obiettivi
 order: 1
 toc: false
 full-width: true
+redirect_from:
+  - /obiettivi
+  - /obiettivi.html
 ---
 
-<div class="section section-primary p-0">
+<div class="section p-0">
   <div class="section-content">
-    <div class="container-full bg-white">
+    <div class="container-full bg-muted">
       <div class="row">
-        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/karol-kaczorek-mWxhlAxJies-unsplash.jpg)">
-          <div class="col-right-bg-inner bg-white"></div>
+        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-04.svg)">
+          <div class="col-right-bg-inner bg-muted"></div>
         </div>
         <div class="col-12 col-lg-8 p-5 order-1">
           <h2>Dal design al prodotto</h2>
@@ -28,12 +31,12 @@ full-width: true
   </div>
 </div>
 
-<div class="section section-muted p-0">
+<div class="section p-0">
   <div class="section-content">
-    <div class="container-full">
+    <div class="container-full bg-white">
       <div class="row">
-        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1" style="background-image:url({{ site.baseurl }}/assets/images/jack-ward-rknrvCrfS1k-unsplash.jpg)">
-          <div class="col-left-bg-inner bg-muted"></div>
+        <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-02.svg)">
+          <div class="col-left-bg-inner bg-white"></div>
         </div>
         <div class="col-12 col-lg-8 p-5 order-1 order-lg-2">
           <h2>Uno standard per 8000 comuni</h2>
@@ -45,17 +48,22 @@ full-width: true
   </div>
 </div>
 
-<div class="section section-primary p-0">
+<div class="section bg-dark p-0">
   <div class="section-content">
     <div class="container-full white-color">
       <div class="row">
-        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/karol-kaczorek-mWxhlAxJies-unsplash.jpg)">
-          <div class="col-right-bg-inner bg-primary"></div>
+        <div class="col-12 col-lg-4 col-right-bg order-2" style="background-image:url({{ site.baseurl }}/assets/images/patterns/pattern-01.svg)">
+          <div class="col-right-bg-inner bg-dark"></div>
         </div>
         <div class="col-12 col-lg-8 p-5 order-1">
           <h2>Pronti, partenza, via</h2>
           <p>Tra gli obiettivi di questo progetto vi è sicuramente anche quello di fornire agli utenti interessati tutto il supporto necessario ad adottare questo nuovo standard. Per questo dopo aver concluso la fase di progettazione e costruzione dei contenuti, ci siamo chiesti come poter mettere a disposizione di tutti il grande lavoro svolto.</p>
           <p>Abbiamo così deciso di costruire un kit di strumenti pronti all’uso, indirizzati a coloro che vogliono conoscere il progetto, presentarlo alla propria realtà comunale e adottarlo.</p>
+          <p>
+          <div class="bg-dark py-1">
+            <a href="{{ site.baseurl }}/it/kit.html" class="btn btn-primary">Iniziamo!</a>
+          </div>
+          </p>
         </div>
       </div>
     </div>
