@@ -31,7 +31,7 @@ redirect_from:
         <div class="col-12 col-lg-4 col-right-bg order-2">
           <div class="col-right-bg-inner bg-muted"></div>
         </div>
-        <div class="col-12 col-lg-8 p-4 order-1 bg-muted">
+        <div class="col-12 col-lg-8 px-4 py-5 order-1 bg-muted">
           <h2>Comincia da qui</h2>
           <p>Vogliamo farti conoscere meglio questo progetto, e per questo abbiamo preparato una serie di risorse che riteniamo utili a tale scopo.</p>
           <p>Il progetto è supportato dal documento “<a class="font-weight-bold" href="https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/">Design dei siti web comunali</a>” e da un repository GitHub dedicato.</p>
@@ -60,7 +60,7 @@ redirect_from:
         <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1">
           <div class="col-left-bg-inner bg-white"></div>
         </div>
-        <div class="col-12 col-lg-8 p-4 order-1 order-lg-2  bg-white">
+        <div class="col-12 col-lg-8 px-4 py-5 order-1 order-lg-2 bg-white">
           <h2>Design dei siti web comunali. Una guida.</h2>
           <p>Il documento “<a class="font-weight-bold" href="https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/">Design dei siti web comunali</a>”, è il punto di partenza.</p> 
           <p>Riteniamo importante la sua lettura per due motivi:</p>
@@ -127,7 +127,7 @@ redirect_from:
         <div class="col-12 col-lg-4 col-right-bg order-2">
           <div class="col-right-bg-inner bg-dark"></div>
         </div>
-        <div class="col-12 col-lg-8 p-4 order-1 bg-dark">
+        <div class="col-12 col-lg-8 px-4 py-5 order-1 bg-dark">
           <h2>Repository GitHub</h2>
           <p>Abbiamo pensato di costruire un repository su GitHub dedicato al progetto. Al suo interno troverai:</p>
           <ul style="list-style-type:none">
@@ -181,7 +181,7 @@ redirect_from:
         <div class="col-12 col-lg-4 col-left-bg order-2 order-lg-1">
           <div class="col-left-bg-inner bg-white"></div>
         </div>
-        <div class="col-12 col-lg-8 p-4 order-1 order-lg-2 bg-white">
+        <div class="col-12 col-lg-8 px-4 py-5 order-1 order-lg-2 bg-white">
           <h2 id="template-html">I template HTML</h2>
           <div class="it-list-wrapper">
             <ul class="it-list">
