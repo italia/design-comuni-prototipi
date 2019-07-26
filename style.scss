@@ -40,20 +40,6 @@
 
   .it-header-navbar-wrapper .navbar .navbar-collapsable .menu-wrapper {
     .navbar-nav li {
-      &:first-child {
-        a.nav-link {
-          @media (min-width: 992px) {
-            padding-left: 8px;
-          }
-        }
-      }
-      &:last-child {
-        a.nav-link {
-          @media (min-width: 992px) {
-            padding-right: 8px;
-          }
-        }
-      }
       a.nav-link {
         @media (min-width: 992px) {
           padding: 12px;

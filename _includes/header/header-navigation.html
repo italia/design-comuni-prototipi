@@ -84,8 +84,8 @@ Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le p
                   {% endcomment %}
                   {% assign current_lang_menu_child_pages = site.pages | where: "lang", page.lang | where_exp: "page", "page.order != nil" | where: "child_of_ref", menu_page.ref | sort: "order"%}
                   {% if current_lang_menu_child_pages.size == 0 %}
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}{{menu_page.url}}"><span>{{menu_page.title}}</span></a>
+                  <li class="nav-item {%if menu_page.title == page.title %}active{% endif %}">
+                    <a class="nav-link {%if menu_page.title == page.title %}active{% endif %}" href="{{ site.baseurl }}{{menu_page.url}}"><span>{{menu_page.title}}</span></a>
                   </li>
                   {% else %}
                   <li class="nav-item dropdown">
