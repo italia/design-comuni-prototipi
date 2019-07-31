@@ -105,3 +105,11 @@
     margin-left: -35px;
   }
 }
+
+.section-content {
+  .container {
+    @media (max-width: 992px) {
+      max-width: none;
+    }
+  }
+}
