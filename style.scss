@@ -98,3 +98,10 @@
 .mw-50 {
   max-width: 50rem;
 }
+
+.list-with-icon-left {
+  list-style-type: none;
+  .icon-left {
+    margin-left: -35px;
+  }
+}
