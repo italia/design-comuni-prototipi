@@ -32,7 +32,7 @@ redirect_from:
           <div class="col-right-bg-inner bg-muted"></div>
         </div>
         <div class="col-12 col-lg-10 px-4 py-5 order-1 bg-muted">
-          <h2>Comincia da qui</h2>
+          <h1>Comincia da qui</h1>
           <p>Il progetto si compone di due grandi parti: un’approfondita documentazione tecnica e un repository GitHub con risorse di codice scaricabili.</p>
         </div>
       </div>

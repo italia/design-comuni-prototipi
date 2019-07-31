@@ -33,9 +33,10 @@ redirect_from:
           <div class="col-right-bg-inner bg-muted"></div>
         </div>
         <div class="col-12 col-lg-10 px-4 py-5 order-1 bg-muted">
-          <h2>Il riuso nella Pubblica Amministrazione</h2>
-          <p class="mw-50">In questa pagina vogliamo raccogliere una serie di esempi di Pubbliche Amministrazioni virtuose, che hanno scelto di adottare le linee guida proposte dal modello che vi abbiamo raccontato.</p>
-          <p class="mw-50">Non solo: queste Pubbliche Amministrazioni hanno deciso di condividere il codice sorgente utilizzato per la realizzazione dei propri siti così come previsto dall’<a class="font-weight-bold" href="https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2017-12-13/_rst/capo6_art69.html">art. 69 del Codice dell’Amministrazione Digitale</a>.</p>
+          <h1>Il riuso nella Pubblica Amministrazione</h1>
+          <p class="mw-50">Tutte le Pubbliche Amministrazioni hanno l’<span class="font-weight-bold">obbligo per legge di pubblicare il software da loro commissionato</span>.<br/>
+          All'interno di <a class="font-weight-bold" href="https://developers.italia.it/it/riuso/pubblicazione">Developers Italia</a> è spiegato dettagliatamente il processo di pubblicazione del proprio software come da Linee Guida, che includono allegati tecnici che le Amministrazioni possono includere nei contratti con i propri fornitori al fine di accertarsi di adempiere all’obbligo in modo corretto e di seguire le best practice dell’open source.</p>
+          <p class="mw-50">In questa pagina vogliamo raccogliere una serie di esempi di Pubbliche Amministrazioni virtuose, che hanno scelto di adottare le linee guida proposte dal modello che vi abbiamo raccontato, e di condividere il codice sorgente utilizzato per la realizzazione dei propri siti così come previsto dall’<a class="font-weight-bold" href="https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2017-12-13/_rst/capo6_art69.html">art. 69 del Codice dell’Amministrazione Digitale</a>.</p>
         </div>
       </div>
     </div>

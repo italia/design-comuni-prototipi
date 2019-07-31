@@ -32,7 +32,7 @@ redirect_from:
           <div class="col-right-bg-inner bg-muted"></div>
         </div>
         <div class="col-12 col-lg-10 px-4 py-5 order-1 bg-muted">
-          <h2>Dal design al prodotto</h2>
+          <h1>Dal design al prodotto</h1>
           <p>I Comuni rappresentano spesso il primo punto di contatto tra la Pubblica Amministrazione e il cittadino. Pertanto giocano un ruolo chiave nella trasformazione digitale in atto.</p>
           <p>l sito web del comune diventa quindi l’interfaccia principale tramite la quale l'amministrazione comunale si rivolge ai propri cittadini, fornendo loro informazioni, notizie e servizi sempre più digitali.</p>
           <p>Il progetto dei siti web dei comuni è uno dei primi progetti che attua le <a href="https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/" target="_blank" class="font-weight-bold">Linee Guida di Design per i servizi digitali della Pubblica Amministrazione</a> prodotte dal Team per la Trasformazione Digitale e AgID. Queste linee guida presentano una serie di buone pratiche, di convenzioni, di indicazioni e di standard che tendono ad uniformare il layout e le funzionalità dei progetti digitali della Pubblica Amministrazione.</p>
