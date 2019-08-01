@@ -131,12 +131,14 @@ redirect_from:
           <h2>Repository GitHub</h2>
           <p>Se hai letto la guida, allora è il momento di mettersi all'opera! Abbiamo pensato di costruire un repository GitHub dedicato al progetto. Al suo interno troverai:</p>
           <ul class="list-with-icon-left">
+          {% comment %}
           <li>
             <span class="icon-left">
               <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
               <span><span class="font-weight-bold">I file utilizzati per definire l’interfaccia preliminare</span> dei modelli a media ed alta definizione descritti nella guida e visibili su InVision, in formato Sketch.</span>
             </span>
           </li>
+          {% endcomment %}
           <li>
             <span class="icon-left">
               <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
