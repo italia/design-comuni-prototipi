@@ -52,7 +52,7 @@
       <h3 class="sr-only">Sezione Link Utili</h3>
       <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
         {% for footer-link in site.data.t.footer-links[page.lang] %}
-        <li class="list-inline-item"><a href="{{ site.baseurl }}{{ footer-link[1].url }}"
+        <li class="list-inline-item"><a href="{% unless footer-link[1].url contains 'http' %}{{ site.baseurl }}{% endunless %}{{ footer-link[1].url }}"
             title="{{ footer-link[1].name }}">{{ footer-link[1].name }}</a></li>
         {% endfor %}
         <li class="list-inline-item">{% include flaticon.html %}</li>

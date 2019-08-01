@@ -52,9 +52,14 @@ footer-links:
     privacy-policy:
       name: "Privacy policy"
       url: "/en/privacy-policy"
+    contatti:
+      name: "Contact us"
+      url: "https://designers.italia.it/contatti/"
   it:
     privacy-policy:
       name: "Privacy policy"
       url: "/it/privacy-policy"
-
+    contatti:
+      name: "Contattaci"
+      url: "https://designers.italia.it/contatti/"
 
