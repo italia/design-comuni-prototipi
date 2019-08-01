@@ -99,11 +99,9 @@ redirect_from:
           <h2>Pronti, partenza, via</h2>
           <p>Vogliamo fornire agli interessati tutto il supporto necessario per cominciare ad adottare questo nuovo standard. Per questo dopo aver concluso la fase di progettazione e costruzione dei contenuti, ci siamo chiesti come poter mettere a disposizione di tutti il grande lavoro svolto.</p>
           <p>Abbiamo così deciso di costruire un kit di strumenti pronti all’uso, indirizzati a coloro che vogliono conoscere il progetto, e cominciare ad adottarlo nella propria realtà comunale.</p>
-          <p>
-          <div class="bg-dark py-1">
+          <div class="bg-dark py-1 text-center">
             <a href="{{ site.baseurl }}/it/kit.html" class="btn btn-primary">Iniziamo!</a>
           </div>
-          </p>
         </div>
       </div>
     </div>
