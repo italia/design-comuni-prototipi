@@ -254,7 +254,37 @@ redirect_from:
                   </div>
                 </a>
               </li>
+              <li>
+                <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-argomenti.html" target="_blank">
+                  <div class="it-right-zone">
+                    <span class="text">Pagina di primo livello - Lista Argomenti
+                      <em>Esempio di pagina di primo livello del menu "Tutti gli argomenti"</em>
+                    </span>
+                    <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-argomenti-argomento.html" target="_blank">
+                  <div class="it-right-zone">
+                    <span class="text">Pagina di secondo livello - Argomento
+                      <em>Esempio di pagina di secondo livello del menu Argomenti: Argomento</em>
+                    </span>
+                    <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+                  </div>
+                </a>
+              </li>
             </ul>
+          </div>
+          <div class="link-list-wrapper mt-4">
+              <ul class="link-list">
+                <li>
+                <a class="list-item" href="{{ site.baseurl }}/esempi/bootstrap-italia/templates-bootstrap-italia.zip">
+                  <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+                  <span class="d-inline">Tutti i file sorgente dei template in formato <code>.zip</code>.</span>
+                </a>
+                </li>
+              </ul>
           </div>
         </div>
       </div>

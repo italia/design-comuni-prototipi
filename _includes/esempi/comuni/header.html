@@ -82,14 +82,6 @@
                       </a>
                     </li>
                     <li>
-                      <a aria-label="Github" href="#" target="_blank">
-                        <svg class="icon">
-                          <use
-                            xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-github"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
                       <a aria-label="Twitter" href="#" target="_blank">
                         <svg class="icon">
                           <use
@@ -163,16 +155,16 @@
                     </li>
                   </ul>
                   <ul class="navbar-nav navbar-secondary">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
+                    <li class="nav-item {% if section == 'argomento' %}active{%endif%}">
+                      <a class="nav-link {% if section == 'argomento' %}active{%endif%}" href="{{ site.baseurl }}/esempi/bootstrap-italia/template-argomenti-argomento.html">
                         Argomento in evidenza 1</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link" href="{{ site.baseurl }}/esempi/bootstrap-italia/template-argomenti-argomento.html">
                         Argomento in evidenza 2</a>
                     </li>
                     <li class="nav-item {% if section == 'argomenti' %}active{%endif%}">
-                      <a class="nav-link {% if section == 'argomenti' %}active{%endif%}" href="#">
+                      <a class="nav-link {% if section == 'argomenti' %}active{%endif%}" href="{{ site.baseurl }}/esempi/bootstrap-italia/template-argomenti.html">
                         <span class="font-weight-bold">Tutti gli argomenti...</span>
                         {% if section == 'argomenti' %}<span class="sr-only">menu selezionato</span>{%endif%}
                       </a>
