@@ -34,6 +34,7 @@ redirect_from:
         <div class="col-12 col-lg-10 px-4 py-5 order-1 bg-muted">
           <h1>Comincia da qui</h1>
           <p>Il progetto si compone di due grandi parti: un’approfondita documentazione tecnica e un repository GitHub con risorse di codice scaricabili.</p>
+          <p>Se qualcosa non è chiaro, o se vuoi confrontarti con i membri di Designers Italia, <a class="font-weight-bold" href="https://designers.italia.it/contatti/" target="_blank">contattaci</a>!</p>
         </div>
       </div>
     </div>
@@ -128,32 +129,32 @@ redirect_from:
         </div>
         <div class="col-12 col-lg-10 px-4 py-5 order-1 bg-dark">
           <h2>Repository GitHub</h2>
-          <p>Se hai letto la guida, allora è il momento di mettersi all'opera. Abbiamo pensato di costruire un repository GitHub dedicato al progetto. Al suo interno troverai:</p>
+          <p>Se hai letto la guida, allora è il momento di mettersi all'opera! Abbiamo pensato di costruire un repository GitHub dedicato al progetto. Al suo interno troverai:</p>
           <ul class="list-with-icon-left">
           <li>
             <span class="icon-left">
               <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-              <span>I <span class="font-weight-bold">file utilizzati per definire l’interfaccia preliminare</span> dei modelli a media ed alta definizione descritti nella guida e <a class="text-white font-weight-bold" href="https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/allegati-documenti-di-progetto.html">visibili su InVision</a>, in formato Sketch.</span>
+              <span><span class="font-weight-bold">I file utilizzati per definire l’interfaccia preliminare</span> dei modelli a media ed alta definizione descritti nella guida e visibili su InVision, in formato Sketch.</span>
             </span>
           </li>
           <li>
             <span class="icon-left">
               <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-              <span>I <a class="font-weight-bold text-white" href="#template-html">template HTML già pronti all’uso</a> e validati in termini di accessibilità e conformità alle linee guida, in quanto costruiti sulle fondamenta fornite dallo UI Kit di Designers Italia e dalla libreria Bootstrap Italia.</span>
+              <span><a class="font-weight-bold text-white" href="#template-html">I template HTML già pronti all’uso</a> e validati in termini di accessibilità e conformità alle linee guida, in quanto costruiti sulle fondamenta fornite dallo UI Kit di Designers Italia e dalla libreria Bootstrap Italia.</span>
             </span>
           </li>
           <li>
             <span class="icon-left">
               <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-              <span>Alcuni <a class="font-weight-bold text-white" href="{{ site.baseurl }}/it/esempi.html">contributi di enti</a> che hanno collaborato con noi e che hanno condiviso i loro processi, il design e il codice utilizzato per realizzare i propri siti comunali.</span>
+              <span>Il codice sorgente di questo stesso sito e dei <a class="font-weight-bold text-white" href="{{ site.baseurl }}/it/esempi.html">contributi degli enti</a> che hanno collaborato con noi e che hanno condiviso i loro processi, il design e il codice utilizzato per realizzare i propri siti comunali.</span>
             </span>
           </li>
           <li>
             <span class="icon-left">
               <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-              <span>Il codice sorgente di questo stesso sito.</span>
+              <span>Inoltre, abbiamo preparato un <a class="font-weight-bold text-white" href="https://docs.google.com/spreadsheets/d/1bE0Ns0LsU0VDvCBT1WXZ5_yIxJU5AbUYcu_F8yMfpHQ/">documento che illustra l'archiettura dell'informazione</a> necessaria per organizzare i contenuti delle varie sezioni all'interno del sito.</span>
             </span>
-          </li>
+           </li>
           </ul>
         </div>
       </div>
