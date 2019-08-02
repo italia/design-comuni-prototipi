@@ -5,9 +5,19 @@
 
  <img src="https://github.com/italia/design-comuni-prototipi/blob/master/cover-image.png" width="800"> 
  
-Questo progetto offre un modello di riferimento per l'architettura delle informazioni, l'erogazione dei servizi e l'esperienza utente del sito web di un comune.
+Benvenuto nel repository ufficiale del progetto “[I siti web dei Comuni Italiani](https://italia.github.io/design-comuni-prototipi/)”. 
 
-Maggiori informazioni sono disponibili al documento _[Design dei siti web dei Comuni italiani](https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/)_ su Docs Italia.
+Questo repo, assieme alla documentazione tecnica, completa [il kit che abbiamo realizzato](https://italia.github.io/design-comuni-prototipi/it/kit.html) per farti conoscere meglio il progetto e per metterti subito nelle condizioni di iniziare a sperimentarlo.
+
+All’interno di questo spazio troverai:
+
+- i prototipi preliminari del modello
+- il codice già pronto all’uso
+- i contributi degli enti che già stanno sperimentando questo progetto
+
+Ti invitiamo infine ad aiutarci a segnalare eventuali bug e a prendere contatto con noi su [Slack](https://slack.developers.italia.it/) o all'[email sul sito di Designers Italia](https://designers.italia.it/contatti/), qualora avessi bisogno di ulteriore supporto. 
+
+Buon lavoro!
 
 ## 📒 I prototipi preliminari del modello
 
