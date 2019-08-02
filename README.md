@@ -47,7 +47,7 @@ Per la corretta visualizzazione dei layout, sono necessarie tali librerie e i se
 
 Questo repository contiene inoltre alcuni contributi dei comuni che stanno facendo uso del modello di riferimento. Il repository stesso è un sito in Jekyll e GitHub pages per la condivisione di tali contributi.
 
-[Visualizza i contributi](https://italia.github.io/design-comuni-prototipi/).
+[Visualizza i contributi](https://italia.github.io/design-comuni-prototipi/it/esempi.html).
 
 ## 🔧 Segnalazione bug e richieste di aiuto
 
