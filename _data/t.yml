@@ -1,0 +1,65 @@
+---
+## Main icon
+icon: "/assets/images/icons/logo-comune.svg"
+
+## Social Card [1200x630]
+social-card-og: "/assets/images/favicons/social-card.png"
+
+## Social Card [1280x640]
+social-card-twitter: "/assets/images/favicons/social-card-twitter.png"
+
+## Site name
+name:
+  en: "I siti web dei Comuni Italiani"
+  it: "I siti web dei Comuni Italiani"
+
+## Site description
+description:
+  en: "Un modello unico per siti semplici e alla portata di tutti"
+  it: "Un modello unico per siti semplici e alla portata di tutti"
+
+## Site author
+author:
+  en: "Digital Transformation Team"
+  it: "Team per la Trasformazione Digitale"
+
+## Social
+social-links:
+  en:
+    - title: "Design dei siti web dei Comuni italiani"
+      url: "https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/"
+      icon-name: "files"
+  it:
+    - title: "Design dei siti web dei Comuni italiani"
+      url: "https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/stabile/"
+      icon-name: "files"
+
+## Labels
+italian-version:
+  en: "Italian version"
+  it: "Versione italiana"
+english-version:
+  en: "English version"
+  it: "Versione inglese"
+cookie-policy-info:
+  en: "This site uses technical, analytics and third-party cookies <br>By continuing to browse, you accept the use of cookies."
+  it: "Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie."
+cookie-policy-accept-btn:
+  en: "Ok"
+  it: "Accetto"
+footer-links:
+  en:
+    privacy-policy:
+      name: "Privacy policy"
+      url: "/en/privacy-policy"
+    contatti:
+      name: "Contact us"
+      url: "https://designers.italia.it/contatti/"
+  it:
+    privacy-policy:
+      name: "Privacy policy"
+      url: "/it/privacy-policy"
+    contatti:
+      name: "Contattaci"
+      url: "https://designers.italia.it/contatti/"
+

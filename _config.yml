@@ -18,7 +18,9 @@ exclude:
   - README.md
   - "*.sketch"
 
-# CDN links
-cdn:
-  bootstrap_italia_js_bundle: 'static/js/bootstrap-italia.bundle_1.2.0.min.js'
-  bootstrap_italia_css:       'static/css/bootstrap-italia_1.2.0.min.css'
+plugins:
+  - jekyll-redirect-from
+  - jekyll-feed
+
+whitelist:
+  - jekyll-redirect-from

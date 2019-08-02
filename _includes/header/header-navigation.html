@@ -1,0 +1,123 @@
+{% comment %}
+Le pagine che vengono incluse in questo menù sono un sottoinsieme di tutte le pagine del sito che:
+- hanno la stessa lingua della pagina corrente
+- hanno l'attributo "order" valorizzato
+- hanno l'attributo "child_of_ref" non valorizzato (è un sottomenu)
+{% endcomment %}
+
+{% assign current_lang_menu_pages = site.pages | where: "lang", page.lang | where_exp: "page", "page.order != nil" | where_exp: "page", "page.child_of_ref == nil" | sort: "order" %}
+<div class="it-nav-wrapper">
+  <div class="it-header-center-wrapper theme-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="it-header-center-content-wrapper">
+            <div class="it-brand-wrapper">
+              <a href="{{ site.baseurl }}/">
+                <img class="icon" src="{{ site.baseurl }}{{ site.data.t.icon }}" alt="{{ site.name }} logo">
+                <div class="it-brand-text">
+                  <h2 class="no_toc">{{ site.data.t.name[page.lang] }}</h2>
+                  <h3 class="no_toc d-none d-md-block">{{ site.data.t.description[page.lang] }}</h3>
+                </div>
+              </a>
+            </div>
+            <div class="it-right-zone">
+              <div class="it-socials d-none d-md-flex">
+                <ul>
+                  {% for social-link in site.data.t.social-links[page.lang] %}
+                  <li class="list-inline-item"><span class="d-none d-lg-inline">Leggi la guida:</span>
+                    <a rel="noreferrer" href="{{ social-link.url }}" title="{{ social-link.title }}"
+                      target="_blank">
+                      <span>{{ social-link.title }}</span><svg class="icon d-none d-lg-inline">
+                        <use
+                          xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-{{ social-link.icon-name }}">
+                        </use>
+                      </svg><span class="sr-only">{{ social-link.title }}</span>
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% comment %}
+              <!-- Search button -->
+              <div class="it-search-wrapper">
+                <span class="d-none d-md-block">Cerca</span>
+                <a class="search-link rounded-icon" href="#" aria-label="Cerca">
+                  <svg class="icon">
+                    <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-search"></use>
+                  </svg>
+                </a>
+              </div>
+              {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="it-header-navbar-wrapper  theme-light-desk">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg has-megamenu">
+            <button class="custom-navbar-toggler" type="button" aria-controls="nav10" aria-expanded="false"
+              aria-label="Toggle navigation" data-target="#nav10">
+              <svg class="icon">
+                <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-burger"></use>
+              </svg>
+            </button>
+            <div class="navbar-collapsable" id="nav10">
+              <div class="overlay"></div>
+              <div class="close-div sr-only">
+                <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+              </div>
+              <div class="menu-wrapper">
+                <ul class="navbar-nav">
+                  {% for menu_page in current_lang_menu_pages %}
+
+                  {% comment %}
+                  Le pagine che vengono incluse in questo sottomenù sono un sottoinsieme di tutte le pagine del sito
+                  che:
+                  - hanno la stessa lingua della pagina corrente
+                  - hanno l'attributo "order" valorizzato
+                  - hanno l'attributo "child_of_ref" uguale a `menu_page.ref` attuale (sono quindi figlie di `menu_page`)
+                  {% endcomment %}
+                  {% assign current_lang_menu_child_pages = site.pages | where: "lang", page.lang | where_exp: "page", "page.order != nil" | where: "child_of_ref", menu_page.ref | sort: "order"%}
+                  {% if current_lang_menu_child_pages.size == 0 %}
+                  <li class="nav-item {%if menu_page.title == page.title %}active{% endif %}">
+                    <a class="nav-link {%if menu_page.title == page.title %}active{% endif %}" href="{{ site.baseurl }}{{menu_page.url}}"><span>{{menu_page.title}}</span></a>
+                  </li>
+                  {% else %}
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                      <span>{{ menu_page.title }}</span>
+                      <svg class="icon icon-xs">
+                        <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-expand">
+                        </use>
+                      </svg></a>
+                    <div class="dropdown-menu">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item"
+                              href="{{ site.baseurl }}{{menu_page.url}}"><span>{{menu_page.title}}</span></a></li>
+                          <li><span class="divider"></span></li>
+                          {% for menu_child_page in current_lang_menu_child_pages %}
+                          <li><a class="list-item"
+                              href="{{ site.baseurl }}{{menu_child_page.url}}"><span>{{menu_child_page.title}}</span></a>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

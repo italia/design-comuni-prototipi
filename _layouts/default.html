@@ -1,202 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
+
 <head>
-  <meta name="generator" content="Hugo 0.53" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Le risorse per progettare secondo il modello di sito web per i Comuni italiani.">
-  <meta name="author" content="Team per la Trasformazione Digitale">
-
-  <title>Siti Web dei Comuni Italiani</title>
-
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicons/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicons/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico">
-
-  <link rel="manifest" href="{{ site.baseurl }}/assets/img/favicons/manifest.webmanifest">
-  <link rel="mask-icon" href="{{ site.baseurl }}/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC">
-  <meta name="msapplication-config" content="/icons/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#0066CC">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@teamdigitaleIT">
-  <meta name="twitter:creator" content="Team per la Trasformazione Digitale">
-  <meta name="twitter:title" content="Siti Web dei Comuni Italiani">
-  <meta name="twitter:description" content="Le risorse per progettare secondo il modello di sito web per i Comuni italiani.">
-  <meta name="twitter:image" content="/icons/favicons/social-card.png">
-
-  <meta property="og:url" content="https://italia.github.io/bootstrap-italia/">
-  <meta property="og:title" content="Siti Web dei Comuni Italiani">
-  <meta property="og:description" content="Le risorse per progettare secondo il modello di sito web per i Comuni italiani.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ site.baseurl }}/assets/img/favicons/social-card.png">
-  <meta property="og:image:secure_url" content="{{ site.baseurl }}/assets/img/favicons/social-card.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-italia@0.30.2/dist/css/bootstrap-italia.min.css" integrity="sha256-kPw6+54wkMjvJ8VUFnkdiW/gT+SahxvHPcsxIKxjTKQ=" crossorigin="anonymous">
-
-  <style>
-    .it-header-slim-wrapper .it-header-slim-wrapper-content span.nav-mobile ul.link-list {
-      margin: 0;
-      padding: 0;
-      border: 0;
-    }
-    .it-header-slim-wrapper .link-list-wrapper ul li a {
-      padding-left: 0;
-    }
-    .it-footer .link-list-wrapper ul li a:hover:not(.disabled) .icon {
-      fill: #FFF !important;
-    }
-    .icon {
-      transform: none !important;
-    }
-  </style>
-
-  <meta name="robots" content="noindex, nofollow">
-
+  {%- include meta.html -%}
+  <title>{%- include title.html -%}</title>
+  {%- include styles.html -%}
+  {%- if jekyll.environment == 'production' -%}
+  {%- include analytics/google-analytics.html -%}
+  {%- endif -%}
 </head>
 
-<body>{{site.static_files["cane.jpg"]}}
-<div class="it-header-wrapper">
-  <div class="it-header-slim-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="it-header-slim-wrapper-content">
-            <a class="d-none d-lg-block navbar-brand" href="https://www.agid.gov.it/">AgID</a><a class="d-none d-lg-block navbar-brand" href="https://teamdigitale.governo.it/">Team Digitale</a>
-            <span class="nav-mobile">
-              <nav>
-                <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu-principale" role="button" aria-expanded="false" aria-controls="menu1">
-                  <svg class="icon">
-                    <use xlink:href="{{ site.baseurl }}/assets/img/sprite.svg#it-list"></use>
-                  </svg>
-                </a>
-                <div class="link-list-wrapper collapse" id="menu-principale">
-                  <ul class="link-list">
-                    <li><a href="https://pianotriennale-ict.italia.it">Piano Triennale</a></li>
-                    <li><a href="https://developers.italia.it/">Developers</a></li>
-                    <li><a href="https://designers.italia.it/">Designers</a></li>
-                    <li><a href="https://forum.italia.it/">Forum</a></li>
-                    <li><a href="https://docs.italia.it/">Docs</a></li>
-                    <li><a href="https://github.com/italia/">GitHub</a></li>
-                  </ul>
-                </div>
-              </nav>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="it-nav-wrapper">
-    <div class="it-header-center-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="it-header-center-content-wrapper">
-              <div class="it-brand-wrapper">
-                <a href="#">
-                  <div class="it-brand-text">
-                    <h2 class="no_toc">Siti Web dei Comuni</h2>
-                    <h3 class="no_toc d-none d-md-block">Tutti i prototipi dei Siti Web dei Comuni</h3>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<main>
-
-  <div class="container">
-    <div class="row">
-      <div class="col my-5">
-        {{ content }}
-      </div>
-    </div>
-  </div>
-
-</main>
-
-<footer class="it-footer">
-  <div class="it-footer-main">
-    <div class="container">
-      <section class="py-4">
-        <div class="row">
-          <div class="col-md-6 pb-2">
-            <h4><a href="#" title="Vai alla pagina: Contatti">Collabora!</a></h4>
-            <p>Puoi partecipare al progetto utilizzando i file Sketch e i prototipi a disposizione e condividendo i risultati ottenuti!</p>
-            <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
-                <li>
-                  <a class="list-item font-weight-bold" href="https://designers.italia.it/come-partecipo/">
-                    Come partecipare
-                    <svg class="d-inline icon icon-sm icon-white"><use xlink:href="{{ site.baseurl }}/assets/img/sprite.svg#it-chevron-right"></use></svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-4 pt-3">
-            <div class="px-2 py-3">
-              <a href="https://www.agid.gov.it/" target="_blank">
-                <img src="{{ site.baseurl }}/assets/img/icons/logo-agid.svg" alt="Agenzia per l'Italia Digitale" height="36" style="max-width: 100%">
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 pt-3">
-            <div class="px-2 py-2">
-              <a href="https://teamdigitale.governo.it/" target="_blank" class="">
-                <img src="{{ site.baseurl }}/assets/img/icons/logo-team-digitale-full.svg" alt="Team per la Trasformazione Digitale" height="48">
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="px-2">
-              <h4><a href="#" title="Vai alla pagina: Seguici su">Seguici su</a></h4>
-              <ul class="list-inline text-left social">
-                <li class="list-inline-item"><a class="p-2 text-white" href="https://designers.italia.it/" target="_blank"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{ site.baseurl }}/assets/img/sprite.svg#it-designers-italia"></use></svg><span class="sr-only">Designers Italia</span></a></li>
-                <li class="list-inline-item"><a class="p-2 text-white" href="https://twitter.com/DesignersITA" target="_blank"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{ site.baseurl }}/assets/img/sprite.svg#it-twitter"></use></svg><span class="sr-only">Twitter</span></a></li>
-                <li class="list-inline-item"><a class="p-2 text-white" href="https://medium.com/designers-italia" target="_blank"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{ site.baseurl }}/assets/img/sprite.svg#it-medium"></use></svg><span class="sr-only">Medium</span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="footer-social col-12 col-md-4 text-white text-right pt-2">
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  <div class="it-footer-small-prints clearfix">
-    <div class="container">
-      <h3 class="sr-only">Sezione Link Utili</h3>
-      <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
-        <li class="list-inline-item"><a href="https://designers.italia.it/privacy-policy" title="Privacy policy">Privacy policy</a></li>
-        <li class="list-inline-item"><a href="https://designers.italia.it/note-legali" title="Note legali">Note legali</a></li>
-      </ul>
-    </div>
-  </div>
-
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-italia@0.30.2/dist/js/bootstrap-italia.bundle.min.js" integrity="sha256-CFIdj+2L+suBdHVmhp2xsB16oCviwz+gKi0/kQThFms=" crossorigin="anonymous"></script>
+<body>
+  {%- include header/header.html -%}
+  {{ content }}
+  {%- include footer/footer.html -%}
+  {%- include cookiebar.html -%}
+  {%- include scripts.html -%}
 </body>
-</html>
 
-</body>
 </html>

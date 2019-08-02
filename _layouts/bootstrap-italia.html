@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    {%- include meta.html -%}
+    <title>{%- include title.html -%}</title>
+    {% assign buildTime =  site.time | date: '%Y%m%d%H%M' %}
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap-italia/dist/css/bootstrap-italia.min.css?build={{ buildTime }}">
+  </head>
+  <body>
+    {{ content }}
+    {%- include scripts.html -%}
+  </body>
+</html>

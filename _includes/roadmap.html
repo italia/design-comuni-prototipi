@@ -1,0 +1,26 @@
+{% assign roadmap = site.data.roadmap[page.lang] %}
+<div class="it-timeline-wrapper my-5">
+  <div class="row">
+    {% for entry in roadmap %}
+    <div class="col-12">
+      <div class="timeline-element">
+        <div class="it-pin-wrapper it-evidence">
+          <div class="pin-icon">
+            <svg class="icon">
+              <use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-code-circle"></use>
+            </svg>
+          </div>
+          <div class="pin-text"><span>{{ entry.date }}</span></div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">{{ entry.title }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
