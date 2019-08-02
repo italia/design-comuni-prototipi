@@ -1,8 +1,8 @@
 # Dependencies
 
 source:         "."
-url:            "https://francescozaia.github.io/design-comuni-prototipi"
-baseurl:        "/design-comuni-prototipi"
+url:            "https://italia.github.io/design-comuni-prototipi"
+baseurl:        ""
 destination:    ./_site
 encoding:       UTF-8
 exclude:
