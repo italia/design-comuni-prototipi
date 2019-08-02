@@ -2,7 +2,7 @@
 
 source:         "."
 url:            "https://italia.github.io/design-comuni-prototipi"
-baseurl:        ""
+baseurl:        "/design-comuni-prototipi"
 destination:    ./_site
 encoding:       UTF-8
 exclude:
@@ -24,5 +24,3 @@ plugins:
 
 whitelist:
   - jekyll-redirect-from
-
-noindex: true
