@@ -24,3 +24,5 @@ plugins:
 
 whitelist:
   - jekyll-redirect-from
+
+google_analytics: UA-145094697-1
