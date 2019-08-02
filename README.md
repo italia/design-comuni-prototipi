@@ -15,7 +15,7 @@ All’interno di questo spazio troverai:
 - il codice già pronto all’uso
 - i contributi degli enti che già stanno sperimentando questo progetto
 
-Ti invitiamo infine ad aiutarci a segnalare eventuali bug e a prendere contatto con noi, tramite il canale Slack dedicato, qualora avessi bisogno di ulteriore supporto. 
+Ti invitiamo infine ad aiutarci a segnalare eventuali bug e a prendere contatto con noi su [Slack](https://slack.developers.italia.it/) o all'[email sul sito di Designers Italia](https://designers.italia.it/contatti/), qualora avessi bisogno di ulteriore supporto. 
 
 Buon lavoro!
 
