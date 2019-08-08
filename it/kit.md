@@ -129,7 +129,7 @@ redirect_from:
         </div>
         <div class="col-12 col-lg-10 px-4 py-5 order-1 bg-dark">
           <h2>Repository GitHub</h2>
-          <p>Se hai letto la guida, allora è il momento di mettersi all'opera! Abbiamo pensato di costruire un repository GitHub dedicato al progetto. Al suo interno troverai:</p>
+          <p>Se hai letto la guida, allora è il momento di mettersi all'opera! Abbiamo pensato di costruire un <a  class="font-weight-bold text-white" href="https://github.com/italia/design-comuni-prototipi">repository GitHub</a> dedicato al progetto. Al suo interno troverai:</p>
           <ul class="list-with-icon-left">
           {% comment %}
           <li>
