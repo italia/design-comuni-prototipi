@@ -188,6 +188,16 @@ redirect_from:
           <div class="it-list-wrapper">
             <ul class="it-list">
               <li>
+                <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-homepage.html" target="_blank">
+                  <div class="it-right-zone">
+                    <span class="text">Homepage
+                      <em>Esempio di homepage</em>
+                    </span>
+                    <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+                  </div>
+                </a>
+              </li>
+              <li>
                 <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-amministrazione.html" target="_blank">
                   <div class="it-right-zone">
                     <span class="text">Pagina di primo livello - Amministrazione
@@ -276,6 +286,16 @@ redirect_from:
                     <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
                   </div>
                 </a>
+              </li>
+              <li>
+                  <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-risultato-ricerca.html" target="_blank">
+                    <div class="it-right-zone">
+                      <span class="text">Pagina "Risultato Ricerca"
+                        <em>Esempio di pagina per i risultati di una ricerca a sito</em>
+                      </span>
+                      <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+                    </div>
+                  </a>
               </li>
             </ul>
           </div>
