@@ -154,7 +154,7 @@ redirect_from:
           <li>
             <span class="icon-left">
               <svg class="icon icon-light"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-              <span>Inoltre, abbiamo preparato un <a class="font-weight-bold text-white" href="https://docs.google.com/spreadsheets/d/1bE0Ns0LsU0VDvCBT1WXZ5_yIxJU5AbUYcu_F8yMfpHQ/">documento che illustra l'archiettura dell'informazione</a> necessaria per organizzare i contenuti delle varie sezioni all'interno del sito.</span>
+              <span>Inoltre, abbiamo preparato un <a class="font-weight-bold text-white" href="https://docs.google.com/spreadsheets/d/1bE0Ns0LsU0VDvCBT1WXZ5_yIxJU5AbUYcu_F8yMfpHQ/">documento che illustra l'architettura dell'informazione</a> necessaria per organizzare i contenuti delle varie sezioni all'interno del sito.</span>
             </span>
            </li>
           </ul>
