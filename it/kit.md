@@ -302,9 +302,9 @@ redirect_from:
           <div class="link-list-wrapper mt-4">
               <ul class="link-list">
                 <li>
-                <a class="list-item" href="{{ site.baseurl }}/esempi/bootstrap-italia/templates-bootstrap-italia.zip">
+                <a class="list-item" href="https://github.com/italia/design-comuni-prototipi/tree/master/esempi/bootstrap-italia">
                   <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-                  <span class="d-inline">Tutti i file sorgente dei template in formato <code>.zip</code>.</span>
+                  <span class="d-inline">Tutti i file sorgente dei template</span>
                 </a>
                 </li>
               </ul>

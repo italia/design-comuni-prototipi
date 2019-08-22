@@ -154,9 +154,9 @@ redirect_from:
           <div class="link-list-wrapper mt-4">
             <ul class="link-list">
               <li>
-              <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche.zip">
+              <a class="list-item" href="https://github.com/italia/design-comuni-prototipi/tree/master/esempi/comune-di-cagliari">
                 <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-                <span class="d-inline">Tutti i file sorgente del prototipo in formato <code>.zip</code>.</span>
+                <span class="d-inline">Tutti i file sorgente del prototipo.</span>
               </a>
               </li>
             </ul>
