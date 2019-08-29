@@ -183,8 +183,8 @@ redirect_from:
         </div>
         <div class="col-12 col-lg-10 px-4 py-5 order-1 bg-dark">
           <h2>Il Consorzio dei Comuni Trentini</h2>
-          <p>Il Consorzio dei Comuni Trentini rappresenta oggi oltre un centinaio di comuni del Trentino Alto Adige.</p>
-          <p>Il Consorzio sta lavorando con il Team per la Trasformazione Digitale per condividere il proprio lavoro sulla ricerca con gli utenti, i prototipi, e i template che stanno realizzando.</p>
+          <p>Il Consorzio dei Comuni Trentini rappresenta tutti i comuni del Trentino a cui offre numerosi servizi digitali. Attraverso l'ecosistema <a class="font-weight-bold" href="https://www.comunweb.it">Comunweb</a> favorisce la diffusione presso i comuni che ne fanno parte delle linee guida di design di contenuti e servizi della pubblica amministrazione, con particolare attenzione alla gestione e rappresentazione di dati strutturati e alla creazione di interfacce e servizi digitali moderni. I comuni ottengono pertanto un duplice beneficio: disponibilità di nuovi canali di dialogo con il cittadino e strumenti concreti per gestire il processo di trasformazione digitale. </p>
+          <p>Il Consorzio sta lavorando con il Team per la Trasformazione Digitale per realizzare un modello comune di interazione digitale tra cittadini e comuni in Italia e i comuni del Consorzio saranno tra i primi in Italia ad utilizzarlo. Il risultato di questo lavoro sarà progressivamente diffuso e reso disponibile in modalità open source.</p>
         </div>
       </div>
     </div>
