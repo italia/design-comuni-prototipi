@@ -288,14 +288,34 @@ redirect_from:
                 </a>
               </li>
               <li>
-                  <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-risultato-ricerca.html" target="_blank">
-                    <div class="it-right-zone">
-                      <span class="text">Pagina "Risultato Ricerca"
-                        <em>Esempio di pagina per i risultati di una ricerca a sito</em>
-                      </span>
-                      <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
-                    </div>
-                  </a>
+                <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-risultato-ricerca.html" target="_blank">
+                  <div class="it-right-zone">
+                    <span class="text">Pagina "Risultato Ricerca"
+                      <em>Esempio di pagina per i risultati di una ricerca a sito</em>
+                    </span>
+                    <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+                  </div>
+               </a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-area-personale.html" target="_blank">
+                  <div class="it-right-zone">
+                    <span class="text">Pagina "Area Personale"
+                      <em>Esempio di pagina per l’Area Personale di un cittadino</em>
+                    </span>
+                    <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="{{ site.baseurl }}/esempi/bootstrap-italia/template-area-personale-dettaglio-pratica.html" target="_blank">
+                  <div class="it-right-zone">
+                    <span class="text">Pagina "Area Personale - Dettaglio Pratica"
+                      <em>Esempio di pagina per il dettaglio dello stato di una pratica</em>
+                    </span>
+                    <span class="it-multiple"><span class="metadata">Apri in una nuova pagina</span></span>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
