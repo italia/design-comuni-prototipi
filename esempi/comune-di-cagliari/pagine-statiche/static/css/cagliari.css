@@ -1,5 +1,5 @@
 .logoprint {display: none;}
-.hidden {display: none;}
+.hidden {display: none !important;}
 .bg-blu {background-color:#003882 !important; color:#fff !important;} /*0, 56, 130*/
 .bg-bluscuro {background-color:#003274 !important; color:#fff !important;} /*0, 34, 79*/
 .bg-grigio {background-color: #ECEFF1 !important;}
@@ -24,10 +24,18 @@
 .mb8 {margin-bottom: 8px !important;}
 .ml8 {margin-left: 8px !important;}
 .mr8 {margin-right: 8px !important;}
+.mt12 {margin-top: 12px !important;}
+.mb12 {margin-bottom: 12px !important;}
+.ml12 {margin-left: 12px !important;}
+.mr12 {margin-right: 12px !important;}
 .mt16 {margin-top: 16px !important;}
 .mb16 {margin-bottom: 16px !important;}
 .ml16 {margin-left: 16px !important;}
 .mr16 {margin-right: 16px !important;}
+.mt20 {margin-top: 20px !important;}
+.mb20 {margin-bottom: 20px !important;}
+.ml20 {margin-left: 20px !important;}
+.mr20 {margin-right: 20px !important;}
 .mt24 {margin-top: 24px !important;}
 .mb24 {margin-bottom: 24px !important;}
 .ml24 {margin-left: 24px !important;}
@@ -40,6 +48,10 @@
 .mb40 {margin-bottom: 40px !important;}
 .ml40 {margin-left: 40px !important;}
 .mr40 {margin-right: 40px !important;}
+.mt48 {margin-top: 48px !important;}
+.mb48 {margin-bottom: 48px !important;}
+.ml48 {margin-left: 48px !important;}
+.mr48 {margin-right: 48px !important;}
 .mt64 {margin-top: 64px !important;}
 .mb64 {margin-bottom: 64px !important;}
 .ml64 {margin-left: 64px !important;}
@@ -107,6 +119,7 @@ body {
     transition: all .3s ease 0s;
     position: relative;
     height: auto !important;
+    font-weight: 400;
 }
 
 body .menu-underlayer {
@@ -198,7 +211,7 @@ body.ridotto {
 }
 
 #mainheader .preheader .sitiverticali a:hover {
-    color: #6FA67E;
+    color: #badec3;
     text-decoration: underline;
 }
 
@@ -221,7 +234,7 @@ body.ridotto {
 }
 
 #mainheader .preheader .accedi .btn-accedi:hover span {
-    color: #6FA67E;
+    color: #badec3;
     text-decoration: underline;
 }
 
@@ -234,7 +247,7 @@ body.ridotto {
 }
 
 #mainheader .preheader .accedi .btn-accedi:hover svg.icon {
-    fill: #6FA67E;
+    fill: #badec3;
 }
 
 #mainheader .preheader .accedi span {
@@ -330,6 +343,19 @@ body.ridotto {
     outline: 1px solid #FF8C00 !important;
 }
 
+#mainheader .comune .logotxt .badge-demo {
+    font-size: 10px;
+    background-color: #db001b!important;
+    color: #fff;
+    border-radius: 8px;
+    padding: 1px 8px;
+    margin-top: 8px;
+    margin-left: 4px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
 #mainheader .social {
     padding-top: 12px;
     margin-bottom: 0;
@@ -356,7 +382,7 @@ body.ridotto {
 }
 
 #mainheader .social a:hover {
-    color: #6FA67E !important;
+    color: #badec3 !important;
     text-decoration: none;
 }
 
@@ -367,7 +393,7 @@ body.ridotto {
 }
 
 #mainheader .social a:hover svg.icon {
-    fill: #6FA67E;
+    fill: #badec3;
 }
 
 #mainheader .social li {
@@ -409,7 +435,7 @@ body.ridotto {
 }
 
 #mainheader .btn-cerca:hover {
-    background: #6FA67E;
+    background: #badec3;
     color: #fff;
 } 
 
@@ -441,38 +467,47 @@ body.ridotto {
 }
 
 #mainheader.ridotto {
-    height: 120px;
+    height: 56px;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1071;
-    margin-top: -120px;
-    margin-bottom: 120px;
+    margin-top: -56px;
+    margin-bottom: 56px;
+}
+
+#mainheader.ridotto .preheader {
+    display: none;
 }
 
 #mainheader.ridotto #sub_nav {
-    height: 0;
-    overflow: hidden;
+    z-index: 999;
+}
+
+#mainheader.ridotto #sub_nav .col-lg-6.pull-left {
+    margin-left: 80px;
+}
+
+#mainheader.ridotto #sub_nav .list_link-utili {
+    display: none;
 }
 
 #mainheader.ridotto .social {
-    padding: 0;
-    margin: 25px 0 0 0;
+    display: none;
 }
 
 #mainheader.ridotto .comune .logoimg {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #mainheader.ridotto .comune .logoimg img {
-    height: 48px;
+    height: 36px;
+    z-index: 1000;
+    position: relative;
 }
 
 #mainheader.ridotto .comune .logotxt {
-    vertical-align: middle;
-    margin-top: 0;
-    height: 48px;
-    max-height: 48px;
+    display: none;
 }
 
 #mainheader.ridotto .comune .logotxt h1 {
@@ -482,8 +517,20 @@ body.ridotto {
 }
 
 #mainheader.ridotto .cerca {
-    margin-top: 18px;
+    margin-top: 10px;
     padding-top: 0px;
+    z-index: 1000;
+    position: relative;
+}
+
+#mainheader.ridotto .btn-cerca {
+    height: 36px;
+    width: 36px;
+}
+
+#mainheader.ridotto .btn-cerca svg.icon {
+    width: 24px;
+    height: 24px;
 }
 
 .sub_nav, .list_link-utili {
@@ -521,7 +568,7 @@ body.ridotto {
 }
 
 .sub_nav li a, .list_link-utili li a {
-    padding: 12px 29px 12px 29px;
+    padding: 12px 28px 12px 28px;
     color: #fff;
     display: block;
 }
@@ -1118,7 +1165,7 @@ ul.navmenu {
 
 .navmenu>li.open ul li a:hover,.navmenu>li.open ul>li.open>a {
     background:transparent;
-    color:#6FA67E;
+    color:#badec3;
 }
 
 .navmenu li a {
@@ -1142,9 +1189,6 @@ ul.navmenu {
 }
 
 .navmenu>li>a:hover, .navmenu>li>a:focus, .navmenu li>a:hover>span:after {
-    /* background: transparent;
-    color: #6FA67E; */
-
     background-color: rgba(116,166,129,0.1);
     border-left: 4px solid #4E7E5B;
 }
@@ -1168,7 +1212,7 @@ ul.navmenu {
 }
 
 .utilitymobile li a:hover {
-    color: #6FA67E;
+    color: #badec3;
     text-decoration: none;
 }
 
@@ -1198,7 +1242,7 @@ ul.navmenu {
 }
 
 .socialmobile a:hover {
-    color: #6FA67E !important;
+    color: #badec3 !important;
     text-decoration: none;
 }
 
@@ -1209,7 +1253,7 @@ ul.navmenu {
 }
 
 .socialmobile a:hover svg.icon {
-    fill: #6FA67E;
+    fill: #badec3;
 }
 
 .socialmobile li {
@@ -1221,6 +1265,20 @@ ul.navmenu {
 
 .socialmobile li:first-child {padding-left: 0;}
 
+
+.cbp-spmenu .accedi {
+    margin: 15px 25px;
+}
+
+.cbp-spmenu .accedi .btn-accedi {
+    color: #003882;
+}
+
+.cbp-spmenu .accedi .btn-accedi svg.icon {
+    fill: #003882;
+    width: 22px;
+    height: 22px;
+}
 
 
 /* ----------- ACCEDI SPID ------------ */
@@ -1399,15 +1457,17 @@ img.spidback {
 }
 
 
-/* ---------- RICERCA MODALE ---------- */
+/* ---------- RICERCA MODALE e RICERCA WIDGET MODALE ---------- */
 
-#searchModal {
+#searchModal,
+.searchWidgetModal {
     z-index: 1100;
     padding: 0 !important;
 }
 
 #searchModal .modal-dialog,
-#spidModal .modal-dialog {
+#spidModal .modal-dialog,
+.searchWidgetModal .modal-dialog {
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -1415,9 +1475,19 @@ img.spidback {
 }
 
 #searchModal .modal-dialog .modal-content,
-#spidModal .modal-dialog .modal-content {
+#spidModal .modal-dialog .modal-content,
+.searchWidgetModal .modal-dialog .modal-content {
     height: 100%;
     overflow-y: auto;
+}
+
+.searchWidgetModal .modal-header-title {
+    border-bottom: 1px solid #dfe4f2;
+    padding-bottom: 48px;
+}
+
+.container .searchWidgetModal li a:focus {
+    outline: 0;
 }
 
 .modal-header-fullsrc {
@@ -1474,17 +1544,17 @@ img.spidback {
     margin-bottom: 56px;
 }
 
+#searchModal .modal-body-search .form-group {
+    border-bottom: 1px solid rgba(85,85,85,0.7);
+    height: 56px;
+}
 
-#searchModal .search-filter-dategroup .form-group label {
+#searchModal .search-filter-dategroup .form-group label,
+.searchWidgetModal .form-group label {
     padding: 0;
     font-size: 1em;
     font-weight: 300;
     top: -12px;
-}
-
-#searchModal .modal-body-search .form-group {
-    border-bottom: 1px solid rgba(85,85,85,0.7);
-    height: 56px;
 }
 
 #searchModal #cerca-txt {
@@ -1603,23 +1673,34 @@ md-autocomplete .md-show-clear-button button md-icon svg path {
     margin-right: 8px;
 }
 
-#searchModal .search-filter-dategroup .form-group input {
+#searchModal .search-filter-dategroup .form-group input,
+.searchWidgetModal .search-filter-dategroup .form-group input {
     font-weight: 300;
-    color: #9B9B9B;
+    color: #555;    
     height:56px;
     border: 0;	
     border-radius: 4px;
     background-color: #F2F2F2;
-    padding: 16px 24px;
+    padding: 16px;
     font-size: 0.889em;
 }
 
-#searchModal input::placeholder, 
-#searchModal input:-ms-input-placeholder, 
-#searchModal input::-ms-input-placeholder {
-    color: #9B9B9B;
-    font-size: 0.889em;
-    line-height: 21px;
+#searchModal input::placeholder,
+.searchWidgetModal input::placeholder,
+.servizi-widget input::placeholder {
+    color: #9B9B9B !important;
+} 
+
+#searchModal input:-ms-input-placeholder,
+.searchWidgetModal input:-ms-input-placeholder,
+.servizi-widget input:-ms-input-placeholder {
+    color: #9B9B9B !important;
+}
+
+#searchModal input::-ms-input-placeholder,
+.searchWidgetModal input::-ms-input-placeholder,
+.servizi-widget input::-ms-input-placeholder {
+    color: #9B9B9B !important;
 } 
 
 #searchModal .box-servizi i {
@@ -1633,7 +1714,12 @@ md-autocomplete .md-show-clear-button button md-icon svg path {
     padding: 0;
 }
 
-#searchModal .form-group .ico-sufix {
+.searchWidgetModal .form-group {
+    margin-top: 24px;
+}
+
+#searchModal .form-group .ico-sufix,
+.searchWidgetModal .form-group .ico-sufix {
     position: absolute;
     width: 56px;
     text-align: center;
@@ -1649,20 +1735,34 @@ md-autocomplete .md-show-clear-button button md-icon svg path {
     cursor: pointer;
 }
 
+.searchWidgetModal input[type="text"] {
+    background: #f2f2f2;
+    border: 0;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 32px;
+    font-weight: normal;
+    padding: 16px;
+    height: 40px;
+}
+
 #searchModal #opzioniTab .form-check.form-check-group {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-#searchModal #opzioniTab .search-filter-dategroup .form-group input {
+#searchModal #opzioniTab .search-filter-dategroup .form-group input,
+.searchWidgetModal .search-filter-dategroup .form-group input {
     height:40px;
 }
 
-#searchModal #opzioniTab .form-group .ico-sufix {
+#searchModal #opzioniTab .form-group .ico-sufix,
+.searchWidgetModal .search-filter-dategroup .form-group .ico-sufix {
     width: 40px;
 }
 
-#searchModal .form-group .ico-sufix svg.icon {
+#searchModal .form-group .ico-sufix svg.icon,
+.searchWidgetModal .form-group .ico-sufix svg.icon {
     width: 26px;
     height: 26px;
     fill: #fff;
@@ -1784,7 +1884,7 @@ md-autocomplete .md-show-clear-button button md-icon svg path {
 .modal-header-fullsrc .confirm {
     position: absolute;
     top: 24px;
-    right: 0;
+    right: 14px;
     font-size: 0.778em;
     min-width: 152px;
 }
@@ -1793,6 +1893,7 @@ md-autocomplete .md-show-clear-button button md-icon svg path {
     max-width: 1184px!important;
     margin: 0 auto;
     margin-top: 24px;
+    margin-bottom: -14px;
 }
 
 @media (min-width: 1200px) {
@@ -1901,8 +2002,11 @@ md-checkbox:focus {
     margin-top: 48px;
 }
 
-#searchModal .search-filter-dategroup .form-group {
+#searchModal .search-filter-dategroup .form-group,
+.searchWidgetModal .search-filter-dategroup .form-group {
     padding: 0;
+    border: 0;
+    height: auto;
 }
 
 #searchModal .search-filter-dategroup input {
@@ -2202,7 +2306,7 @@ html #ui-datepicker-div .ui-button.ui-state-disabled:active {
     margin:0;
     padding: 0 0 16px 0;
     border-bottom: 1px solid #796C31;
-    line-height: 24px;
+    line-height: 1em;
     text-transform: uppercase;
     vertical-align: middle;
 }
@@ -2215,7 +2319,7 @@ html #ui-datepicker-div .ui-button.ui-state-disabled:active {
     width: 22px;
     height: 22px;
     opacity: 0.5;
-    margin-right: 16px;
+    margin-right: 8px;
     fill: #fff;
 }
 
@@ -2733,9 +2837,17 @@ h4:focus, h4 a:focus {outline: 1px solid #FF8C00 !important;}
 a.tutte:focus {outline: 2px solid #FF8C00 !important;}
 #topcontrol:focus {outline: 2px solid #FF8C00 !important;}
 button.owl-dot:focus {outline: 0; border: 2px solid #ff8c00!important; border-radius: 50%;}
-input[type="text"]:focus {border: 2px solid #FF8C00 !important;}
+input[type="text"]:focus, select:focus, input[type=checkbox]:focus+label::after {border: 2px solid #FF8C00 !important;}
+.servizi-widget .nav-tabs a.nav-link:focus {border: 2px solid #FF8C00 !important;}
 button.btn.btn-info.mr-2.btn-verde:focus {outline: 2px solid #FF8C00 !important;}
 button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !important; outline: 0;}
+
+
+/* ---------- ANGULAR ---------- */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
 
 
 @media (min-width: 1200px) {
@@ -2746,7 +2858,7 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .sub_nav li a {
-        padding: 13px 16px;
+        padding: 13px 12px;
     }
 
     .sub_nav li.megamenu a {
@@ -2801,7 +2913,7 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
     }
 
     .sub_nav li a {
-        padding: 13px 16px;
+        padding: 13px 12px;
     }
 
     .sub_nav li.megamenu a {
@@ -2964,13 +3076,13 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
     }
 
     #mainheader .p_cercaMobile .btn-cerca:hover svg.icon {
-        fill: #6FA67E;
+        fill: #badec3;
     } 
 
 
     #mainheader.ridotto .p_cercaMobile {
         height: 64px;
-        padding-top: 26px;
+        padding-top: 16px;
     }
 
     #mainheader .social {
@@ -2989,7 +3101,7 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
     }
 
     #mainheader.ridotto .menu-btn {
-        margin-top: 30px;
+        margin-top: 16px;
     }
 
     #mainheader .menu-btn .icon-bar {
@@ -3014,6 +3126,12 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
         width: 24px;
     }
 
+    #mainheader .navbar-toggle.menu-active {
+        position: fixed;
+        top:40px;
+        left:300px;
+    }
+
     #cercaMobile {
         position: absolute;
         right: 0;
@@ -3027,7 +3145,7 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
     }
 
     #mainheader.ridotto #cercaMobile {
-        top:120px;
+        top:56px;
     }
 
     .navbar-toggler-icon {
@@ -3066,7 +3184,7 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
 
     .modal-header-fullsrc .confirm {
         top: 0px;
-        right: 0;
+        right: 6px;
         left: auto;
         min-width: 0;
     }
@@ -3119,12 +3237,18 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
         font-size: 1em;
     }
 
+    .searchWidgetModal .modal-header-title {
+        border: 0;
+        padding-bottom: 0;
+    }
+
 
     .modal-header-fullsrc .close, 
     .modal-header-fullsrc .back {
         margin-top: 0;
         position: absolute;
         left: 0;
+        z-index: 100;
     }
 
     .modal-header-fullsrc .close svg.icon,
@@ -3148,6 +3272,10 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
         width: 40px;
     }
 
+    .searchWidgetModal .form-group {
+        margin-top: 8px;
+    }
+
     #searchModal .modal-body-search .form-group,
     #searchModal md-autocomplete, 
     #searchModal md-autocomplete md-autocomplete-wrap {
@@ -3166,7 +3294,7 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
     .md-virtual-repeat-container .md-autocomplete-suggestions li .autocomplete-list-text em {
         display: none;
     }
-    
+
     #searchModal .modal-body-search .search-start {
         margin-top: 32px;
     }
@@ -3179,7 +3307,7 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
         width: 26px;
         height: 26px;
     }
-    
+
     #searchModal .modal-body-search .form-blockopz ul li a {
         font-size: 1em;
     }
@@ -3317,20 +3445,23 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
         width: 140px !important;
     }
 
+    #mainheader .comune .logotxt .badge-demo {
+        position: absolute;
+        margin-left: 4px;
+        margin-top: 4px;
+        vertical-align: initial;
+    }
+    
+    #mainheader .comune .logotxt .badge-demo b {
+        display: none;
+    }
+
     #mainheader.ridotto .p_cercaMobile {
-        padding-top: 26px;
+        padding-top: 16px;
     }
 
     #mainheader.ridotto .btn-cerca {
         margin-left: 0;
-    }
-
-    #mainheader.ridotto .comune .logoimg {
-        margin-top: 20px;
-    }
-
-    #mainheader.ridotto .comune .logoimg img {
-        height: 40px;
     }
 
     #mainheader .menu-btn {
@@ -3378,4 +3509,19 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
         width: 24px;
         height: 24px;
     }
+}
+
+
+/* fix ie cover img */
+.img-fit-cover {
+    
+}
+
+.img-fit-ie {
+    background-size: cover;
+    background-position: center;
+}
+
+.img-fit-ie img {
+    visibility: hidden;
 }

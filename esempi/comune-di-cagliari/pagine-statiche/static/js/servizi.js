@@ -15,14 +15,14 @@ app.controller('ctrlServizi', ['$scope', '$location', '$anchorScroll', function 
 
         selfs.zeroSubmit();
 
-        this.servizi_spid = [{'id': 0, 'value': 'aruba', 'name': 'Aruba SPID', 'image': '/ponmetroca/resources/static/img/spid-idp-arubaid.svg'},
-            {'id': 1, 'value': 'poste', 'name': 'Poste SPID', 'image': '/ponmetroca/resources/static/img/spid-idp-posteid.svg'},
-            {'id': 2, 'value': 'infocert', 'name': 'Infocert SPID', 'image': '/ponmetroca/resources/static/img/spid-idp-infocertid.svg'},
-            {'id': 3, 'value': 'sielte', 'name': 'Sielte SPID', 'image': '/ponmetroca/resources/static/img/spid-idp-sielteid.svg'},
-            {'id': 4, 'value': 'intesa', 'name': 'Intesa SPID', 'image': '/ponmetroca/resources/static/img/spid-idp-intesaid.svg'},
-            {'id': 5, 'value': 'register', 'name': 'Register SPID', 'image': '/ponmetroca/resources/static/img/spid-idp-spiditalia.svg'},
-            {'id': 6, 'value': 'namirial', 'name': 'Namirial SPID', 'image': '/ponmetroca/resources/static/img/spid-idp-namirialid.svg'},
-            {'id': 7, 'value': 'tim', 'name': 'TIM SPID', 'image': '/ponmetroca/resources/static/img/spid-idp-timid.svg'}];
+        this.servizi_spid = [{'id': 0, 'value': 'aruba', 'name': 'Aruba SPID', 'image': 'static/img//spid-idp-arubaid.svg'},
+            {'id': 1, 'value': 'poste', 'name': 'Poste SPID', 'image': 'static/img//spid-idp-posteid.svg'},
+            {'id': 2, 'value': 'infocert', 'name': 'Infocert SPID', 'image': 'static/img//spid-idp-infocertid.svg'},
+            {'id': 3, 'value': 'sielte', 'name': 'Sielte SPID', 'image': 'static/img//spid-idp-sielteid.svg'},
+            {'id': 4, 'value': 'intesa', 'name': 'Intesa SPID', 'image': 'static/img//spid-idp-intesaid.svg'},
+            {'id': 5, 'value': 'register', 'name': 'Register SPID', 'image': 'static/img//spid-idp-spiditalia.svg'},
+            {'id': 6, 'value': 'namirial', 'name': 'Namirial SPID', 'image': 'static/img//spid-idp-namirialid.svg'},
+            {'id': 7, 'value': 'tim', 'name': 'TIM SPID', 'image': 'static/img//spid-idp-timid.svg'}];
 
         this.primoSubmit = function (id) {
             if (id !== null)

@@ -22,15 +22,35 @@ section#briciole {
 }
 
 #briciole a:hover {
-    font-weight: 600;
+    /*font-weight: 600;*/
 }
 
 #briciole .breadcrumb {
     padding: 0;
+    overflow: hidden;
+    vertical-align: bottom;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    line-height: 1.5;
+}
+
+#briciole .breadcrumb .breadcrumb-item {
+    line-height: 1.5;
+    display: inline-block;
+}
+
+#briciole .breadcrumb .breadcrumb-item a {
+    line-height: 1.5;
 }
 
 #briciole .breadcrumb .breadcrumb-item span.separator {
     font-weight: 300;
+    padding: 0;
+    margin: 0 4px 0 8px;
+    line-height: 1.5;
 }
 
 #briciole .breadcrumb .breadcrumb-item:focus {
@@ -39,7 +59,7 @@ section#briciole {
 
 #briciole .breadcrumb .breadcrumb-item.active a {
     color: #555;
-    font-weight: bold;
+    pointer-events: auto;
 }
 
 #intro .titolo-sezione, 
@@ -107,7 +127,10 @@ section#briciole {
     text-decoration: underline;
 }
 
-#intro #cerca-intro, #introricerca #cerca-intro {
+#intro #cerca-intro, 
+#introricerca #cerca-intro,
+#intro .ricerca-testo,
+#introricerca .ricerca-testo {
     font-weight: 300;
     color: #9B9B9B;
     height:48px;
@@ -125,7 +148,32 @@ section#briciole {
     color: #9B9B9B;
     font-size: 0.889em;
     line-height: 21px;
-} 
+}
+
+#intro md-autocomplete,
+#intro md-autocomplete-wrap {
+    height:48px;
+    border: 0;	
+    border-radius: 4px;
+    background-color: #F2F2F2;
+    box-shadow: none;
+    font-size: 1em;
+}
+
+#intro md-autocomplete input#cerca-txt-intro {
+    height:48px;
+    font-size: 1em;
+    font-weight: 300;
+    color: #9B9B9B;
+}
+
+#intro md-autocomplete .md-show-clear-button button {
+    margin-right: 56px;
+}
+
+.md-virtual-repeat-container .md-autocomplete-suggestions li .autocomplete-intro {
+    font-size: 0.889em;
+}
 
 #intro .box-servizi i {
     color: #D1CFCF;
@@ -157,6 +205,7 @@ section#briciole {
     border: 0;
     padding: 8px;
     cursor: pointer;
+    z-index: 700;
 }
 
 #intro .form-group .ico-sufix svg.icon,
@@ -417,11 +466,6 @@ section#briciole {
     box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.1);
     border: 1px solid #ECEFF1;
     position: relative;
-    margin-bottom: 24px;
-}
-
-.scheda-argomento-lista {
-    margin-bottom: 0;
 }
 
 .scheda-argomento-lista .scheda-argomento-lista-testo {
@@ -473,6 +517,10 @@ section#briciole {
 
 .scheda-round {
     border-radius: 4px;
+}
+
+.scheda-margine {
+    margin-bottom: 24px;
 }
 
 .scheda .scheda-icona-small {
@@ -1125,6 +1173,7 @@ section#briciole {
     top: 0;
     bottom: 0;
     border-radius: 4px;
+    border: 1px solid #eceff1;
 }
 
 .scheda-app .bg-full img {
@@ -1153,7 +1202,7 @@ section#briciole {
 }
 
 .scheda-app.h264 {
-    height: 264px;
+    height: 252px;
 }
 
 .scheda-app.h184 {
@@ -1288,7 +1337,9 @@ section#briciole {
     }
 
     #intro #cerca-intro, 
-    #introricerca #cerca-intro {
+    #introricerca #cerca-intro,
+    #intro .ricerca-testo,
+    #introricerca .ricerca-testo {
         font-size: 1em;
         height: 40px;
     }
@@ -1331,9 +1382,13 @@ section#briciole {
     .scheda .scheda-footer {
         padding: 16px 24px 13px 24px;
     }
-
-    .scheda-argomento-lista {
-        margin-bottom: 16px;
+    
+    .scheda-brick {
+       margin-bottom: 16px; 
+    }
+    
+    .scheda-margine {
+        margin-bottom: 0px;
     }
 
     .row-eq-height {
@@ -1706,6 +1761,15 @@ section#briciole {
     #articolo-dettaglio-testo .cerca-risultato-item .tutte {
         display: none;
     }
+    
+    #intro md-autocomplete,
+    #intro md-autocomplete-wrap {
+        height:40px;
+    }
+
+    #intro md-autocomplete input#cerca-txt-intro {
+        height:40px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1720,27 +1784,12 @@ section#briciole {
     .scheda-news .scheda-testo {
         margin-right: 114px;
     }
-}
-
-
-
-
-/* IE10+ hack */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .scheda-news .scheda-foto {
-    }
-
-    .scheda-news .scheda-foto figure {
-    }
-
-    .scheda-news .scheda-foto img {
-        height: auto;
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    
+    .scheda-news .no-mr-xs {
+        margin-right: 0;
     }
 }
+
+
+
+

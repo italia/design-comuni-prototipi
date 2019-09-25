@@ -24,7 +24,7 @@
 <meta name="twitter:image" content="{{ site.url | append: site.data.t.social-card-twitter }}">
 
 <!-- Facebook -->
-<meta property="og:url" content="/">
+<meta property="og:url" content="{{ site.url | append: page.url }}">
 <meta property="og:title" content="{%- include title.html -%}">
 <meta property="og:description"
     content="{% if page.excerpt %}{{ page.excerpt| strip_html }}{% else %}{{ site.data.t.description[page.lang] }}{% endif %}">

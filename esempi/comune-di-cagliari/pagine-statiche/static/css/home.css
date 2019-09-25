@@ -11,7 +11,7 @@
 .novita-foto {
     width: 50%;
     float:right;
-    height: 472px;
+    height: 480px;
     position: absolute;
     right: 0;
 }
@@ -521,6 +521,32 @@
     top: 124px;
 }
 
+#home-servizi md-autocomplete,
+#home-servizi md-autocomplete-wrap {
+    height:48px;
+    border: 0;	
+    border-radius: 4px;
+    background-color: #F2F2F2;
+    box-shadow: none;
+    font-size: 1em;
+}
+
+#home-servizi md-autocomplete input#cerca-txt-intro {
+    height:48px;
+    font-size: 1em;
+    font-weight: 300;
+    color: #9B9B9B;
+}
+
+#home-servizi md-autocomplete .md-show-clear-button button {
+    margin-right: 56px;
+}
+
+.md-virtual-repeat-container .md-autocomplete-suggestions li .autocomplete-intro {
+    font-size: 0.889em;
+}
+
+
 @media (min-width: 767px) and (max-width: 991px) {
     #novita_evidenza, .novita-foto {
         min-height: 600px;
@@ -659,6 +685,16 @@
     #home-servizi input::placeholder, #home-servizi input:-ms-input-placeholder, #home-servizi input::-ms-input-placeholder { 
         font-size: 1em;
     }
+    
+    #home-servizi md-autocomplete,
+    #home-servizi md-autocomplete-wrap {
+        height:40px;
+    }
+
+    #home-servizi md-autocomplete input#cerca-txt-intro {
+        height:40px;
+    }
+    
 }
 
 @media (max-width: 576px) {

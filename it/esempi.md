@@ -81,27 +81,15 @@ redirect_from:
                         </a>
                       </li>
                       <li>
+                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/area.html">
+                          <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+                          <span class="d-inline">Pagina Amministrazione - Area</span>
+                        </a>
+                      </li>
+                      <li>
                         <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/documenti.html">
                           <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
                           <span class="d-inline">Pagina Documenti</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/evento1.html">
-                          <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-                          <span class="d-inline">Pagina Evento (festa di Sant'Efisio)</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/evento2.html">
-                          <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-                          <span class="d-inline">Pagina Evento (canti di donne)</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/giuntacomunale.html">
-                          <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-                          <span class="d-inline">Pagina Giunta Comunale</span>
                         </a>
                       </li>
                       <li>
@@ -111,21 +99,27 @@ redirect_from:
                         </a>
                       </li>
                       <li>
-                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/iscrizioni_asili_nido.html">
+                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/servizio.html">
                           <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-                          <span class="d-inline">Pagina Servizio (iscrizione asili nido)</span>
+                          <span class="d-inline">Pagina Servizio</span>
                         </a>
                       </li>
                       <li>
-                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/prenota_appuntamento.html">
+                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/evento.html">
                           <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-                          <span class="d-inline">Pagina Servizio (prenotazione appuntamento)</span>
+                          <span class="d-inline">Pagina Evento</span>
                         </a>
                       </li>
                       <li>
-                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/muoversi.html">
+                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/argomenti.html">
                           <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
-                          <span class="d-inline">Pagina Argomento (muoversi)</span>
+                          <span class="d-inline">Pagina Argomenti</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/argomento_cultura.html">
+                          <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+                          <span class="d-inline">Pagina Argomento di esempio</span>
                         </a>
                       </li>
                       <li>
@@ -141,9 +135,21 @@ redirect_from:
                         </a>
                       </li>
                       <li>
+                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/persona.html">
+                          <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+                          <span class="d-inline">Persona</span>
+                        </a>
+                      </li>
+                      <li>
                         <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/ricerca.html">
                           <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
                           <span class="d-inline">Risultato Ricerca</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/newsletter.html">
+                          <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+                          <span class="d-inline">Template per Newsletter</span>
                         </a>
                       </li>
                     </ul>
@@ -154,7 +160,7 @@ redirect_from:
           <div class="link-list-wrapper mt-4">
             <ul class="link-list">
               <li>
-              <a class="list-item" href="https://github.com/italia/design-comuni-prototipi/tree/master/esempi/comune-di-cagliari">
+              <a class="list-item" href="{{ site.baseurl }}/esempi/comune-di-cagliari/pagine-statiche/sorgenti-prototipo-cagliari.zip">
                 <svg class="icon icon-sm icon-primary"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
                 <span class="d-inline">Tutti i file sorgente del prototipo.</span>
               </a>

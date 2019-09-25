@@ -58,6 +58,18 @@
     min-height: 168px;
 }
 
+.scheda-persona-singola .scheda-persona {
+    height: auto!important;
+}
+
+.widget-mono .col-md-6 {
+    margin-bottom: 32px;
+}
+
+.widget-mono .col-md-6 .scheda-gestione {
+    margin-bottom: 0px;
+}
+
 .scheda-persona .scheda-foto, 
 .scheda-video .scheda-anteprima,
 .scheda-evento .scheda-foto {
@@ -96,6 +108,7 @@
 }
 
 .scheda-persona .scheda-testo h4,
+#articolo-dettaglio-testo .scheda-persona .scheda-testo h4,
 .scheda-video .scheda-testo h4,
 .scheda-evento .scheda-testo h4 {
     font-size: 1em;
@@ -104,6 +117,7 @@
 }
 
 .scheda-persona .scheda-testo p,
+#articolo-dettaglio-testo .scheda-persona .scheda-testo p,
 .scheda-video .scheda-testo p, 
 .scheda-evento .scheda-testo p { 
     font-size: 0.889em;
@@ -160,8 +174,16 @@
     margin-right: 0px;
 }
 
+.lista-persone {
+    margin-top: 12px;
+}
+
 
 /*  ARTICOLO DETTAGLIO  */
+
+#shareModal, #actionModal {
+    overflow-y: hidden;
+}
 
 .condividi {
     margin-bottom: 24px;
@@ -177,6 +199,10 @@
     fill: #003882;
     width: 22px;
     height: 22px;
+}
+
+.condividi .link-list svg.icon {
+    margin: 4px 8px 8px 0 !important;
 }
 
 .condividi a:focus {
@@ -215,7 +241,7 @@
 
 #articolo-dettaglio-foto figure img {
     object-fit: cover;
-    height: 448px;
+    height: 480px;
     width: 100%;
 }
 
@@ -325,13 +351,13 @@
 #articolo-dettaglio-testo .paragrafo a {
     position: absolute;
     left: 0px;
-    top: -150px;
+    top: -88px;
 }
 
 #articolo-dettaglio-testo .articolo-paragrafi .deleghe ul {
-    color: #003882;
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 #articolo-dettaglio-testo .articolo-paragrafi .deleghe ul > li {
@@ -339,7 +365,7 @@
 }
 
 #articolo-dettaglio-testo .articolo-paragrafi .deleghe ul > li:before {
-    content: "-";
+    content: "- ";
     text-indent:0;
 }
 
@@ -356,6 +382,19 @@
 #articolo-dettaglio-testo p {
     margin-top: 12px;
     margin-bottom: 0;
+}
+
+#articolo-dettaglio-testo .articolo-mt0 p:first-child {
+    margin-top: 0px;
+}
+
+#articolo-dettaglio-testo .articolo-titoletto {
+    font-size: 1em !important;
+    font-weight: 600 !important;
+    font-family: "Titillium Web",Geneva,Tahoma,sans-serif !important;
+    color: #555;
+    margin: 16px 0 0 0;
+    display: inline-block;
 }
 
 #articolo-dettaglio-testo .testolungo {
@@ -453,11 +492,16 @@
 }
 
 #articolo-dettaglio-testo .allegati-riga:last-of-type {
-    margin-bottom: 18px;
+    margin-bottom: 0px;
 }
 
 #articolo-dettaglio-testo .allegati-riga .allegato {
     height: 100%;
+}
+
+.barretta-verde {
+    border: 0 !important; 
+    border-left: 8px solid #eaf2ec !important;
 }
 
 .scheda-allegato,
@@ -478,8 +522,29 @@
     margin: 24px 0 36px 0;
 }
 
+.listaluoghi .scheda-ufficio-contatti {
+    margin: 24px 0 0 0;
+}
+
+.listaluoghi .row:first-child .scheda-ufficio-contatti {
+    margin-top: 12px;
+}
+
+#articolo-dettaglio-testo .lista-persone-ruoli .persona-ruolo {
+    font-size: .889em;
+    margin-top: 12px;
+}
+
+#articolo-dettaglio-testo .lista-persone-ruoli .persona-ruolo a {
+    color: #003882;
+    font-weight: 600;
+    display: inline-block
+}
+
+
 #articolo-dettaglio-testo .scheda-allegato svg.icon,
-#articolo-dettaglio-testo .scheda-ufficio-contatti svg.icon {
+#articolo-dettaglio-testo .scheda-ufficio-contatti svg.icon,
+#menu-area .scheda-ufficio-contatti svg.icon {
     /* display: table-cell; */
     fill: #003882;
     margin-right: 8px;
@@ -488,7 +553,8 @@
 }
 
 #articolo-dettaglio-testo .scheda-allegato h4,
-#articolo-dettaglio-testo .scheda-ufficio-contatti .scheda-ufficio-testo {
+#articolo-dettaglio-testo .scheda-ufficio-contatti .scheda-ufficio-testo,
+#menu-area .scheda-ufficio-contatti .scheda-ufficio-testo {
     font-size: 1em;
     display: table-cell;
     margin: 0;
@@ -506,10 +572,20 @@
 
 #articolo-dettaglio-testo .scheda-allegato h4 span,
 #articolo-dettaglio-testo .scheda-ufficio-contatti h4 span,
-#articolo-dettaglio-testo .scheda-ufficio-contatti p {
+#articolo-dettaglio-testo .scheda-ufficio-contatti .scheda-ufficio-testo span,
+#menu-area .scheda-ufficio-contatti .scheda-ufficio-testo span,
+#articolo-dettaglio-testo .scheda-ufficio-contatti p,
+#articolo-dettaglio-testo .scheda-ufficio-contatti ul {
     font-weight: 300;
     color: #4A4A4A;
     font-size: 0.889em;
+}
+
+#articolo-dettaglio-testo a svg.icon-link {
+    width: 24px;
+    height: 24px;
+    fill: #003882;
+    margin-right: 8px;
 }
 
 
@@ -529,6 +605,13 @@
     background: #fff;
 }
 
+.scheda-gestione svg.icon {
+    fill: #003882;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+}
+
 .scheda-gestione p {
     display: table-cell;
     vertical-align: middle;
@@ -541,6 +624,7 @@
 .scheda-gestione a {
     font-size: 1.125em;
     color: #003882;
+    line-height: 1;
 }
 
 .scheda-gestione a:focus {
@@ -553,6 +637,13 @@
     height: 88px;
     float: right;
     margin: 16px 0 16px 16px;
+    overflow: hidden;
+}
+
+.scheda-gestione .thumbs-round img {
+    object-fit: cover;
+    height: 88px;
+    width: 88px;
 }
 
 .scheda-gestione .thumbs-round-icon {
@@ -585,8 +676,6 @@
     text-align: center;
     font-weight: 600;
 }
-
-
 
 #articolo-dettaglio-testo .articolo-ulterioriinfo p.data-articolo {
     margin: 0;
@@ -650,7 +739,11 @@
 }
 
 #articolo-dettaglio-testo .profilo-dettaglio-testo .scheda-staff {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+}
+
+#articolo-dettaglio-testo .scheda-staff p {
+    margin-top: 0;
 }
 
 #articolo-dettaglio-testo .profilo-dettaglio-testo .col-md-6:last-child .scheda-staff:last-of-type {
@@ -660,6 +753,15 @@
 #articolo-dettaglio-testo .profilo-dettaglio-testo .scheda-staff strong {
     color: #003882;
     font-weight: 700;
+}
+
+#articolo-dettaglio-testo .profilo-dettaglio-testo .scheda-staff .ampio a {
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+#articolo-dettaglio-testo .profilo-dettaglio-testo .scheda-staff .ampio a:last-child {
+    margin-bottom: 0;
 }
 
 #articolo-dettaglio-testo .profilo-dettaglio-testo h5 {
@@ -683,6 +785,30 @@
     font-size: 0.667em;
     vertical-align: text-bottom;
     line-height: 36px;
+}
+
+#articolo-dettaglio-testo .articolo-ulterioriinfo .persone {
+    margin-bottom: 0;
+}
+
+.persone a.badge-persone { 
+    color: #003882;
+    border: 1px solid #003882;
+    margin-right: 8px;
+    margin-top: 12px;
+    font-size: 0.889em;
+    font-weight: 600;
+}
+
+.persone a.badge-persone:hover { 
+    background-color: #003882;
+    color:#fff;
+    text-decoration: none;
+}
+
+.callout {
+    margin-top: 12px;
+    margin-bottom: 0;
 }
 
 .callout.important {
@@ -723,7 +849,7 @@
     margin: 0 0 0 32px !important;
 }
 
-.callout.sp p {
+.callout.sp p, .callout-punti p {
     list-style:none;
     display: block;
     margin: 0 0 8px 0 !important;
@@ -765,6 +891,45 @@
 .callout.callout-highlight p {
     font-size: 0.899em;
     color: #555;
+}
+
+.articolo-ulterioriinfo .callout ul, 
+.callout-punti p, 
+.callout-punti ul {
+    font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
+    font-size: 0.889em;
+    padding-left: 0;
+}
+
+.articolo-ulterioriinfo .callout ul li {
+    margin-left: 0;
+    list-style-type: none;
+}
+
+.callout-punti .callout-punto {
+    display: table;
+    margin-bottom: 16px;
+}
+
+.callout-punti .callout-punto .callout-punto-icona,
+.callout-punti .callout-punto .callout-punto-testo {
+    display: table-cell;
+}
+
+.callout-punti .callout-punto .callout-punto-testo p {
+    margin: 0!important;
+}
+
+.callout-punti .callout-punto .callout-punto-testo ul {
+    margin-left: 16px;
+    margin-bottom: 0 !important;
+}
+
+.callout-punti .callout-punto .callout-punto-icona svg.icon {
+    fill: #4e7e5b;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
 
 
@@ -877,7 +1042,8 @@
     height: 76px;
 }
 
-.step:last-of-type .scheda-gestione {
+.step:last-of-type .scheda-gestione,
+.step:last-of-type .scheda-step {
     margin-bottom: 0;
 }
 
@@ -903,6 +1069,50 @@
 
 .stepper-comunicazioni .scheda-gestione p {
     display: block;
+}
+
+.step .scheda-step {
+    border:0;
+    border-left: 8px solid #EAF2EC;
+    padding: 0 24px;
+    margin-bottom: 32px;
+    vertical-align: middle;
+    min-height: 80px;
+    -webkit-box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.1);
+    font-size: 1em;
+    display: table;
+    width: 100%;
+    background: #fff;
+}
+
+.step .scheda-step .scheda-step-testo {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0;
+    font-family: "Titillium Web",Geneva,Tahoma,sans-serif !important;
+    font-size: 0.889em;
+    padding: 16px 0;
+}
+
+.step .scheda-step .scheda-step-testo a {
+    font-size: 1em;
+    color: #003882;
+}
+
+.step .scheda-step .scheda-step-testo a:focus {
+    outline: 1px solid #FF8C00 !important;
+}
+
+.step .scheda-step .scheda-step-testo a svg.icon {
+    width: 24px;
+    height: 24px;
+    fill: #003882;
+}
+
+#articolo-dettaglio-testo .step .scheda-step .scheda-step-testo p {
+    margin: 0;
 }
 
 
@@ -995,16 +1205,47 @@
     color: #4E7E5B;
 }
 
+#articolo-dettaglio-testo .scheda-logo {
+    display: inline-block;
+    margin: 12px 40px 0 0;
+    height: 100px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+}
+
+#articolo-dettaglio-testo .scheda-logo-piccolo {
+    display: inline-block;
+    margin: 12px 40px 0 0;
+    height: 60px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 55px;
+    padding: 0;
+}
+
+#articolo-dettaglio-testo .scheda-logo-piccolo img {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    vertical-align: middle;
+}
 
 
 
-/*  SERVIZI PRENOTAZIONI  */
+
+/*  SERVIZI PRENOTAZIONI e SERVIZI  */
+
+.servizi-widget {
+    margin-bottom: 64px;
+}
 
 .numero-step {
     margin-right: 25px;
 }
 
-#servizi-prenotazione form {
+#servizi-prenotazione form,
+.servizi-widget form {
     margin-bottom: 32px;
 }
 
@@ -1014,22 +1255,26 @@
     top: 200px;
 }
 
-
 #servizi-prenotazione .form-group {
     margin: 48px 0 48px 0;
 }
 
-#servizi-prenotazione h4 {
+#servizi-prenotazione h4,
+.servizi-widget h4 {
     font-size: 1.333em;
     margin: 0 0 32px 0;
 }
 
-#servizi-prenotazione .select-container {
+#servizi-prenotazione .select-container,
+.servizi-widget .select-container {
     position: relative;
     padding: 0;
 }
 
-#servizi-prenotazione select {
+#servizi-prenotazione select,
+#intro select, 
+.searchWidgetModal select,
+.servizi-widget select {
     -moz-appearance:none;
     -webkit-appearance:none;
     appearance:none;
@@ -1039,12 +1284,31 @@
     border: 0;
     border-radius: 4px;
     background-color: rgba(127,127,127,0.1);
+    padding: 0 40px 0 16px;
+    width: 100%;
 }
 
-#servizi-prenotazione .select-arrow {
+.servizi-widget select {
+    margin-bottom: 32px;
+}
+
+#servizi-prenotazione select:focus,
+#intro select:focus, 
+.searchWidgetModal select:focus,
+.servizi-widget select:focus {
+    background-color: rgba(127,127,127,0.1);
+}
+
+.searchWidgetModal select {
+    height: 40px;
+}
+
+#servizi-prenotazione .select-arrow,
+#intro .select-arrow, 
+.searchWidgetModal .select-arrow {
     fill: #003882;
     right: 8px;
-    top: 8px;
+    bottom: 8px;
     width: 28px;
     position: absolute;
     display: block;
@@ -1053,15 +1317,28 @@
     pointer-events: none;
 }
 
-#servizi-prenotazione select::-ms-expand {
+.searchWidgetModal .select-arrow {
+    top: 4px;
+}
+
+#servizi-prenotazione select::-ms-expand,
+.servizi-widget select::-ms-expand {
     display: none;
 }
 
-#servizi-prenotazione .btn-verde {
+#servizi-prenotazione .btn-verde,
+.servizi-widget .btn-verde {
     font-size: 1em;
     padding: 12px 32px;
     min-width: 174px;
     margin: 0 16px 0 0;
+}
+
+.widget #intro .btn-verde-search {
+    font-size: 1em;
+    padding: 12px 32px;
+    min-width: 174px;
+    margin: 42px 16px 42px 0;
 }
 
 .scheda-referente {
@@ -1288,34 +1565,72 @@ a.ui-button:active, .ui-button:active,
     color: #FFFFFF;
 }
 
-#servizi-prenotazione label {
-    color: #5A6772;
-    margin-bottom: 16px;
+.servizi-widget .form-group {
+    margin: 0;
 }
 
-#servizi-prenotazione textarea {
+#servizi-prenotazione label,
+.servizi-widget .form-group label {
+    color: #5A6772;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 1em;
+    font-weight: 300;
+    padding: 0;
+    position: relative;
+    transform: none;
+    z-index: 1;
+}
+
+.servizi-widget .form-ckgroup {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    color: #5A6772;
+}
+
+.servizi-widget .select-arrow {
+    fill: #003882;
+    right: 8px;
+    bottom: 8px;
+    width: 28px;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    margin: 0 0 0 0;
+    pointer-events: none;
+}
+
+#servizi-prenotazione textarea,
+.servizi-widget textarea {
     min-height: 328px;
     background: #F2F2F2;
     border:0;
-    border-radius: 4px 0 0 4px;
+    border-radius: 4px;
     width: 100%;
     color: #5A6772;
     font-weight: normal;
     padding: 16px;
 }
 
-#servizi-prenotazione input[type="text"] {
+.servizi-widget textarea:focus {
+    background: #F2F2F2;
+}
+
+#servizi-prenotazione input[type="text"],
+.servizi-widget input[type="text"] {
     background: #F2F2F2;
     border:0;
-    border-radius: 4px 0 0 4px;
+    border-radius: 4px;
     width: 100%;
     margin-bottom: 32px;
     color: #5A6772;
     font-weight: normal;
     padding: 16px;
+    height: 48px;
 }
 
-#servizi-prenotazione input[type="text"]:disabled {
+#servizi-prenotazione input[type="text"]:disabled,
+.servizi-widget input[type="text"]:disabled {
     color: #908E8E;
 }
 
@@ -1332,13 +1647,13 @@ a.ui-button:active, .ui-button:active,
     height: 32px;
 }
 
-#servizi-prenotazione h5 {
+#servizi-prenotazione h5,
+.servizi-widget h5 {
     color: #796C31;
     font-weight: 600;
     font-size: 1.111em;
     margin-bottom: 20px;
 }
-
 
 #servizi-prenotazione .prenotazione-nav {
     margin-top: 32px;
@@ -1374,29 +1689,235 @@ a.ui-button:active, .ui-button:active,
     bottom: auto;
     width: auto;
     margin-top: 24px;
-    -webkit-box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.18);
-    -moz-box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.18);
-    box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.18);
+    -webkit-box-shadow: 0px 3px 15px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 3px 15px 0 rgba(0,0,0,0.1);
+    box-shadow: 0px 3px 15px 0 rgba(0,0,0,0.1);
     border-top: 0 !important;
     border-radius: 4px;
 }
 
+.notifica h5 {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.notification.with-icon h5 .icon {
+    position: absolute;
+    top: -4px;
+    left: -38px;
+}
+
 .notifica.success {
-    background-color: #EAF2EC;
-    border-left: 8px solid #008255;
+    border-left: 8px solid #4E7E5B;
 }
 
 .notifica.success h5 {
     color: #4E7E5B;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.3;
+}
+
+.notification.with-icon.success .icon {
+    fill: #4E7E5B;
+}
+
+.notifica.info {
+    border-left: 8px solid #003882;
+}
+
+.notifica.info h5 {
+    color: #003882;
+}
+
+.notification.with-icon.info .icon {
+    fill: #003882;
+}
+
+.notifica.error {
+    border-left: 8px solid #D71820;
+}
+
+.notifica.error h5 {
+    color: #D71820;
+}
+
+.notification.with-icon.error .icon {
+    fill: #D71820;
+}
+
+.notifica.warning {
+    border-left: 8px solid #827534;
+}
+
+.notifica.warning h5 {
+    color: #827534;
+}
+
+.notification.with-icon.warning .icon {
+    fill: #827534;
 }
 
 .notifica p {
     font-size: 1em;
     margin-left: 33px !important;
     margin-top: 8px !important;
+}
+
+.servizi-widget .note {
+    font-size: 0.889em;
+}
+
+.servizi-widget .note a {
+    color: #003882;
+}
+
+.servizi-widget .form-check {
+    margin: 0;
+}
+
+.servizi-widget .form-check [type=checkbox]+label, 
+.servizi-widget .form-check [type=radio]+label {
+    color: #555;
+    font-size: 1em;
+    padding-left: 32px;
+    margin-bottom: 8px;
+}
+
+.servizi-widget .form-check:last-child [type=checkbox]+label, 
+.servizi-widget .form-check:last-child [type=radio]+label {
+    margin-bottom: 0px;
+}
+
+.servizi-widget .form-check [type=checkbox]+label::before {
+    margin: 2px 0px;
+}
+
+.servizi-widget .form-check [type=checkbox]+label::after {
+    margin: 6px 0px;
+}
+
+.servizi-widget .form-check [type=checkbox]:checked+label::before {
+    top: 7px;
+}
+
+.servizi-widget .form-check [type=checkbox]:not(:checked)+label::after {
+    border-color: #555;
+    border-width: 1px;
+}
+
+
+.servizi-widget .form-check [type=checkbox]:checked+label::after,
+.servizi-widget .form-check [type=radio]:checked+label::after {
+    border-color: #555;
+    background-color: #555;
+}
+
+.servizi-widget .form-check [type=radio]:checked+label::before {
+    border-color: #555;
+    border-width: 1px;
+}
+
+.form-check [type=radio]:not(:checked)+label::after, 
+.form-check [type=radio]:not(:checked)+label::before {
+    border-color: #555;
+    border-width: 1px;
+}
+
+.servizi-widget .table th {
+    color: #796c31;
+}
+
+.servizi-widget .nav-tabs li {
+    text-align: center;
+}
+
+.servizi-widget .nav-tabs li a {
+    color: #003882; 
+    font-size: 1.111em; 
+    font-weight: 600; 
+    letter-spacing: 1px; 
+    display: block; 
+    border-bottom: 2px solid transparent; 
+    padding: 16px 32px;
+}
+
+.servizi-widget .nav-tabs li a:hover,
+.servizi-widget .nav-tabs li a.active {
+    color: #796c31; 
+    border-bottom: 2px solid #796c31; 
+    text-decoration: none;
+}
+
+.servizi-widget .tab-content>.active {
+    padding-left: 0 !important;
+}
+
+.servizi-widget .tab-content p {
+    margin-bottom: 32px;
+}
+
+.servizi-widget .form-group .ico-sufix {
+    position: absolute; 
+    width: 48px; 
+    height: 48px; 
+    text-align: center; 
+    right: 0; 
+    bottom: 0; 
+    vertical-align: middle; 
+    background-color: #4e7e5b; 
+    color: #fff; 
+    border-radius: 0 4px 4px 0; 
+    border: 0; 
+    padding: 0; 
+    cursor: pointer;
+}
+
+.servizi-widget .form-group .ico-sufix svg.icon {
+    width: 26px; 
+    height: 26px; 
+    fill: #fff;
+}
+
+.servizi-widget .form-group-inline {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.servizi-widget .form-group-inline input[type="text"] {
+    height: 32px;
+    margin-bottom: 0;
+}
+
+.servizi-widget .form-group-inline .ico-sufix {
+    width: 32px; 
+    height: 32px;
+    top: 0;
+    line-height: 0;
+}
+
+.servizi-widget .form-group-inline .ico-sufix svg.icon {
+    width: 16px; 
+    height: 16px; 
+}
+
+.servizi-widget .campoerrore {
+    border: 2px solid #D71820!important;
+}
+
+.servizi-widget .campoerrore-testo {
+    color: #d71820!important;
+    font-style: italic;
+    white-space: normal;
+    font-size: 0.887em;
+    line-height: 0;
+}
+
+.servizi-widget .form-check.campoerrore {
+    border:0!important;
+}
+
+.servizi-widget .form-check.campoerrore [type=checkbox]:not(:checked)+label::after {
+    border-color: #d71820!important;
+    border-width: 2px;
 }
 
 
@@ -1461,21 +1982,23 @@ a.ui-button:active, .ui-button:active,
 }
 
 
-/*  EVENTI  */
-
-#eventomappa {
+#schedamappa {
     height: 368px;
     box-sizing: content-box;
     position: absolute!important;
     left: 0;
     right: 14px;
+    z-index: 800;
 }
 
-#eventomappah {
+#schedamappah {
     height: 368px;
     position: relative;
     width: 100%; 
 }
+
+
+/*  EVENTI  */
 
 .addeventatc {
     display: inline-block;
@@ -1588,8 +2111,7 @@ a.ui-button:active, .ui-button:active,
 }
 
 #evento-rating .rating>label svg {
-    fill: transparent;
-    stroke: #003882;
+    fill: #003882;
 }
 
 #evento-rating .rating:not(:checked)>label:hover svg, 
@@ -1667,15 +2189,73 @@ a.ui-button:active, .ui-button:active,
 }
 
 
+/* SCHEDA SERVIZI con FOTO Es. canile */
+
+.scheda-srv .scheda-foto {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.scheda-srv .scheda-foto figure {
+    margin: 0;
+}
+
+.scheda-srv .scheda-foto img {
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.scheda-srv .scheda-testo h4 {
+    font-size: 1.333em;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    line-height: 1.1;
+}
+
+.scheda-srv .scheda-argomenti {
+    padding: 10px 24px 16px 24px;
+}
+
+.scheda-srv .scheda-argomenti a.badge-argomenti {
+    color: #003882;
+    border: 1px solid #003882;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    font-size: 0.889em;
+    font-weight: 600;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.scheda-srv .scheda-argomenti a.badge-argomenti:hover {
+    background-color: #003882;
+    color: #fff;
+    text-decoration: none;
+}
+
+.scheda-srv .scheda-argomenti a:focus {
+    outline: 1px solid #FF8C00 !important;
+}
+
+
 @media (min-width: 767px) {
     #menu-sinistro {
         position: sticky;
-        top: 140px;
+        top: 80px;
         margin-bottom: 32px;
     }
 
     .articolo-ulterioriinfo .scheda-gestione {
         margin-bottom: 0;
+    }
+
+    .articolo-ulterioriinfo.schede-contatti .scheda-gestione {
+        margin-bottom: 32px;
     }
 }
 
@@ -1756,14 +2336,24 @@ a.ui-button:active, .ui-button:active,
     .scheda-evento {
         height: auto;
     }
+    
+    .widget-mono .col-md-6 {
+        margin-bottom: 24px;
+    }
+    
+    .widget-mono .col-md-6 .scheda {
+        margin-bottom: 0px;
+    }
 
     .scheda-persona .scheda-testo h4,
+    #articolo-dettaglio-testo .scheda-persona .scheda-testo h4,
     .scheda-video .scheda-testo h4, 
     .scheda-evento .scheda-testo h4 {
         font-size: 1em;
     }
 
     .scheda-persona .scheda-testo p,
+    #articolo-dettaglio-testo .scheda-persona .scheda-testo p,
     .scheda-video .scheda-testo p, 
     .scheda-evento .scheda-testo p {
         font-size: 1em;
@@ -1847,7 +2437,11 @@ a.ui-button:active, .ui-button:active,
         font-size: 0.875em;
     }
 
-    #articolo-dettaglio-testo .articolo-ulterioriinfo p {
+    #articolo-dettaglio-testo .articolo-ulterioriinfo p,
+    .articolo-ulterioriinfo .callout ul, 
+    .callout-punti p, 
+    .callout-punti ul,
+    .step .scheda-step .scheda-step-testo {
         font-size: 1em;
     }
 
@@ -1879,6 +2473,10 @@ a.ui-button:active, .ui-button:active,
 
     #articolo-dettaglio-testo .profilo-dettaglio-testo .mappa-url li a {
         font-size: 0.722em;
+    }
+
+    .articolo-ulterioriinfo .callout ul {
+        font-size: 1em;
     }
 
     .scheda-gestione .thumbs-round {
@@ -1962,6 +2560,10 @@ a.ui-button:active, .ui-button:active,
         display: block;
     }
 
+    .servizi-widget textarea {
+        min-height: 280px;
+    }
+
     .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
         width: 40px;
         height: 40px;
@@ -2002,6 +2604,50 @@ a.ui-button:active, .ui-button:active,
 
     #intro .btn-celeste {
         margin-top: 24px;
+    }
+
+    #servizi-prenotazione select, 
+    #intro select, 
+    .searchWidgetModal select, 
+    .servizi-widget select,
+    #servizi-prenotazione input[type="text"], 
+    .servizi-widget input[type="text"] {
+        font-size: 1em;
+        height: 40px;
+    }
+
+    #servizi-prenotazione .select-arrow, 
+    #intro .select-arrow, 
+    .searchWidgetModal .select-arrow,
+    .servizi-widget .select-arrow {
+        bottom: 4px;
+    }
+
+    #servizi-prenotazione label, .servizi-widget .form-group label {
+        margin-bottom: 12px;
+    }
+
+    #intro .info-ricerca {
+        margin-top:24px;
+    }
+
+    .servizi-widget .form-group .ico-sufix {
+        width: 40px;
+        height: 40px;
+    }
+
+    .servizi-widget .form-group-inline .ico-sufix {
+        width: 32px; 
+        height: 32px;
+    }
+
+    .servizi-widget .nav-tabs li a {
+        padding: 8px 16px;
+    }
+
+    .notification.with-icon h5 .icon {
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -2045,28 +2691,19 @@ a.ui-button:active, .ui-button:active,
     .articolo-foto-interna figure img {
         height: 264px;
     }
-}
 
-
-
-/* IE10+ hack */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .scheda-persona .scheda-foto figure, 
-    .scheda-video .scheda-anteprima figure,
-    .scheda-evento .scheda-foto figure {
-        overflow: hidden;
+    .searchWidgetModal .col-xs-6,
+    .servizi-widget .col-xs-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 
-    .scheda-persona .scheda-foto img, 
-    .scheda-video .scheda-anteprima img,
-    .scheda-evento .scheda-foto img {
-        height: 100%;
-        width: auto;
-        text-align: center;
-        margin: 0 auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .servizi-widget .nav-tabs li a {
+        padding: 8px 12px;
+        font-size: 1em;
     }
 }
+
+
