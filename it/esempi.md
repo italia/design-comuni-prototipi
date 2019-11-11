@@ -189,8 +189,34 @@ redirect_from:
         </div>
         <div class="col-12 col-lg-10 px-4 py-5 order-1 bg-dark">
           <h2>Il Consorzio dei Comuni Trentini</h2>
-          <p>Il Consorzio dei Comuni Trentini rappresenta tutti i comuni del Trentino a cui offre numerosi servizi digitali. Attraverso l'ecosistema <a class="font-weight-bold" href="https://www.comunweb.it">Comunweb</a> favorisce la diffusione presso i comuni che ne fanno parte delle linee guida di design di contenuti e servizi della pubblica amministrazione, con particolare attenzione alla gestione e rappresentazione di dati strutturati e alla creazione di interfacce e servizi digitali moderni. I comuni ottengono pertanto un duplice beneficio: disponibilità di nuovi canali di dialogo con il cittadino e strumenti concreti per gestire il processo di trasformazione digitale. </p>
-          <p>Il Consorzio sta lavorando con il Team per la Trasformazione Digitale per realizzare un modello unico di interazione digitale tra cittadini e comuni in Italia (basato su linee guida e kit di Designers Italia) e i comuni del Consorzio saranno tra i primi in Italia ad utilizzarlo. Il risultato di questo lavoro sarà progressivamente diffuso e reso disponibile in modalità open source.</p>
+          <p>Il Consorzio dei Comuni Trentini rappresenta tutti i comuni del Trentino a cui offre numerosi servizi digitali. Attraverso l'ecosistema <a class="font-weight-bold text-light" href="https://www.comunweb.it">Comunweb</a> favorisce la diffusione presso i comuni che ne fanno parte delle linee guida di design di contenuti e servizi della pubblica amministrazione, con particolare attenzione alla gestione e rappresentazione di dati strutturati e alla creazione di interfacce e servizi digitali moderni. I comuni ottengono pertanto un duplice beneficio: disponibilità di nuovi canali di dialogo con il cittadino e strumenti concreti per gestire il processo di trasformazione digitale. </p>
+          <p>Il Consorzio sta lavorando con il Team per la Trasformazione Digitale per realizzare un modello unico di interazione digitale tra cittadini e comuni in Italia (basato su linee guida e kit di Designers Italia) e i comuni del Consorzio saranno tra i primi in Italia ad utilizzarlo.</p>
+          <p>Di seguito si possono trovare i primi software messi a disposizione, dal catalogo del software a riuso di Developers Italia:</p>
+          <div id="collapseDiv2" class="collapse-div" role="tablist">
+            <div class="collapse-header" id="collapse-template-heading">
+                <button class="text-light" data-toggle="collapse" data-target="#collapse-template-2" aria-expanded="false" aria-controls="collapse-template-2">Tutti i software a disposizione</button>
+            </div>
+            <div id="collapse-template-2" class="collapse" role="tabpanel" aria-labelledby="collapse-template-heading">
+              <div class="collapse-body">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <a class="list-item" href="https://developers.italia.it/it/software/c_a116-opencontent-opencity" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon-sm icon-white"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+                        <span class="d-inline text-white">Comunweb: una piattaforma completa per la costruzione del sito web</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="list-item" href="https://developers.italia.it/it/software/c_a116-opencontent-stanzadelcittadino" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon-sm icon-white"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
+                        <span class="d-inline text-white">La "stanza del cittadino" per costruire l'area personale</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div> 
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
