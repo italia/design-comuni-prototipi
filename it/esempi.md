@@ -201,7 +201,7 @@ redirect_from:
                 <div class="link-list-wrapper">
                   <ul class="link-list">
                     <li>
-                      <a class="list-item" href="https://developers.italia.it/it/software/c_a116-opencontent-opencity" target="_blank" rel="noopener noreferrer">
+                      <a class="list-item" href="https://developers.italia.it/it/software/c_a116-comune-di-ala-comunweb" target="_blank" rel="noopener noreferrer">
                         <svg class="icon icon-sm icon-white"><use xlink:href="{{ site.baseurl }}/assets/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use></svg>
                         <span class="d-inline text-white">Comunweb: una piattaforma completa per la costruzione del sito web</span>
                       </a>
