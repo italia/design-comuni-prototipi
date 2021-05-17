@@ -1,4 +1,5 @@
 # Jekyll output files #
+.jekyll-cache
 _site
 
 # Compiled source #

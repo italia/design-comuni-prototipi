@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
-gem 'jekyll', '~> 3.8.5'
-gem 'jekyll-redirect-from'
-gem 'jekyll-feed'
+gem 'jekyll', '4.2.0'
+gem 'jekyll-redirect-from', '0.16.0'
+gem 'jekyll-feed', '0.15.1' 

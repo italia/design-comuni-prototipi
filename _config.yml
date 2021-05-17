@@ -26,3 +26,4 @@ whitelist:
   - jekyll-redirect-from
 
 google_analytics: UA-145094697-1
+jekyll_version: 4.2.0

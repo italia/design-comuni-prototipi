@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt| strip_html }}{% else %}{{ site.data.t.description[page.lang] }}{% endif %}">
 <meta name="author" content="{{ site.data.t.author[page.lang] }}">
-<meta name="generator" content="Jekyll v3.8.5">
+<meta name="generator" content="Jekyll v{{ site.jekyll_version }}">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/images/favicons/apple-touch-icon.png">
@@ -26,8 +26,7 @@
 <!-- Facebook -->
 <meta property="og:url" content="{{ site.url | append: page.url }}">
 <meta property="og:title" content="{%- include title.html -%}">
-<meta property="og:description"
-    content="{% if page.excerpt %}{{ page.excerpt| strip_html }}{% else %}{{ site.data.t.description[page.lang] }}{% endif %}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt| strip_html }}{% else %}{{ site.data.t.description[page.lang] }}{% endif %}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="{{ site.url | replace: 'https://', 'http://' | append: site.data.t.social-card-og }}">
 <meta property="og:image:secure_url" content="{{ site.url | append: site.data.t.social-card-og }}">
