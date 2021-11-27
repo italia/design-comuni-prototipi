@@ -41,12 +41,6 @@ italian-version:
 english-version:
   en: "English version"
   it: "Versione inglese"
-cookie-policy-info:
-  en: "This site uses technical, analytics and third-party cookies <br>By continuing to browse, you accept the use of cookies."
-  it: "Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie."
-cookie-policy-accept-btn:
-  en: "Ok"
-  it: "Accetto"
 footer-links:
   en:
     privacy-policy:

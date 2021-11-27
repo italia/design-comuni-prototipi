@@ -2793,39 +2793,6 @@ section .pagination .page-item .page-link:hover svg.icon {
     box-shadow: 0 0 0 .1rem rgba(255,140,0,.25) !important;
 }
 
-
-/* ---------- COOKIEBAR ---------- */
-
-.cookiebar {
-    min-height: 120px;
-    vertical-align: baseline;
-    text-align: center;
-    padding-top: 36px;
-    font-size: 0.889em;
-    width: 100%;
-    max-width: none!important;
-}
-
-.cookiebar p {
-    margin: 0 auto;
-}
-
-.cookiebar .btn-verde {
-    font-size: 0.875em;
-    margin: 8px 0 8px 16px;
-    vertical-align: baseline;    
-}
-
-.cookiebar .btn-trasp {
-    font-size: 0.875em;
-    margin: 8px 0;
-    padding-left: 0;
-    padding-right: 0;
-    text-decoration: underline;
-    vertical-align: baseline;
-}
-
-
 /* ---------- FOCUS ---------- */
 
 .btn.focus, .btn:focus {outline: 0; -webkit-box-shadow: 0 0 0 .1rem rgba(255,140,0,.85); box-shadow: 0 0 0 .1rem rgb(255, 140, 0);}
@@ -3415,10 +3382,6 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
 
     section .pagination .page-item .page-link i[class^=it-] {
         font-size: 0.875em;
-    }
-
-    .cookiebar p {
-        font-size: 1em;
     }
 
     .bricklayer-column {
