@@ -7,6 +7,9 @@ ref: privacy-policy
 ---
 
 <div class="container mt-5 mw-50" markdown="1">
+
+# Privacy Policy
+
 [https://italia.github.io/design-comuni-prototipi/](https://italia.github.io/design-comuni-prototipi/) è gestito dalla Presidenza
 del Consiglio dei Ministri - Dipartimento per la trasformazione digitale.
 
