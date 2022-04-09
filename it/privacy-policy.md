@@ -21,7 +21,7 @@ https://italia.github.io/design-comuni-prototipi/.
 ## Titolare del trattamento
 
 Il Titolare del trattamento è la Presidenza del Consiglio dei Ministri - Dipartimento per
-la trasformazione digitale, con sede in Largo Pietro di Brazzà 86, 00186 Roma,
+la trasformazione digitale, con sede in Largo Pietro di Brazzà 86, 00187 Roma,
 contattabile ai seguenti recapiti:
 
 * E-mail: [segreteria.trasformazionedigitale@governo.it](mailto:segreteria.trasformazionedigitale@governo.it);
